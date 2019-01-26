@@ -1,0 +1,16 @@
+menu inicial: jogar, sair
+		jogar      --> como jogar, créditos, jogar, opções
+		como jogar --> imagens, voltar
+		créditos   --> imagens, voltar
+		opções     --> imagens, som (on/of), apagar dados
+		jogar 2    --> 
+				--> 2 players teclado
+				--> 2 players controle
+				--> 4 players controle
+				--> 2 players controle e 2 players teclado
+
+			--> escolha do personagem 
+				seleção horizontal, um por vez
+
+* 4 fazer depois
+ 
