@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     bool hasBomb;
 
     public GameObject bomb;
+    public GameObject buildHome;
 
     // Start is called before the first frame update
     void Start()
@@ -63,12 +64,18 @@ public class Player : MonoBehaviour
         } else {
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
-
         if (hasBomb){
             if (Input.GetButtonDown("Fire1")){
                 hasBomb = false;
                 Instantiate(bomb, transform.position, transform.rotation);
                 StartCoroutine(BombCooldown(bombCooldown));
+            }
+        }
+        if (getResource() >= 3){
+            if (Input.GetButtonDown("Fire2")){
+                GameObject building = Instantiate(buildHome,transform.position, transform.rotation);
+                building.GetComponent<Home>().owner = gameObject.GetComponent<Player>();
+                setResource(getResource() - 3);
             }
         }
     }
