@@ -189,9 +189,9 @@ public class Menu : MonoBehaviour
 
 		Choise_Play();
 
-		KeyBoard.CountPlayer = 2;
+		//KeyBoard.CountPlayer = 2;
 
-		KeyBoard.Control = "joystic";
+		//KeyBoard.Control = "joystic";
 
 	}
 
@@ -199,9 +199,9 @@ public class Menu : MonoBehaviour
 
 		Choise_Play();
 
-		KeyBoard.CountPlayer = 4;
+		//KeyBoard.CountPlayer = 4;
 
-		KeyBoard.Control = "joystic";
+		//KeyBoard.Control = "joystic";
 
 	}
 
@@ -209,9 +209,9 @@ public class Menu : MonoBehaviour
 
 		Choise_Play();
 
-		Keyboard.CountPlayer = 4;
+		//Keyboard.CountPlayer = 4;
 
-		Keyboard.Control = "mixed";
+		//Keyboard.Control = "mixed";
 
 		ChangeScreen(GoKeyboardChoise, ManageStatus(screenStatus));
 

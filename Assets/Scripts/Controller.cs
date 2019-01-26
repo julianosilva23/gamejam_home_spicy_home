@@ -15,12 +15,17 @@ public class Controller : MonoBehaviour
 
 	public Text gameCounter;
 
+	int highScore;
+
+	Player winner;
+
 	int countPlayers;
 
 
     // Start is called before the first frame update
 	void Start()
 	{
+		highScore = 0;
 		StartCoroutine(GameTimer(timer));
 
 
@@ -66,6 +71,12 @@ public class Controller : MonoBehaviour
 
 	public void EndTime(){
 		SetCount(0);
+		foreach (Player player in players){
+			if (player.getHome() > highScore){
+				highScore = player.getHome();
+				winner = player;
+			}
+		}
 	}
 
 	public void SetCount(int timeLeft){

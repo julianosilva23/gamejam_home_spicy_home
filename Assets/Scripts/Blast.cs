@@ -8,6 +8,7 @@ public class Blast : MonoBehaviour
     void Start()
     {
         StartCoroutine(BoomTimer(1));
+        //gameObject.GetComponent<AudioSource>().Play ();
     }
 
     // Update is called once per frame

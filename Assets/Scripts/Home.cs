@@ -9,6 +9,9 @@ public class Home : MonoBehaviour
 
     public int fireTime;
 
+    public Sprite halfDone;
+    public Sprite done;
+
     int buildTime;
 
     // Start is called before the first frame update
@@ -41,6 +44,7 @@ public class Home : MonoBehaviour
     
     IEnumerator OnFire(int timer){
         fire = true;
+        //GetComponent<AudioSource>().Play ();
         gameObject.GetComponent<CircleCollider2D>().enabled = true;
         yield return new WaitForSeconds(timer);
         owner.setHome(owner.getHome() - 1);

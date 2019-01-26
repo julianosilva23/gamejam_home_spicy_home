@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public int home;
     public string typeInput;
     float direction;
+    float bombSpawn;
     bool isMoving;
     bool alive;
     bool hasBomb;
@@ -35,7 +36,7 @@ public class Player : MonoBehaviour
         if (col.tag == "Resource"){
             
             setResource(resource + 1);
-
+            //col.gameObject.GetComponent<AudioSource>().Play ();
             Destroy(col.gameObject);
         }
 
@@ -46,7 +47,20 @@ public class Player : MonoBehaviour
     }
 
     IEnumerator BlastCooldown(int timer){
-        yield return new WaitForSeconds(timer);
+        int i;
+        while (timer > 0){
+            i=2;
+            while (i > 0){
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                yield return new WaitForSeconds(0.25f);
+                gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                yield return new WaitForSeconds(0.25f);
+                i--;
+            }
+            timer --;
+        }
+        gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        
         alive = true;
     }
 
@@ -69,13 +83,14 @@ public class Player : MonoBehaviour
         }
         if (hasBomb && alive){
             if (Input.GetButtonDown("Fire1" + typeInput)){
+                bombSpawn = direction / 2;
                 Debug.Log("Fire1" + typeInput);
                 hasBomb = false;
-                Instantiate(bomb, transform.position, transform.rotation);
+                Instantiate(bomb,  new Vector2((float)transform.position.x + bombSpawn, transform.position.y), transform.rotation);
                 StartCoroutine(BombCooldown(bombCooldown));
             }
         }
-        if (getResource() >= 3){
+        if (getResource() >= 5){
             if (Input.GetButtonDown("Fire2" + typeInput)){
                 StartCoroutine(BuildHome(bombCooldown + 3));
             }
@@ -88,8 +103,25 @@ public class Player : MonoBehaviour
         Home house = building.GetComponent<Home>();
         house.owner = gameObject.GetComponent<Player>();
         house.setBuildTime(buildTime);
-        setResource(getResource() - 3); 
-        yield return new WaitForSeconds(buildTime);
+        setResource(getResource() - 3);
+        while (buildTime > 0){
+            Debug.Log(buildTime.ToString());
+            yield return new WaitForSeconds(1);
+            if (buildTime % 2 != 0){
+                building.GetComponent<SpriteRenderer>().sprite = house.halfDone;
+                if (buildTime >= 5 ){
+                     building.GetComponent<SpriteRenderer>().enabled = true;  
+                }
+            } else{
+                if (buildTime < 5 ){
+                    building.GetComponent<SpriteRenderer>().sprite = house.done;
+                } else {
+                    building.GetComponent<SpriteRenderer>().enabled = false;
+                }
+            }
+            buildTime --;
+        }
+        building.GetComponent<SpriteRenderer>().sprite = house.done;
         alive = true;
     }
 
