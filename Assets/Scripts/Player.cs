@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float moveSpeed;
+    public int bombCooldown;
+    public int blastCooldown;
     int resource;
     int home;
     bool alive;
@@ -28,13 +30,21 @@ public class Player : MonoBehaviour
 
         if (col.tag == "Boom"){
             alive = false;
-            StartCoroutine(Cooldown(alive, 5));
+            StartCoroutine(BlastCooldown(blastCooldown));
         }
     }
 
-    IEnumerator Cooldown(bool state, int timer){
+    IEnumerator BlastCooldown(int timer){
         yield return new WaitForSeconds(timer);
-        state = true;
+        alive = true;
+    }
+
+    IEnumerator BombCooldown(int timer){
+        while (timer > 0){
+            yield return new WaitForSeconds(1);
+            timer --;
+        }
+        hasBomb = true;
     }
 
     // Update is called once per frame
@@ -51,7 +61,7 @@ public class Player : MonoBehaviour
             if (Input.GetButtonDown("Fire1")){
                 hasBomb = false;
                 Instantiate(bomb, transform.position, transform.rotation);
-                StartCoroutine(Cooldown(hasBomb, 5));
+                StartCoroutine(BombCooldown(bombCooldown));
             }
         }
     }

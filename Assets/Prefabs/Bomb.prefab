@@ -119,5 +119,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec81f253ee44b414d951dd6ed0f3014a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 5
+  timer: 3
   blast: {fileID: 3144701965707827302, guid: 0e40930581cd38547b29ccdc406f3f8c, type: 3}
