@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Controller : MonoBehaviour
 
 	public int timer;
 
+	public Text countText;
+
     // Start is called before the first frame update
 	void Start()
 	{
@@ -17,9 +20,18 @@ public class Controller : MonoBehaviour
 
 	}
 
-	IEnumerator GameTimer(int countdown){
-        yield return new WaitForSeconds(countdown);
-        Debug.Log(timer);
+	IEnumerator GameTimer(int timeLeft){
+		while (timeLeft > 0) {
+        	
+        	yield return new WaitForSeconds (1);
+
+        	Debug.Log(timeLeft);
+
+        	SetCount(timeLeft);
+
+         	timeLeft--;
+        }
+
         EndTime();
     }
 
@@ -31,5 +43,9 @@ public class Controller : MonoBehaviour
 
 	public void EndTime(){
 		Debug.Log("fim do tempo");
+	}
+
+	public void SetCount(int timeLeft){
+		countText.text = timeLeft.ToString();
 	}
 }
