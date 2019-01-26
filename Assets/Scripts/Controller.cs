@@ -55,7 +55,7 @@ public class Controller : MonoBehaviour
 
 		for (int i = 0; i < countPlayers; i++){
 
-		 	playerResources[i].text = setMask(i, "resources", players[i].getResource());
+		 	playerResources[i].text = setMask(i, "res", players[i].getResource());
 
 		 	playerHouses[i].text = setMask(i, "home", players[i].getHome());
 
