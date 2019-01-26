@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public int blastCooldown;
     public int resource;
     public int home;
+    public string typeInput;
     bool alive;
     bool hasBomb;
 
@@ -60,19 +61,20 @@ public class Player : MonoBehaviour
     {
         if (alive){
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2
-            (moveSpeed * Time.fixedDeltaTime * Input.GetAxis("Horizontal"), moveSpeed * Time.fixedDeltaTime * Input.GetAxis("Vertical"));
+            (moveSpeed * Time.fixedDeltaTime * Input.GetAxisRaw("Horizontal" + typeInput), moveSpeed * Time.fixedDeltaTime * Input.GetAxisRaw("Vertical" + typeInput));
         } else {
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
-        if (hasBomb){
-            if (Input.GetButtonDown("Fire1")){
+        if (hasBomb && alive){
+            if (Input.GetButtonDown("Fire1" + typeInput)){
+                Debug.Log("Fire1" + typeInput);
                 hasBomb = false;
                 Instantiate(bomb, transform.position, transform.rotation);
                 StartCoroutine(BombCooldown(bombCooldown));
             }
         }
         if (getResource() >= 3){
-            if (Input.GetButtonDown("Fire2")){
+            if (Input.GetButtonDown("Fire2" + typeInput)){
                 GameObject building = Instantiate(buildHome,transform.position, transform.rotation);
                 building.GetComponent<Home>().owner = gameObject.GetComponent<Player>();
                 setResource(getResource() - 3);

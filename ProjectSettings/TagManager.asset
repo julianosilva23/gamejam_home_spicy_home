@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Boom
   - Resource
+  - Home
   layers:
   - Default
   - TransparentFX
