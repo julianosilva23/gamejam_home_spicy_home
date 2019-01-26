@@ -64,7 +64,6 @@ public class Player : MonoBehaviour
         if (alive){
             PlayerMove();
             
-
         } else {
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
@@ -85,7 +84,7 @@ public class Player : MonoBehaviour
 
     IEnumerator BuildHome(int buildTime){
         alive = false;
-        GameObject building = Instantiate(builtHome,transform.position, transform.rotation);
+        GameObject building = Instantiate(builtHome, new Vector2(transform.position.x + direction, transform.position.y), transform.rotation);
         Home house = building.GetComponent<Home>();
         house.owner = gameObject.GetComponent<Player>();
         house.setBuildTime(buildTime);
