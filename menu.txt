@@ -13,4 +13,4 @@ menu inicial: jogar, sair
 				seleção horizontal, um por vez
 
 * 4 fazer depois
- 
+ 2 horas, inicio 8:40
