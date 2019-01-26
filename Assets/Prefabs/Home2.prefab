@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 222669640926419447}
   - component: {fileID: 222669640926419444}
   - component: {fileID: 222669640926419445}
-  - component: {fileID: 222669640926419446}
   - component: {fileID: 6123926204667611946}
   - component: {fileID: 6842683331793597434}
+  - component: {fileID: 3900598008894729770}
   m_Layer: 0
   m_Name: Home2
   m_TagString: Home
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 222669640926418954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.23, y: -2.54, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.234, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -104,32 +104,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &222669640926419446
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 222669640926418954}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.96, y: 3.65}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &6123926204667611946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +134,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!68 &3900598008894729770
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222669640926418954}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.9799998, y: -0.7502897}
+  - {x: -1.9828882, y: 0.51570016}
+  - {x: -0.9288342, y: 1.874701}
+  - {x: -0.009421109, y: 1.824994}
+  - {x: 1.9052716, y: 0.70027107}
+  - {x: 1.8197408, y: -0.6999063}
+  - {x: -0.09712934, y: -1.7499548}
+  - {x: -1.9446478, y: -0.7502897}
