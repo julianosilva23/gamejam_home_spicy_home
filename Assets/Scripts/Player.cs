@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public int resource;
     public int home;
     public string typeInput;
+    float direction;
+    bool isMoving;
     bool alive;
     bool hasBomb;
 
@@ -60,8 +62,9 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (alive){
-            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2
-            (moveSpeed * Time.fixedDeltaTime * Input.GetAxisRaw("Horizontal" + typeInput), moveSpeed * Time.fixedDeltaTime * Input.GetAxisRaw("Vertical" + typeInput));
+            PlayerMove();
+            
+
         } else {
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
@@ -89,6 +92,42 @@ public class Player : MonoBehaviour
         setResource(getResource() - 3); 
         yield return new WaitForSeconds(buildTime);
         alive = true;
+    }
+
+    void PlayerMove(){
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(
+                moveSpeed * Time.fixedDeltaTime * Input.GetAxisRaw("Horizontal" + typeInput), 
+                moveSpeed * Time.fixedDeltaTime * Input.GetAxisRaw("Vertical" + typeInput)
+            );
+            if (GetAxisRaw("Horizontal" + typeInput) == 1){
+                direction = 1;
+                isMoving = true;
+            }
+            if (GetAxisRaw("Horizontal" + typeInput) == -1){
+                direction = -1;
+                isMoving = false;
+            }
+            if (GetAxisRaw("Horizontal" + typeInput) == 0){
+                isMoving = false;
+            }
+            SpriteWork();
+    }
+
+    void SpriteWork(){
+        if (direction == 1){
+            if (isMoving){
+                //animação andando p/ direita
+            } else {
+                //sprite parado direita
+            }
+        }
+        if (direction == -1){
+            if (isMoving){
+                //animação andando p/ esquerda
+            } else {
+                //sprite parado esquerda
+            }
+        }
     }
 
     public int getResource(){
