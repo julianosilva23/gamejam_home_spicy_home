@@ -5,18 +5,33 @@ using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
-	public Player player1;
+	public Player[] players;
 
-	public Player player2;
+	public Text[] playerResourses;
 
 	public int timer;
 
-	public Text countText;
+	public Text gameCounter;
+
+	int countPlayers;
+
+
+	// public int[] resources;
 
     // Start is called before the first frame update
 	void Start()
 	{
 		StartCoroutine(GameTimer(timer));
+
+
+		// Set resource atributte in text field
+		countPlayers = players.Length;
+
+		for (int i = 0; i < countPlayers; i++){
+
+		 	playerResourses[i].text = players[i].getResource().ToString();
+
+		}
 
 	}
 
@@ -38,6 +53,15 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
 	void Update()
 	{
+		// Set resource atributte in text field
+		countPlayers = players.Length;
+
+		for (int i = 0; i < countPlayers; i++){
+
+		 	playerResourses[i].text = players[i].getResource().ToString();
+
+		}
+
 
 	}
 
@@ -46,6 +70,6 @@ public class Controller : MonoBehaviour
 	}
 
 	public void SetCount(int timeLeft){
-		countText.text = timeLeft.ToString();
+		gameCounter.text = timeLeft.ToString();
 	}
 }

@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
     public float moveSpeed;
     public int bombCooldown;
     public int blastCooldown;
-    int resource;
-    int home;
+    public int resource;
+    public int home;
     bool alive;
     bool hasBomb;
 
@@ -68,5 +68,15 @@ public class Player : MonoBehaviour
 
     void PlayerMove(){
         
+    }
+
+    public int getResource(){
+        return resource;
+    }
+
+    public int setResource(int value){
+        resource = value;
+
+        return resource;
     }
 }
