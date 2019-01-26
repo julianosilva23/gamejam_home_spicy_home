@@ -27,8 +27,12 @@ public class Player : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D col){
+        
         if (col.tag == "Resource"){
-            resource ++;
+            
+            setResource(resource + 1);
+
+            Destroy(col.gameObject);
         }
 
         if (col.tag == "Boom"){
