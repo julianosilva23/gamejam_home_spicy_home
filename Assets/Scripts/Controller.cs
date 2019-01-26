@@ -7,7 +7,9 @@ public class Controller : MonoBehaviour
 {
 	public Player[] players;
 
-	public Text[] playerResourses;
+	public Text[] playerResources;
+
+	public Text[] playerHouses;
 
 	public int timer;
 
@@ -16,23 +18,18 @@ public class Controller : MonoBehaviour
 	int countPlayers;
 
 
-	// public int[] resources;
-
     // Start is called before the first frame update
 	void Start()
 	{
 		StartCoroutine(GameTimer(timer));
 
 
-		// Set resource atributte in text field
-		countPlayers = players.Length;
 
-		for (int i = 0; i < countPlayers; i++){
 
-		 	playerResourses[i].text = players[i].getResource().ToString();
+	}
 
-		}
-
+	private string setMask(int number, string type, int score){
+		return "P" + number.ToString() + " " + type.ToString() + ": " + score.ToString();
 	}
 
 	IEnumerator GameTimer(int timeLeft){
@@ -53,12 +50,14 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
 	void Update()
 	{
-		// Set resource atributte in text field
+		// assigned resource value in text field
 		countPlayers = players.Length;
 
 		for (int i = 0; i < countPlayers; i++){
 
-		 	playerResourses[i].text = players[i].getResource().ToString();
+		 	playerResources[i].text = setMask(i, "resources", players[i].getResource());
+
+		 	playerHouses[i].text = setMask(i, "home", players[i].getHome());
 
 		}
 
@@ -66,7 +65,7 @@ public class Controller : MonoBehaviour
 	}
 
 	public void EndTime(){
-		Debug.Log("fim do tempo");
+		SetCount(0);
 	}
 
 	public void SetCount(int timeLeft){

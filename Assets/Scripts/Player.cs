@@ -17,9 +17,12 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        resource = 0;
-        home = 0;
+        setResource(0);
+
+        setHome(0);
+
         alive = true;
+
         hasBomb = true;
     }
 
@@ -78,5 +81,17 @@ public class Player : MonoBehaviour
         resource = value;
 
         return resource;
+    }
+
+    public int getHome(){
+
+        return home;
+    }
+
+    public int setHome(int value){
+
+        home = value;
+
+        return home;
     }
 }
