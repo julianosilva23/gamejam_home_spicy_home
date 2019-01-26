@@ -99,15 +99,15 @@ public class Player : MonoBehaviour
                 moveSpeed * Time.fixedDeltaTime * Input.GetAxisRaw("Horizontal" + typeInput), 
                 moveSpeed * Time.fixedDeltaTime * Input.GetAxisRaw("Vertical" + typeInput)
             );
-            if (GetAxisRaw("Horizontal" + typeInput) == 1){
+            if (Input.GetAxisRaw("Horizontal" + typeInput) == 1){
                 direction = 1;
                 isMoving = true;
             }
-            if (GetAxisRaw("Horizontal" + typeInput) == -1){
+            if (Input.GetAxisRaw("Horizontal" + typeInput) == -1){
                 direction = -1;
                 isMoving = false;
             }
-            if (GetAxisRaw("Horizontal" + typeInput) == 0){
+            if (Input.GetAxisRaw("Horizontal" + typeInput) == 0){
                 isMoving = false;
             }
             SpriteWork();

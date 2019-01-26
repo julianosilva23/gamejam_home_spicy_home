@@ -81,7 +81,9 @@ public class Choise : MonoBehaviour
 
     public void setChar(int charCount){
 
-    	if(charCount <= names.Length || charCount > 0){
+    	Debug.Log(names.Length);
+
+    	if(charCount <= names.Length && charCount >= 0){
     		
     		name.text = names[charCount];
     	}
