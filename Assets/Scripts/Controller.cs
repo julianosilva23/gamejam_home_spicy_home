@@ -13,13 +13,14 @@ public class Controller : MonoBehaviour
     // Start is called before the first frame update
 	void Start()
 	{
-		StartCoroutine(gameTimer(timer));
+		StartCoroutine(GameTimer(timer));
 
 	}
 
-	IEnumerator BombTimer(int countdown){
+	IEnumerator GameTimer(int countdown){
         yield return new WaitForSeconds(countdown);
-        Explode();
+        EndTime();
+    }
 
     // Update is called once per frame
 	void Update()
@@ -27,7 +28,7 @@ public class Controller : MonoBehaviour
 
 	}
 
-	static EndTime(){
-		Debug.log("fim do tempo")
+	public void EndTime(){
+		Debug.Log("fim do tempo");
 	}
 }
