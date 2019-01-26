@@ -19,6 +19,7 @@ public class Controller : MonoBehaviour
 
 	IEnumerator GameTimer(int countdown){
         yield return new WaitForSeconds(countdown);
+        Debug.Log(timer);
         EndTime();
     }
 
