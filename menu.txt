@@ -10,7 +10,7 @@ menu inicial: jogar, sair
 				--> 2 players controle e 2 players teclado
 
 			--> escolha do personagem 
-				seleção horizontal, um por vez
+				seleção horizontal, um por vez (nome, imagem)
 
 * 4 fazer depois
  2 horas, inicio 8:40

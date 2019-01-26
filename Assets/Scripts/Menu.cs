@@ -68,9 +68,9 @@ public class Menu : MonoBehaviour
     {
     	var e = EventSystem.current.currentSelectedGameObject;
 
-    	Debug.Log(e.name);
-
     	string methodName = e.name.Replace(" ", "_");
+
+    	Debug.Log(methodName);
 
     	Invoke(methodName, 0f);
 
@@ -139,7 +139,9 @@ public class Menu : MonoBehaviour
 
 	private void Choise_Play(){
 
-		ChangeScreen(GoPlayMenu, GoPlayerChoise);
+		ChangeScreen(GoKeyboardChoise, GoPlayerChoise);
+
+		screenStatus++;
 
 	}
 
@@ -147,13 +149,13 @@ public class Menu : MonoBehaviour
 
 	}
 
-	private void KeyboardChoise(){
+	// private void KeyboardChoise(){
 
-		ChangeScreen(GoPlayMenu, ManageStatus(screenStatus));
+	// 	ChangeScreen(GoPlayMenu, ManageStatus(3));
 
-		screenStatus ++;
+	// 	screenStatus ++;
 
-	}
+	// }
 
 	public void Back(){
 
@@ -175,9 +177,43 @@ public class Menu : MonoBehaviour
 
 	void two_keyboards(){
 
-		ChangeScreen(GoKeyboardChoise, ManageStatus(screenStatus));
+		Choise_Play();
 
-		//SetNumberPlayers(2, )
+		// KeyBoard.CountPlayer = 2;
+
+		// KeyBoard.Control = "keyboard";
+
+	}
+
+	void two_joystics(){
+
+		Choise_Play();
+
+		// KeyBoard.CountPlayer = 2;
+
+		// KeyBoard.Control = "joystic";
+
+	}
+
+	void four_joystics(){
+
+		Choise_Play();
+
+		// KeyBoard.CountPlayer = 4;
+
+		// KeyBoard.Control = "joystic";
+
+	}
+
+	void four_mixed(){
+
+		Choise_Play();
+
+		Keyboard.CountPlayer = 4;
+
+		Keyboard.Control = "mixed";
+
+		ChangeScreen(GoKeyboardChoise, ManageStatus(screenStatus));
 
 	}
 
