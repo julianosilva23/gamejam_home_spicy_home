@@ -177,10 +177,10 @@ public class Menu : MonoBehaviour
 
 		ChangeScreen(GoKeyboardChoise, ManageStatus(screenStatus));
 
-		SetNumberPlayers(2, )
+		//SetNumberPlayers(2, )
 
 	}
 
-	void
+	//void
 
 }

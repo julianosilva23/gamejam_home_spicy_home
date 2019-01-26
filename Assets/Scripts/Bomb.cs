@@ -21,4 +21,10 @@ public class Bomb : MonoBehaviour
         GameObject objBlast = Instantiate(blast, transform.position, transform.rotation);
         Destroy(gameObject);
     }
+
+   void OnTriggerEnter2D(Collider2D col){
+        if (col.tag == "Boom"){
+            Explode();
+        }
+    } 
 }
