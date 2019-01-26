@@ -7,7 +7,7 @@ public class Blast : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(BoomTimer(3));
+        StartCoroutine(BoomTimer(2));
     }
 
     // Update is called once per frame
