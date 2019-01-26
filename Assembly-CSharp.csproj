@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Blast.cs" />
      <Compile Include="Assets\Scripts\Bomb.cs" />
+     <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Tree.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
