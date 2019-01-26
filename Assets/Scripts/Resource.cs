@@ -25,7 +25,10 @@ public class Resource : MonoBehaviour
             Destroy(gameObject);
         }
         if (col.tag == "Player"){
+            int res = col.gameObject.GetComponent<Player>().getResource();
+            res ++;
+            col.gameObject.GetComponent<Player>().setResource(res);
             Destroy(gameObject);
         }
-    }
+    }   
 }
