@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     bool hasBomb;
 
     public GameObject bomb;
-    public GameObject buildHome;
+    public GameObject builtHome;
 
     // Start is called before the first frame update
     void Start()
@@ -75,15 +75,20 @@ public class Player : MonoBehaviour
         }
         if (getResource() >= 3){
             if (Input.GetButtonDown("Fire2" + typeInput)){
-                GameObject building = Instantiate(buildHome,transform.position, transform.rotation);
-                building.GetComponent<Home>().owner = gameObject.GetComponent<Player>();
-                setResource(getResource() - 3);
+                StartCoroutine(BuildHome(bombCooldown + 3));
             }
         }
     }
 
-    void PlayerMove(){
-        
+    IEnumerator BuildHome(int buildTime){
+        alive = false;
+        GameObject building = Instantiate(builtHome,transform.position, transform.rotation);
+        Home house = building.GetComponent<Home>();
+        house.owner = gameObject.GetComponent<Player>();
+        house.setBuildTime(buildTime);
+        setResource(getResource() - 3); 
+        yield return new WaitForSeconds(buildTime);
+        alive = true;
     }
 
     public int getResource(){

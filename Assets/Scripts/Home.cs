@@ -9,6 +9,8 @@ public class Home : MonoBehaviour
 
     public int fireTime;
 
+    int buildTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +33,11 @@ public class Home : MonoBehaviour
             Debug.Log("Ta pegando fogo bixo!!!");
             }
         }
-    } 
+    }
+
+    IEnumerator Building(){
+        yield return new WaitForSeconds(buildTime);
+    }
     
     IEnumerator OnFire(int timer){
         fire = true;
@@ -48,6 +54,18 @@ public class Home : MonoBehaviour
 
     public void GotFire(){
         StartCoroutine(OnFire(fireTime));
+    }
+
+    public int getBuildTime(){
+
+        return buildTime;
+    }
+
+    public int setBuildTime(int value){
+
+        buildTime = value;
+
+        return buildTime;
     }
 
 }
