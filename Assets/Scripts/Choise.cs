@@ -27,7 +27,7 @@ public class Choise : MonoBehaviour
 
 	private int charCount;
 
-	public Sprite [] image;
+	public Sprite[] image;
 
 	public Image imageContainer;
 
@@ -96,19 +96,31 @@ public class Choise : MonoBehaviour
 
 		charCount = (names.Length);
 
-		setChar(1);
+		setChar(0);
 
     }
 
     public void setChar(int charCount){
 
-    	Debug.Log(charCount - 1);
+    	if(charCount <= (names.Length) && charCount >= 0){
 
-    	if(charCount <= (names.Length) && charCount > 0){
+    		if(charCount == 0){
+
+    			// Debug.Log(image[charCount]);
+
+    			name.text = names[charCount];
+
+    			imageContainer.sprite = image[charCount];
+
+    		}else{
+
+	    		name.text = names[charCount - 1];
+
+    			imageContainer.sprite = image[charCount -1];
+
+    		}
     		
-    		name.text = names[charCount - 1];
 
-    		imageContainer.sprite = image[charCount -1];
     	}
 
 

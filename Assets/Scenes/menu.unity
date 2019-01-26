@@ -174,7 +174,7 @@ MonoBehaviour:
   player: {fileID: 266699379}
   players: []
   image:
-  - {fileID: 21300000, guid: 1261c5f17604c9343a6bf895c3d9dbc7, type: 3}
+  - {fileID: 21300004, guid: 62668113fa64c784198a61f410f30e9b, type: 3}
   - {fileID: 21300000, guid: 62668113fa64c784198a61f410f30e9b, type: 3}
   - {fileID: 21300000, guid: 1261c5f17604c9343a6bf895c3d9dbc7, type: 3}
   imageContainer: {fileID: 217136111}
