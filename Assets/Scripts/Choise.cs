@@ -27,10 +27,21 @@ public class Choise : MonoBehaviour
 
 	private int charCount;
 
+	public Sprite [] image;
+
+	public Image imageContainer;
+
+	private bool trigger;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
+
+    	trigger = true;
+
+    	startChoise();
         
     }
 
@@ -39,33 +50,41 @@ public class Choise : MonoBehaviour
     {
     	keyPress = Input.GetAxisRaw("Horizontal");
 
-    	if(keyPress != 0){
+    	if(keyPress != 0 && trigger == true){
 
-    		changeChar(keyPress);
+    		StartCoroutine(changeChar(keyPress));
+
     	}
 
         
     }
 
-    public void changeChar(float keyPress){
+    public IEnumerator changeChar(float keyPress){
+
+    	trigger = false;
 
     	charCount = charCount + (int) keyPress;
 
-    	if(charCount > names.Length){
+    	if(charCount < 0 || charCount > (names.Length)){
 
-    		charCount = 0;
-
-    	}
-
-    	if(charCount == names.Length){
-
-    		charCount = names.Length;
+    		charCount = (names.Length);
 
     	}
 
-    	Debug.Log(charCount);
+    	if(charCount > (names.Length)){
 
+    		charCount = 1;
+
+    	}
+
+
+    	yield return new WaitForSeconds(1);
+    	
     	setChar(charCount);
+
+	   	trigger = true;
+	   	
+
 
     }
 
@@ -75,17 +94,21 @@ public class Choise : MonoBehaviour
 
 		control = Keyboard.Control;
 
-		charCount = names.Length;
+		charCount = (names.Length);
+
+		setChar(1);
 
     }
 
     public void setChar(int charCount){
 
-    	Debug.Log(names.Length);
+    	Debug.Log(charCount - 1);
 
-    	if(charCount <= names.Length && charCount >= 0){
+    	if(charCount <= (names.Length) && charCount > 0){
     		
-    		name.text = names[charCount];
+    		name.text = names[charCount - 1];
+
+    		imageContainer.sprite = image[charCount -1];
     	}
 
 
