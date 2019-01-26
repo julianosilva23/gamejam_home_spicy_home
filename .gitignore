@@ -6,5 +6,6 @@ Logs/
 Library/ScriptAssemblies/
 Library/ShaderCache.db
 Library/shadercompiler-UnityShaderCompiler.exe0.log
-Temp/UnityLockfile
-Temp/
+Library/shadercompiler-UnityShaderCompiler.exe0.log
+Temp/*
+Library/*
