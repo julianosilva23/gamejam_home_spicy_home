@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class Resource : MonoBehaviour
 {
+    bool immortal;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        immortal = true;
+        StartCoroutine(Mortality());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    IEnumerator Mortality(){
+        yield return new WaitForSeconds(2);
+        immortal = false;
+        Debug.Log("Não eh imortal...");
+    }
+
+    void OnTriggerEnter2D(Collider2D col){
+        if (col.tag == "Boom" && immortal == false){
+            Debug.Log("Pois morre no final...");
+            Destroy(gameObject);
+        }
+        if (col.tag == "Player"){
+            Destroy(gameObject);
+        }
     }
 }
