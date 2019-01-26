@@ -58,7 +58,7 @@
      <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Resource.cs" />
-     <Compile Include="Assets\Scripts\Treevore.cs" />
+     <Compile Include="Assets\Treevore.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Vinicius/Documents/homespicyhome/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
