@@ -236,6 +236,8 @@ public class Player : MonoBehaviour
         animationsRun = animRun;
         animationsStop = animStop;
 
+        
+
         // animator
 
     }
