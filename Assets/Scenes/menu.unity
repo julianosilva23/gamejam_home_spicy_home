@@ -1280,7 +1280,7 @@ GameObject:
   - component: {fileID: 416865994}
   - component: {fileID: 416865993}
   m_Layer: 5
-  m_Name: two keyboards two joystics
+  m_Name: four mixed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

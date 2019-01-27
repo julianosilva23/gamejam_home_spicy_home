@@ -28,18 +28,6 @@ public class Menu : MonoBehaviour
 	public GameObject GoOptions;
 	public GameObject GoCredits;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     GameObject ManageStatus(int status){
     	if(status == 0){
     		return GoMainMenu;
@@ -205,7 +193,7 @@ public class Menu : MonoBehaviour
 
 		Choise_Play();
 
-		string[] inputs = {"Joy1", "Joy2", "Joy1", "Joy2"};
+		string[] inputs = {"Joy1", "Joy2", "Joy3", "Joy4"};
 
 		Keyboard.TypeInput = inputs;
 
@@ -218,6 +206,8 @@ public class Menu : MonoBehaviour
 	void four_mixed(){
 
 		Choise_Play();
+
+		string[] inputs = {"Joy1", "Joy2", "Key1", "Key2"};
 
 		Keyboard.CountPlayer = 4;
 

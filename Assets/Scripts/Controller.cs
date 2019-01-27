@@ -7,6 +7,8 @@ public class Controller : MonoBehaviour
 {
 	public Player[] players;
 
+	public GameObject[] houses;
+
 	public Text[] playerResources;
 
 	public Text[] playerHouses;
@@ -31,10 +33,13 @@ public class Controller : MonoBehaviour
 	{
 		highScore = 0;
 
+		int i = 0;
+
 		foreach (string input in Keyboard.TypeInput){
 
-			addPlayer(input);
+			addPlayer(input, houses[i]);
 
+			i++;
 		}
 
 		StartCoroutine(GameTimer(timer));
@@ -88,11 +93,13 @@ public class Controller : MonoBehaviour
 		gameCounter.text = timeLeft.ToString();
 	}
 
-	public GameObject addPlayer(string type_input){
+	public GameObject addPlayer(string type_input, GameObject house){
 
 		player = Instantiate(playerPrefab, new Vector3(2.0F, 0, 0), Quaternion.identity);
 
 		player.GetComponent<Player>().setTypeInput(type_input);
+
+		player.GetComponent<Player>().builtHome = house;
 
 		return player;
 
