@@ -5,6 +5,7 @@ using UnityEngine;
 public class Home : MonoBehaviour
 {
     bool fire;
+    public GameObject flames;
     public Player owner;
 
     public int fireTime;
@@ -44,10 +45,12 @@ public class Home : MonoBehaviour
     
     IEnumerator OnFire(int timer){
         fire = true;
+        GameObject burning = Instantiate(flames, transform.position, transform.rotation);
         //GetComponent<AudioSource>().Play ();
         gameObject.GetComponent<CircleCollider2D>().enabled = true;
         yield return new WaitForSeconds(timer);
         owner.setHome(owner.getHome() - 1);
+        Destroy(burning);
         Destroy(gameObject);
     }
 
