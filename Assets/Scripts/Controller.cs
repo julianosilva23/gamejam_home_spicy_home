@@ -22,16 +22,14 @@ public class Controller : MonoBehaviour
 
 	public GameObject gameOver;
 
-	public AnimationClip[] animationsRun;
-
-	public AnimationClip[] animationsStop;
+	public Animator[] animator;
 
 	int highScore;
 
 	Player winner;
 
 	int countPlayers;
-	
+
 	private GameObject player;
 
 	AudioSource audioSource;
@@ -51,7 +49,7 @@ public class Controller : MonoBehaviour
 
 		foreach (string input in Keyboard.TypeInput){
 
-			players[i] = AnimationClip(input, houses[i], animationsRun[i], animationsStop[i]).GetComponent<Player>();
+			players[i] = AnimationClip(input, houses[i], animator[i]).GetComponent<Player>();
 
 			i++;
 		}
@@ -115,13 +113,13 @@ public class Controller : MonoBehaviour
 		gameCounter.text = timeLeft.ToString();
 	}
 
-	public GameObject AnimationClip(string type_input, GameObject house, AnimationClip animRun, AnimationClip animStop){
+	public GameObject AnimationClip(string type_input, GameObject house, Animator anim){
 
 		player = Instantiate(playerPrefab, new Vector3(2.0F, 0, 0), Quaternion.identity);
 
 		player.GetComponent<Player>().setTypeInput(type_input);
 
-		player.GetComponent<Player>().setAnimator(animRun, animStop);
+		player.GetComponent<Player>().setAnimator(anim);
 
 		player.GetComponent<Player>().builtHome = house;
 

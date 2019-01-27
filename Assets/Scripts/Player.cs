@@ -231,14 +231,11 @@ public class Player : MonoBehaviour
         return charName;
     }
 
-    public void setAnimator(AnimationClip animRun, AnimationClip animStop){
-        
-        animationsRun = animRun;
-        animationsStop = animStop;
+    public void setAnimator(Animator anim){
 
-        
+        // GameObject.Ger.RuntimeAnimatorController = anim;
 
-        // animator
+        // .runtimeAnimatorController = ((AbstractAttackingLim
 
     }
 }
