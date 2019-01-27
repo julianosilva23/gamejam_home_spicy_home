@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     bool isMoving;
     bool alive;
     bool hasBomb;
+    string charName;
 
     public GameObject bomb;
     public GameObject builtHome;
@@ -194,5 +195,17 @@ public class Player : MonoBehaviour
     public string getTypeInput(){
 
         return typeInput;
+    }
+
+    public string setCharName(string name){
+
+        charName = name;
+
+        return charName;
+    }
+
+    public string getCharName(){
+
+        return charName;
     }
 }

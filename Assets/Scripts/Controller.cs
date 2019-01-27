@@ -20,6 +20,8 @@ public class Controller : MonoBehaviour
 
 	public GameObject playerPrefab;
 
+	public GameObject gameOver;
+
 	int highScore;
 
 	Player winner;
@@ -28,17 +30,23 @@ public class Controller : MonoBehaviour
 
 	private GameObject player;
 
+	AudioSource audioSource;
+
 
     // Start is called before the first frame update
 	void Start()
 	{
+		audioSource = GetComponent<AudioSource> ();
+
+		audioSource.Play();
+
 		highScore = 0;
 
 		int i = 0;
 
 		foreach (string input in Keyboard.TypeInput){
 
-			addPlayer(input, houses[i]);
+			players[i] = addPlayer(input, houses[i]).GetComponent<Player>();
 
 			i++;
 		}
@@ -69,25 +77,33 @@ public class Controller : MonoBehaviour
 		// assigned resource value in text field
 		countPlayers = players.Length;
 
-		for (int i = 0; i < countPlayers; i++){
+		//for (int i = 0; i < countPlayers; i++){
+		
+		// 	playerResources[i].text = setMask(i, "res", players[i].getResource());
 
-		 	playerResources[i].text = setMask(i, "res", players[i].getResource());
+		// 	playerHouses[i].text = setMask(i, "home", players[i].getHome());
 
-		 	playerHouses[i].text = setMask(i, "home", players[i].getHome());
-
-		}
+		//}
 
 
 	}
 
 	public void EndTime(){
 		SetCount(0);
+		Debug.Log("***");
 		foreach (Player player in players){
+			Debug.Log(player.getHome());
 			if (player.getHome() > highScore){
+				Debug.Log("::::::");
 				highScore = player.getHome();
 				winner = player;
 			}
+			Debug.Log("Who-");
 		}
+		Debug.Log("Whooooooaaaa");
+		gameOver.SetActive(true);
+		gameOver.GetComponent<Text>().text = winner.getCharName() + "'s crew now owns the Land!";
+
 	}
 
 	public void SetCount(int timeLeft){
@@ -106,9 +122,9 @@ public class Controller : MonoBehaviour
 
 	}
 
-	void Replay(){
-
-	}
+	//void Replay(){
+	//
+	//}
 
 	void Return(){
 		SceneManager.LoadScene("menu");
