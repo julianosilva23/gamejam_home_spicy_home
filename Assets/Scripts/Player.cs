@@ -104,9 +104,10 @@ public class Player : MonoBehaviour
         house.owner = gameObject.GetComponent<Player>();
         house.setBuildTime(buildTime);
         setResource(getResource() - 3);
+        buildTime = buildTime * 2;
         while (buildTime > 0){
             Debug.Log(buildTime.ToString());
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
             if (buildTime % 2 != 0){
                 building.GetComponent<SpriteRenderer>().sprite = house.halfDone;
                 if (buildTime >= 5 ){

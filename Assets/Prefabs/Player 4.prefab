@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 100
-  bombCooldown: 5
+  bombCooldown: 3
   blastCooldown: 5
   resource: 0
   home: 0
