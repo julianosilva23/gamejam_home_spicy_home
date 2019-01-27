@@ -20,6 +20,12 @@ public class Player : MonoBehaviour
     public GameObject bomb;
     public GameObject builtHome;
 
+    public AnimationClip animationsStop;
+
+    public AnimationClip animationsRun;
+
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -134,16 +140,32 @@ public class Player : MonoBehaviour
             );
             if (Input.GetAxisRaw("Horizontal" + typeInput) == 1){
                 direction = 1;
-                isMoving = true;
+
+                setIsMoveing(true);
+
+                animator.SetBool("isMoving", isMoving);
             }
             if (Input.GetAxisRaw("Horizontal" + typeInput) == -1){
+                
                 direction = -1;
-                isMoving = false;
+
+                setIsMoveing(false);
+
             }
             if (Input.GetAxisRaw("Horizontal" + typeInput) == 0){
-                isMoving = false;
+
+                setIsMoveing(false);
             }
             SpriteWork();
+    }
+
+    public bool setIsMoveing(bool mov){
+        isMoving = mov;
+
+        animator.SetBool("isMoving", isMoving);
+
+        return isMoving;
+
     }
 
     void SpriteWork(){
@@ -207,5 +229,14 @@ public class Player : MonoBehaviour
     public string getCharName(){
 
         return charName;
+    }
+
+    public void setAnimator(AnimationClip animRun, AnimationClip animStop){
+        
+        animationsRun = animRun;
+        animationsStop = animStop;
+
+        // animator
+
     }
 }

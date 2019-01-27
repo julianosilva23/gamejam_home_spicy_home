@@ -22,15 +22,20 @@ public class Controller : MonoBehaviour
 
 	public GameObject gameOver;
 
+	public AnimationClip[] animationsRun;
+
+	public AnimationClip[] animationsStop;
+
 	int highScore;
 
 	Player winner;
 
 	int countPlayers;
-
+	
 	private GameObject player;
 
 	AudioSource audioSource;
+
 
 
     // Start is called before the first frame update
@@ -46,7 +51,7 @@ public class Controller : MonoBehaviour
 
 		foreach (string input in Keyboard.TypeInput){
 
-			players[i] = addPlayer(input, houses[i]).GetComponent<Player>();
+			players[i] = AnimationClip(input, houses[i], animationsRun[i], animationsStop[i]).GetComponent<Player>();
 
 			i++;
 		}
@@ -110,11 +115,13 @@ public class Controller : MonoBehaviour
 		gameCounter.text = timeLeft.ToString();
 	}
 
-	public GameObject addPlayer(string type_input, GameObject house){
+	public GameObject AnimationClip(string type_input, GameObject house, AnimationClip animRun, AnimationClip animStop){
 
 		player = Instantiate(playerPrefab, new Vector3(2.0F, 0, 0), Quaternion.identity);
 
 		player.GetComponent<Player>().setTypeInput(type_input);
+
+		player.GetComponent<Player>().setAnimator(animRun, animStop);
 
 		player.GetComponent<Player>().builtHome = house;
 

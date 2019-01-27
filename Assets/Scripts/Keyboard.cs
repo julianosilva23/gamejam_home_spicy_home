@@ -13,5 +13,7 @@ public static class Keyboard
 
 	public static string[] TypeInput;
 
+	public static Animator[] animatorPlayer;
+
 
 }

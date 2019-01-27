@@ -128,7 +128,7 @@ public class Choise : MonoBehaviour
 
     public void Play(){
 
-    	Debug.Log(Keyboard.TypeInput[charCount - 1]);
+    	Debug.Log(charCount - 1);
 
     	if(choiseController >= playerCount){
 
