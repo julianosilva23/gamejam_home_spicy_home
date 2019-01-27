@@ -235,7 +235,13 @@ public class Player : MonoBehaviour
 
         // GameObject.Ger.RuntimeAnimatorController = anim;
 
-        // .runtimeAnimatorController = ((AbstractAttackingLim
+        // animator = gameObject.GetComponent<Animator>();
+
+        // animator.runtimeAnimatorController =  anim as RuntimeAnimatorController;
+
+        // controller = overrideController.runtimeAnimatorController;
+        
+        // overrideController = anim as AnimatorOverrideController;
 
     }
 }
