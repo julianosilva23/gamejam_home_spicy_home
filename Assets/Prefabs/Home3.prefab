@@ -121,6 +121,7 @@ MonoBehaviour:
   fireTime: 10
   halfDone: {fileID: 21300034, guid: 332851c4b07def349b5c82e02969d361, type: 3}
   done: {fileID: 21300036, guid: 332851c4b07def349b5c82e02969d361, type: 3}
+  incendio: {fileID: 8300000, guid: 566ec6bf5caa1f94890bca9b4e188f55, type: 3}
 --- !u!58 &6842683331793597434
 CircleCollider2D:
   m_ObjectHideFlags: 0
