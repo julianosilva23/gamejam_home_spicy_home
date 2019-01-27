@@ -5548,8 +5548,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   houses:
+  - {fileID: 222669640926418954, guid: 1d43fe31d37b1834bab4a4a93d21ad6a, type: 3}
   - {fileID: 222669640926418954, guid: 6746b88bd43c5e341a65696a0d3988ff, type: 3}
-  - {fileID: 222669640926418954, guid: 65c4eb1a201663043849880a915a21e5, type: 3}
   - {fileID: 222669640926418954, guid: 1d43fe31d37b1834bab4a4a93d21ad6a, type: 3}
   - {fileID: 222669640926418954, guid: ae0726b87f355624298d696180000cc4, type: 3}
   playerResources:
@@ -5562,12 +5562,13 @@ MonoBehaviour:
   - {fileID: 1047785010}
   - {fileID: 695271007}
   - {fileID: 498255680}
-  timer: 5
+  timer: 100
   gameCounter: {fileID: 828912814}
   playerPrefab: {fileID: 256175392684628159, guid: 335b48dcca40f504d8794a2091c245d0,
     type: 3}
   gameOver: {fileID: 172202242}
-  animator: []
+  animationsRun: []
+  animationsStop: []
 --- !u!4 &1950683190
 Transform:
   m_ObjectHideFlags: 0

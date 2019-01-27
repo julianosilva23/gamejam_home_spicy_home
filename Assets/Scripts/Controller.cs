@@ -60,7 +60,8 @@ public class Controller : MonoBehaviour
 	}
 
 	private string setMask(int number, string type, int score){
-		return number.ToString() + " " + score.ToString();
+		Debug.Log(score);
+		return score.ToString();
 	}
 
 	IEnumerator GameTimer(int timeLeft){
@@ -82,13 +83,13 @@ public class Controller : MonoBehaviour
 		// assigned resource value in text field
 		countPlayers = players.Length;
 
-		//for (int i = 0; i < countPlayers; i++){
+		for (int i = 0; i < countPlayers; i++){
 		
-		// 	playerResources[i].text = setMask(i, "res", players[i].getResource());
+			playerResources[i].text = setMask(i, "res", players[i].getResource());
 
-		// 	playerHouses[i].text = setMask(i, "home", players[i].getHome());
+			playerHouses[i].text = setMask(i, "home", players[i].getHome());
 
-		//}
+		}
 
 
 	}

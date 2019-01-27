@@ -143,7 +143,7 @@ public class Player : MonoBehaviour
 
                 setIsMoveing(true);
 
-                animator.SetBool("isMoving", isMoving);
+                // animator.SetBool("isMoving", isMoving);
             }
             if (Input.GetAxisRaw("Horizontal" + typeInput) == -1){
                 
