@@ -55,7 +55,7 @@ public class Controller : MonoBehaviour
 	}
 
 	private string setMask(int number, string type, int score){
-		return "P" + number.ToString() + " " + type.ToString() + ": " + score.ToString();
+		return number.ToString() + " " + score.ToString();
 	}
 
 	IEnumerator GameTimer(int timeLeft){
