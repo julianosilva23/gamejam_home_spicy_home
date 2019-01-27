@@ -162,7 +162,7 @@ public class Player : MonoBehaviour
     public bool setIsMoveing(bool mov){
         isMoving = mov;
 
-        animator.SetBool("isMoving", isMoving);
+        //animator.SetBool("isMoving", isMoving);
 
         return isMoving;
 

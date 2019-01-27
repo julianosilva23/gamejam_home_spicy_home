@@ -15,11 +15,11 @@ public class Bomb : MonoBehaviour
     IEnumerator BombTimer(int countdown){
         yield return new WaitForSeconds(countdown);
         Explode();
+        Destroy(gameObject);
     }
 
     void Explode(){
         GameObject objBlast = Instantiate(blast, transform.position, transform.rotation);
-        Destroy(gameObject);
     }
 
    void OnTriggerEnter2D(Collider2D col){
