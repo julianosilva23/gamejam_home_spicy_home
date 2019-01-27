@@ -126,7 +126,7 @@ public class Controller : MonoBehaviour
 	//
 	//}
 
-	void Return(){
+	public void Return(){
 		SceneManager.LoadScene("menu");
 	}
 }
