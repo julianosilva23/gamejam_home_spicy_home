@@ -22,7 +22,9 @@ public class Controller : MonoBehaviour
 
 	public GameObject gameOver;
 
-	public Animator[] animator;
+	public AnimationClip[] animationsRun;
+
+	public AnimationClip[] animationsStop;
 
 	int highScore;
 
@@ -49,7 +51,7 @@ public class Controller : MonoBehaviour
 
 		foreach (string input in Keyboard.TypeInput){
 
-			players[i] = AnimationClip(input, houses[i], animator[i]).GetComponent<Player>();
+			players[i] = AnimationClip(input, houses[i]).GetComponent<Player>();
 
 			i++;
 		}
@@ -58,7 +60,7 @@ public class Controller : MonoBehaviour
 	}
 
 	private string setMask(int number, string type, int score){
-		return score.ToString();
+		return number.ToString() + " " + score.ToString();
 	}
 
 	IEnumerator GameTimer(int timeLeft){
@@ -80,28 +82,32 @@ public class Controller : MonoBehaviour
 		// assigned resource value in text field
 		countPlayers = players.Length;
 
-		for (int i = 0; i < countPlayers; i++){
+		//for (int i = 0; i < countPlayers; i++){
 		
-		 	playerResources[i].text = setMask(i, "res", players[i].getResource());
+		// 	playerResources[i].text = setMask(i, "res", players[i].getResource());
 
-		 	playerHouses[i].text = setMask(i, "home", players[i].getHome());
+		// 	playerHouses[i].text = setMask(i, "home", players[i].getHome());
 
-		}
+		//}
 
 
 	}
 
 	public void EndTime(){
 		SetCount(0);
+		Debug.Log("***");
 		foreach (Player player in players){
 			Debug.Log(player.getHome());
 			if (player.getHome() > highScore){
+				Debug.Log("::::::");
 				highScore = player.getHome();
 				winner = player;
 			}
+			Debug.Log("Who-");
 		}
+		Debug.Log("Whooooooaaaa");
 		gameOver.SetActive(true);
-		gameOver.GetComponent<Text>().text = winner.getCharName() + "'s tribe now owns the Land!";
+		gameOver.GetComponent<Text>().text = winner.getCharName() + "'s crew now owns the Land!";
 
 	}
 
@@ -109,13 +115,13 @@ public class Controller : MonoBehaviour
 		gameCounter.text = timeLeft.ToString();
 	}
 
-	public GameObject AnimationClip(string type_input, GameObject house, Animator anim){
+	public GameObject AnimationClip(string type_input, GameObject house){
 
 		player = Instantiate(playerPrefab, new Vector3(2.0F, 0, 0), Quaternion.identity);
 
 		player.GetComponent<Player>().setTypeInput(type_input);
 
-		player.GetComponent<Player>().setAnimator(anim);
+		// player.GetComponent<Player>().setAnimator(animRun, animStop);
 
 		player.GetComponent<Player>().builtHome = house;
 
