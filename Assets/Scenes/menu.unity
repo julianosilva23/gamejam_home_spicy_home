@@ -173,13 +173,23 @@ MonoBehaviour:
   - Name Char2
   - Name Char3
   - Name Char4
+  - Name Char5
+  - Name Char6
+  - Name Char7
+  - Name Char8
+  - Name Char9
   name: {fileID: 2080007931}
   player: {fileID: 266699379}
   players: []
   image:
-  - {fileID: 21300004, guid: 62668113fa64c784198a61f410f30e9b, type: 3}
-  - {fileID: 21300004, guid: 332851c4b07def349b5c82e02969d361, type: 3}
-  - {fileID: 21300000, guid: 1261c5f17604c9343a6bf895c3d9dbc7, type: 3}
+  - {fileID: 21300000, guid: dc75487a4077961458e06db3df11b9c3, type: 3}
+  - {fileID: 21300000, guid: 9ef9436f959bf7543b2ecee0339cf292, type: 3}
+  - {fileID: 21300000, guid: 62668113fa64c784198a61f410f30e9b, type: 3}
+  - {fileID: 21300000, guid: 1475b82b1dcbde542ae5a3c95cf9e017, type: 3}
+  - {fileID: 21300000, guid: 9e197bdad686b92439b528957a0f9aad, type: 3}
+  - {fileID: 21300000, guid: 99a719f570c308b489d5b9f3c27fe51a, type: 3}
+  - {fileID: 21300000, guid: afab6e922346a4a4482be77333e8ad43, type: 3}
+  - {fileID: 21300000, guid: 001666c52d7f8184381e66da5aeb1818, type: 3}
   - {fileID: 21300008, guid: 332851c4b07def349b5c82e02969d361, type: 3}
   imageContainer: {fileID: 217136111}
 --- !u!1 &26250884
