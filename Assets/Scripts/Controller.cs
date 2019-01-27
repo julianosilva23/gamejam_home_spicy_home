@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Controller : MonoBehaviour
 {
@@ -103,5 +104,13 @@ public class Controller : MonoBehaviour
 
 		return player;
 
+	}
+
+	void Replay(){
+
+	}
+
+	void Return(){
+		SceneManager.LoadScene("menu");
 	}
 }

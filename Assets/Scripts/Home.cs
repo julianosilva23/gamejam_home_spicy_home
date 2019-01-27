@@ -13,6 +13,10 @@ public class Home : MonoBehaviour
     public Sprite halfDone;
     public Sprite done;
 
+    public AudioClip incendio;
+    AudioSource audioSource;
+
+
     int buildTime;
 
     // Start is called before the first frame update
@@ -20,6 +24,7 @@ public class Home : MonoBehaviour
     {
        fire = false;
        owner.setHome(owner.getHome() + 1);
+       audioSource = GetComponent<AudioSource> ();
     }
 
      void OnTriggerEnter2D(Collider2D col){
@@ -44,9 +49,10 @@ public class Home : MonoBehaviour
     }
     
     IEnumerator OnFire(int timer){
+        audioSource.PlayOneShot (incendio, 1f);
         fire = true;
         GameObject burning = Instantiate(flames, transform.position, transform.rotation);
-        //GetComponent<AudioSource>().Play ();
+        GetComponent<AudioSource>().Play ();
         gameObject.GetComponent<CircleCollider2D>().enabled = true;
         yield return new WaitForSeconds(timer);
         owner.setHome(owner.getHome() - 1);
