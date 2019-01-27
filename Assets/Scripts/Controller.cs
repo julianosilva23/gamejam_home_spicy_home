@@ -101,7 +101,7 @@ public class Controller : MonoBehaviour
 			}
 		}
 		gameOver.SetActive(true);
-		gameOver.GetComponent<Text>().text = winner.getCharName() + "'s tribe now owns the Land!";
+		gameOver.GetComponentInChildren<Text>().text = winner.getCharName() + "Game Over"; //s tribe now owns the Land!
 
 	}
 
