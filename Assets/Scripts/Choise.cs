@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Choise : MonoBehaviour
 {
@@ -33,7 +34,11 @@ public class Choise : MonoBehaviour
 
 	private bool trigger;
 
+	private int choiseController = 1;
 
+	private GameObject canvas;
+
+	private GameObject gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -65,7 +70,7 @@ public class Choise : MonoBehaviour
 
     	charCount = charCount + (int) keyPress;
 
-    	if(charCount < 0 || charCount > (names.Length)){
+    	if(charCount == 0){
 
     		charCount = (names.Length);
 
@@ -76,7 +81,6 @@ public class Choise : MonoBehaviour
     		charCount = 1;
 
     	}
-
 
     	yield return new WaitForSeconds(1);
     	
@@ -94,34 +98,61 @@ public class Choise : MonoBehaviour
 
 		control = Keyboard.Control;
 
-		charCount = (names.Length);
+		charCount = 1;
 
-		setChar(0);
+		setChar(charCount);
+
+		ChoiseNext(choiseController);
 
     }
 
     public void setChar(int charCount){
 
-    	if(charCount <= (names.Length) && charCount >= 0){
+    	if(charCount <= (names.Length) && charCount > 0){
 
     		if(charCount == 0){
 
-    			// Debug.Log(image[charCount]);
+    			// name.text = names[charCount];
 
-    			name.text = names[charCount];
-
-    			imageContainer.sprite = image[charCount];
+    			// imageContainer.sprite = image[charCount];
 
     		}else{
 
 	    		name.text = names[charCount - 1];
 
-    			imageContainer.sprite = image[charCount -1];
+    			imageContainer.sprite = image[charCount - 1];
 
     		}
-    		
+    	}
+    }
+
+    public void Play(){
+
+    	Debug.Log(Keyboard.TypeInput[charCount - 1]);
+
+    	if(choiseController >= playerCount){
+
+    		canvas = GameObject.Find("Canvas");
+
+    		canvas.SetActive(false);
+
+    		// Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
+        	SceneManager.LoadScene("Map1", LoadSceneMode.Additive);
+
+
+
+    	}else{
+
+    		ChoiseNext(choiseController + 1);
 
     	}
+
+    	choiseController++;
+    }
+
+    private void ChoiseNext(int number_player){
+
+    	player.text = "Player " + number_player.ToString() + ": Select Yout Character";
 
 
     }

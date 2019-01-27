@@ -9,4 +9,9 @@ public static class Keyboard
 
 	public static string Control;
 
+	public static int keyChar;
+
+	public static string[] TypeInput;
+
+
 }

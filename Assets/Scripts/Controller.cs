@@ -15,22 +15,29 @@ public class Controller : MonoBehaviour
 
 	public Text gameCounter;
 
+	public GameObject playerPrefab;
+
 	int highScore;
 
 	Player winner;
 
 	int countPlayers;
 
+	private GameObject player;
+
 
     // Start is called before the first frame update
 	void Start()
 	{
 		highScore = 0;
+
+		foreach (string input in Keyboard.TypeInput){
+
+			addPlayer(input);
+
+		}
+
 		StartCoroutine(GameTimer(timer));
-
-
-
-
 	}
 
 	private string setMask(int number, string type, int score){
@@ -41,8 +48,6 @@ public class Controller : MonoBehaviour
 		while (timeLeft > 0) {
         	
         	yield return new WaitForSeconds (1);
-
-        	Debug.Log(timeLeft);
 
         	SetCount(timeLeft);
 
@@ -81,5 +86,15 @@ public class Controller : MonoBehaviour
 
 	public void SetCount(int timeLeft){
 		gameCounter.text = timeLeft.ToString();
+	}
+
+	public GameObject addPlayer(string type_input){
+
+		player = Instantiate(playerPrefab, new Vector3(2.0F, 0, 0), Quaternion.identity);
+
+		player.GetComponent<Player>().setTypeInput(type_input);
+
+		return player;
+
 	}
 }

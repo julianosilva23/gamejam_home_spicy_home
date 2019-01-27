@@ -70,8 +70,6 @@ public class Menu : MonoBehaviour
 
     	string methodName = e.name.Replace(" ", "_");
 
-    	Debug.Log(methodName);
-
     	Invoke(methodName, 0f);
 
     }
@@ -179,9 +177,13 @@ public class Menu : MonoBehaviour
 
 		Choise_Play();
 
-		// KeyBoard.CountPlayer = 2;
+		string[] inputs = {"Key1", "Key2"};
 
-		// KeyBoard.Control = "keyboard";
+		Keyboard.TypeInput = inputs;	
+
+		Keyboard.CountPlayer = 2;
+
+		Keyboard.Control = "keyboard";
 
 	}
 
@@ -189,9 +191,13 @@ public class Menu : MonoBehaviour
 
 		Choise_Play();
 
-		//KeyBoard.CountPlayer = 2;
+		string[] inputs = {"Joy1", "Joy2"};
 
-		//KeyBoard.Control = "joystic";
+		Keyboard.TypeInput = inputs;
+
+		Keyboard.CountPlayer = 2;
+
+		Keyboard.Control = "joystic";
 
 	}
 
@@ -199,9 +205,13 @@ public class Menu : MonoBehaviour
 
 		Choise_Play();
 
-		//KeyBoard.CountPlayer = 4;
+		string[] inputs = {"Joy1", "Joy2", "Joy1", "Joy2"};
 
-		//KeyBoard.Control = "joystic";
+		Keyboard.TypeInput = inputs;
+
+		Keyboard.CountPlayer = 4;
+
+		Keyboard.Control = "joystic";
 
 	}
 
@@ -209,9 +219,9 @@ public class Menu : MonoBehaviour
 
 		Choise_Play();
 
-		//Keyboard.CountPlayer = 4;
+		Keyboard.CountPlayer = 4;
 
-		//Keyboard.Control = "mixed";
+		Keyboard.Control = "mixed";
 
 		ChangeScreen(GoKeyboardChoise, ManageStatus(screenStatus));
 

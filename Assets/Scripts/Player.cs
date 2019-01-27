@@ -182,4 +182,16 @@ public class Player : MonoBehaviour
 
         return home;
     }
+
+    public string setTypeInput(string type){
+
+        typeInput = type;
+
+        return typeInput;
+    }
+
+    public string getTypeInput(){
+
+        return typeInput;
+    }
 }
