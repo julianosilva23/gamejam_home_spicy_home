@@ -9,7 +9,7 @@ public static class Keyboard
 
 	public static string Control;
 
-	public static int keyChar;
+	public static int[] NumberChar = {0,0,0,0,0,0,0,0,0,0,0,0};
 
 	public static string[] TypeInput;
 
