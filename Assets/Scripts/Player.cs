@@ -5,26 +5,48 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float moveSpeed;
+
     public int bombCooldown;
+
     public int blastCooldown;
+
     public int resource;
+
     public int home;
+
     public string typeInput;
+
     float direction;
+
     float bombSpawn;
+
     bool isMoving;
+
     bool alive;
+
     bool hasBomb;
+
     string charName;
 
     public GameObject bomb;
+
     public GameObject builtHome;
 
-    public AnimationClip animationsStop;
+    // private RuntimeAnimatorController rac;
 
-    public AnimationClip animationsRun;
+    public Animator anim;
 
-    public Animator animator;
+    // public AnimationClip[] animationsStop;
+
+    // public AnimationClip[] animationsRun;
+
+    // public Animator animator;
+    
+    // public AnimatorOverrideController animatorOverrideController;
+
+    // public AnimatorOverrideController teste;
+
+    // public RuntimeAnimatorController teste1;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +57,8 @@ public class Player : MonoBehaviour
 
         alive = true;
 
-        hasBomb = true;
+        hasBomb = true;        
+        
     }
 
     void OnTriggerEnter2D(Collider2D col){
@@ -43,7 +66,9 @@ public class Player : MonoBehaviour
         if (col.tag == "Resource"){
             
             setResource(resource + 1);
+
             //col.gameObject.GetComponent<AudioSource>().Play ();
+
             Destroy(col.gameObject);
         }
 
@@ -58,10 +83,15 @@ public class Player : MonoBehaviour
         while (timer > 0){
             i=2;
             while (i > 0){
+
                 gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
                 yield return new WaitForSeconds(0.25f);
+
                 gameObject.GetComponent<SpriteRenderer>().enabled = true;
+
                 yield return new WaitForSeconds(0.25f);
+
                 i--;
             }
             timer --;
@@ -89,41 +119,69 @@ public class Player : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
         if (hasBomb && alive){
+
             if (Input.GetButtonDown("Fire1" + typeInput)){
+
                 bombSpawn = direction / 2;
-                Debug.Log("Fire1" + typeInput);
+
                 hasBomb = false;
-                Instantiate(bomb,  new Vector2((float)transform.position.x + bombSpawn, transform.position.y), transform.rotation);
+
+                Instantiate(
+                    bomb,
+                    new Vector2((float)transform.position.x + bombSpawn, transform.position.y),
+                    transform.rotation
+                );
+
                 StartCoroutine(BombCooldown(bombCooldown));
             }
         }
         if (getResource() >= 5){
+
             if (Input.GetButtonDown("Fire2" + typeInput)){
+
                 StartCoroutine(BuildHome(bombCooldown + 3));
             }
         }
     }
 
     IEnumerator BuildHome(int buildTime){
+
         alive = false;
-        GameObject building = Instantiate(builtHome, new Vector2(transform.position.x + direction, transform.position.y), transform.rotation);
+        GameObject building = Instantiate(
+            builtHome,
+            new Vector2(transform.position.x + direction, transform.position.y),
+            transform.rotation);
+
         Home house = building.GetComponent<Home>();
+
         house.owner = gameObject.GetComponent<Player>();
+
         house.setBuildTime(buildTime);
+
         setResource(getResource() - 3);
+
         buildTime = buildTime * 2;
+
         while (buildTime > 0){
-            Debug.Log(buildTime.ToString());
+
             yield return new WaitForSeconds(0.5f);
+
             if (buildTime % 2 != 0){
+
                 building.GetComponent<SpriteRenderer>().sprite = house.halfDone;
+
                 if (buildTime >= 5 ){
+
                      building.GetComponent<SpriteRenderer>().enabled = true;  
                 }
             } else{
+
                 if (buildTime < 5 ){
+
                     building.GetComponent<SpriteRenderer>().sprite = house.done;
+
                 } else {
+
                     building.GetComponent<SpriteRenderer>().enabled = false;
                 }
             }
@@ -134,11 +192,15 @@ public class Player : MonoBehaviour
     }
 
     void PlayerMove(){
+
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(
-                moveSpeed * Time.fixedDeltaTime * Input.GetAxisRaw("Horizontal" + typeInput), 
-                moveSpeed * Time.fixedDeltaTime * Input.GetAxisRaw("Vertical" + typeInput)
-            );
+
+                moveSpeed * Time.fixedDeltaTime * Input.GetAxisRaw("Horizontal" + typeInput),
+
+                moveSpeed * Time.fixedDeltaTime * Input.GetAxisRaw("Vertical" + typeInput));
+            
             if (Input.GetAxisRaw("Horizontal" + typeInput) == 1){
+                
                 direction = 1;
 
                 setIsMoveing(true);
@@ -231,17 +293,35 @@ public class Player : MonoBehaviour
         return charName;
     }
 
-    public void setAnimator(Animator anim){
+    public void setAnimator(RuntimeAnimatorController rac){
 
-        // GameObject.Ger.RuntimeAnimatorController = anim;
+        anim = GetComponent<Animator>();
 
-        // animator = gameObject.GetComponent<Animator>();
+        anim.runtimeAnimatorController = rac as RuntimeAnimatorController;
+     
+        // animator.runtimeAnimatorController = rac as RuntimeAnimatorController;
 
-        // animator.runtimeAnimatorController =  anim as RuntimeAnimatorController;
+        // Debug.Log(animator.runtimeAnimatorController);
 
-        // controller = overrideController.runtimeAnimatorController;
-        
-        // overrideController = anim as AnimatorOverrideController;
+        // animator = GetComponent<Animator>();
+
+        // animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
+
+        // animator.runtimeAnimatorController = animatorOverrideController;
+
+        // animatorOverrideController = teste1 as AnimatorOverrideController;
+
+        // Debug.Log(animatorOverrideController.name);
+
+        // Animator animator = GetComponent<Animator>();
+
+        // animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
+
+        // animator.runtimeAnimatorController = animatorOverrideController;
+
+        // animatorOverrideController["LandGuy_Main"] = animRun;
+
+        // animatorOverrideController["LandGuy_Stop"] = animStop;
 
     }
 }

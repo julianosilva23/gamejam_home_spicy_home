@@ -104,6 +104,7 @@ MonoBehaviour:
   bomb: {fileID: 2155331609324510802, guid: 8a6f16c5173dcb0438fe9165ae68b2bd, type: 3}
   builtHome: {fileID: 222669640926418954, guid: 6746b88bd43c5e341a65696a0d3988ff,
     type: 3}
+  rac: {fileID: 9100000, guid: a8ee72671be10c6479cb6b0249e59c03, type: 2}
 --- !u!50 &256175392684628147
 Rigidbody2D:
   serializedVersion: 4
@@ -161,7 +162,7 @@ Animator:
   m_GameObject: {fileID: 256175392684628159}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a014165d13e064947a604d2953252456, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -59,9 +59,7 @@ public class Choise : MonoBehaviour
 
     		StartCoroutine(changeChar(keyPress));
 
-    	}
-
-        
+    	}        
     }
 
     public IEnumerator changeChar(float keyPress){
@@ -128,7 +126,12 @@ public class Choise : MonoBehaviour
 
     public void Play(){
 
-    	Debug.Log(charCount - 1);
+    	Debug.Log("choiseController: " + choiseController.ToString());
+
+
+    	Debug.Log("charCount: " + charCount.ToString());
+
+    	Keyboard.NumberChar[choiseController - 1] = charCount - 1;
 
     	if(choiseController >= playerCount){
 
