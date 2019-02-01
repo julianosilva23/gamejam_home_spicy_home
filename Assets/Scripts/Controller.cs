@@ -71,13 +71,15 @@ public class Controller : MonoBehaviour
 	}
 
 	IEnumerator GameTimer(int timeLeft){
+		SetCount(timeLeft);
+		
 		while (timeLeft > 0) {
         	
         	yield return new WaitForSeconds (1);
 
-        	SetCount(timeLeft);
+			timeLeft--;
 
-         	timeLeft--;
+        	SetCount(timeLeft);
         }
 
         EndTime();
@@ -103,13 +105,13 @@ public class Controller : MonoBehaviour
 	public void EndTime(){
 		SetCount(0);
 
-		foreach (Player player in players){
+		for (int i = 0; i < countPlayers; i++){
 
-			if (player.getHome() > highScore){
+			if (players[i].getHome() > highScore){
 
-				highScore = player.getHome();
+				highScore = players[i].getHome();
 
-				winner = player;
+				winner = players[i];
 			}
 
 		}

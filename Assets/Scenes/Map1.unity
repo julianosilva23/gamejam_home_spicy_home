@@ -5898,7 +5898,7 @@ MonoBehaviour:
   - {fileID: 1047785010}
   - {fileID: 695271007}
   - {fileID: 498255680}
-  timer: 100
+  timer: 5
   gameCounter: {fileID: 828912814}
   playerPrefab: {fileID: 256175392684628159, guid: 335b48dcca40f504d8794a2091c245d0,
     type: 3}
