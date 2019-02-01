@@ -10,7 +10,7 @@ public class Treevore : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col){
         if (col.tag == "Boom"){
-            Debug.Log("Arvore Imortal eh o krl!!!");
+            //Debug.Log("Arvore Imortal eh o krl!!!");
             while (amount > 0){
                 Instantiate(drop, transform.position, transform.rotation);
                 amount --;

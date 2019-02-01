@@ -114,15 +114,11 @@ public class Player : MonoBehaviour
     {
         if (alive){
             PlayerMove();
-            
-        } else {
-            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        }
-        if (hasBomb && alive){
+            if (hasBomb){
 
             if (Input.GetButtonDown("Fire1" + typeInput)){
 
-                bombSpawn = direction / 2;
+                bombSpawn = direction / 3;
 
                 hasBomb = false;
 
@@ -133,14 +129,17 @@ public class Player : MonoBehaviour
                 );
 
                 StartCoroutine(BombCooldown(bombCooldown));
+                }
+            }
+            if (getResource() >= 5){
+
+                if (Input.GetButtonDown("Fire2" + typeInput)){
+                    StartCoroutine(BuildHome(bombCooldown + 3));
             }
         }
-        if (getResource() >= 5){
 
-            if (Input.GetButtonDown("Fire2" + typeInput)){
-
-                StartCoroutine(BuildHome(bombCooldown + 3));
-            }
+        } else {
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
     }
 
@@ -155,8 +154,6 @@ public class Player : MonoBehaviour
         Home house = building.GetComponent<Home>();
 
         house.owner = gameObject.GetComponent<Player>();
-
-        house.setBuildTime(buildTime);
 
         setResource(getResource() - 3);
 
@@ -199,7 +196,7 @@ public class Player : MonoBehaviour
 
                 moveSpeed * Time.fixedDeltaTime * Input.GetAxisRaw("Vertical" + typeInput));
             
-            if (Input.GetAxisRaw("Horizontal" + typeInput) == 1){
+            if (Input.GetAxisRaw("Horizontal" + typeInput) > 0){
                 
                 direction = 1;
 
@@ -207,7 +204,7 @@ public class Player : MonoBehaviour
 
                 // animator.SetBool("isMoving", isMoving);
             }
-            if (Input.GetAxisRaw("Horizontal" + typeInput) == -1){
+            if (Input.GetAxisRaw("Horizontal" + typeInput) < 0){
                 
                 direction = -1;
 
@@ -232,17 +229,13 @@ public class Player : MonoBehaviour
 
     void SpriteWork(){
         if (direction == 1){
-            if (isMoving){
-                //animação andando p/ direita
-            } else {
-                //sprite parado direita
+            if (gameObject.GetComponent<Transform>().localScale.x < 0){
+                gameObject.GetComponent<Transform>().localScale *= new Vector2(-1,1);
             }
         }
         if (direction == -1){
-            if (isMoving){
-                //animação andando p/ esquerda
-            } else {
-                //sprite parado esquerda
+            if (gameObject.GetComponent<Transform>().localScale.x > 0){
+                gameObject.GetComponent<Transform>().localScale*= new Vector2(-1,1);
             }
         }
     }
@@ -267,6 +260,10 @@ public class Player : MonoBehaviour
         home = value;
 
         return home;
+    }
+
+    public void LessHome(){
+        home --;
     }
 
     public string setTypeInput(string type){

@@ -5881,6 +5881,8 @@ MonoBehaviour:
   players:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   houses:
   - {fileID: 222669640926418954, guid: 1d43fe31d37b1834bab4a4a93d21ad6a, type: 3}
   - {fileID: 222669640926418954, guid: 6746b88bd43c5e341a65696a0d3988ff, type: 3}

@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 256175392684628159}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.4499, y: -2.968, z: 0}
-  m_LocalScale: {x: 0.11772335, y: 0.11772335, z: 0.23393743}
+  m_LocalScale: {x: 0.1177234, y: 0.1177234, z: 0.23393743}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   bomb: {fileID: 2155331609324510802, guid: 8a6f16c5173dcb0438fe9165ae68b2bd, type: 3}
   builtHome: {fileID: 222669640926418954, guid: 6746b88bd43c5e341a65696a0d3988ff,
     type: 3}
-  rac: {fileID: 9100000, guid: a8ee72671be10c6479cb6b0249e59c03, type: 2}
+  anim: {fileID: 0}
 --- !u!50 &256175392684628147
 Rigidbody2D:
   serializedVersion: 4

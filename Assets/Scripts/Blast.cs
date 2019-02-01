@@ -8,11 +8,11 @@ public class Blast : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<AudioSource>().PlayOneShot(gameObject.GetComponent<AudioSource>().clip, 1f);
-        StartCoroutine(BoomTimer(1));
+        StartCoroutine(BoomTimer(0.6f));
     }
 
 
-    IEnumerator BoomTimer(int duration){
+    IEnumerator BoomTimer(float duration){
         yield return new WaitForSeconds(duration);
         //gameObject.SetActive(false);
         //yield return new WaitForSeconds(duration * 2);
