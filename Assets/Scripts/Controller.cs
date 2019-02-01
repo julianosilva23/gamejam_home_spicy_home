@@ -103,10 +103,10 @@ public class Controller : MonoBehaviour
 	}
 
 	public void EndTime(){
-		SetCount(0);
+		SetCount(999);
 
 		for (int i = 0; i < countPlayers; i++){
-
+			Debug.Log(players[i].getCharName());
 			if (players[i].getHome() > highScore){
 
 				highScore = players[i].getHome();
