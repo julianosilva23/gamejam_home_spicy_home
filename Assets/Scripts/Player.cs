@@ -208,23 +208,23 @@ public class Player : MonoBehaviour
             if (Input.GetAxisRaw("Horizontal" + typeInput) > 0){
                 
                 direction = 1;
-                Debug.Log("->");
+                //Debug.Log("->");
                 setIsMoving(true);
 
             }
             if (Input.GetAxisRaw("Horizontal" + typeInput) < 0){
                 
                 direction = -1;
-                Debug.Log("<-");
+                //Debug.Log("<-");
                 setIsMoving(true);
 
             }
             if (Input.GetAxisRaw("Vertical" + typeInput) != 0){
-                Debug.Log("^v");
+                //Debug.Log("^v");
                 setIsMoving(true);
             }
             if (Input.GetAxisRaw("Horizontal" + typeInput) == 0 && Input.GetAxisRaw("Vertical" + typeInput) == 0){
-                Debug.Log("x");
+                //Debug.Log("x");
                 setIsMoving(false);
             }
             SpriteWork();
@@ -232,7 +232,7 @@ public class Player : MonoBehaviour
 
     public bool setIsMoving(bool mov){
         isMoving = mov;
-        Debug.Log(mov);
+        //Debug.Log(mov);
         gameObject.GetComponent<Animator>().SetBool("isMoving", mov);
 
         return isMoving;
