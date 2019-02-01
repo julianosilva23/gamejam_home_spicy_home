@@ -190,7 +190,7 @@ public class Menu : MonoBehaviour
 	}
 
 	void four_joystics(){
-
+		
 		Choise_Play();
 
 		string[] inputs = {"Joy1", "Joy2", "Joy3", "Joy4"};
@@ -204,10 +204,12 @@ public class Menu : MonoBehaviour
 	}
 
 	void four_mixed(){
-
+		Debug.Log("Deu boa aqui");
 		Choise_Play();
 
 		string[] inputs = {"Joy1", "Joy2", "Key1", "Key2"};
+
+		Keyboard.TypeInput = inputs;
 
 		Keyboard.CountPlayer = 4;
 
