@@ -91,12 +91,12 @@ TextureImporter:
       name: landguyAnima_0
       rect:
         serializedVersion: 2
-        x: 455
+        x: 434
         y: 668
-        width: 301
-        height: 358
+        width: 350
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -111,12 +111,12 @@ TextureImporter:
       name: landguyAnima_1
       rect:
         serializedVersion: 2
-        x: 94
-        y: 133
-        width: 265
-        height: 353
+        x: 53
+        y: 134
+        width: 350
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,12 +131,12 @@ TextureImporter:
       name: landguyAnima_2
       rect:
         serializedVersion: 2
-        x: 480
-        y: 132
-        width: 270
-        height: 358
+        x: 443
+        y: 133
+        width: 350
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,12 +151,12 @@ TextureImporter:
       name: landguyAnima_3
       rect:
         serializedVersion: 2
-        x: 838
+        x: 796
         y: 136
-        width: 270
-        height: 356
+        width: 350
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

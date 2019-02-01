@@ -90,12 +90,12 @@ TextureImporter:
       name: KEK_IDLE+RUN_0
       rect:
         serializedVersion: 2
-        x: 459
+        x: 433
         y: 687
-        width: 306
-        height: 274
+        width: 350
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -110,12 +110,12 @@ TextureImporter:
       name: KEK_IDLE+RUN_1
       rect:
         serializedVersion: 2
-        x: 79
-        y: 133
-        width: 306
-        height: 280
+        x: 57
+        y: 132
+        width: 350
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,12 +130,12 @@ TextureImporter:
       name: KEK_IDLE+RUN_2
       rect:
         serializedVersion: 2
-        x: 477
-        y: 132
-        width: 306
-        height: 288
+        x: 455
+        y: 131
+        width: 350
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

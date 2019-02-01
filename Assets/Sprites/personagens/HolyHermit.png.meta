@@ -124,12 +124,12 @@ TextureImporter:
       name: HolyHermit_0
       rect:
         serializedVersion: 2
-        x: 464
+        x: 408
         y: 668
-        width: 291
-        height: 445
+        width: 400
+        height: 450
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,12 +144,12 @@ TextureImporter:
       name: HolyHermit_1
       rect:
         serializedVersion: 2
-        x: 87
+        x: 24
         y: 131
-        width: 281
-        height: 445
+        width: 400
+        height: 450
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -164,12 +164,12 @@ TextureImporter:
       name: HolyHermit_2
       rect:
         serializedVersion: 2
-        x: 483
+        x: 424
         y: 139
-        width: 263
-        height: 445
+        width: 400
+        height: 450
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,12 +184,12 @@ TextureImporter:
       name: HolyHermit_3
       rect:
         serializedVersion: 2
-        x: 832
+        x: 775
         y: 138
-        width: 256
-        height: 446
+        width: 400
+        height: 450
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

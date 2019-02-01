@@ -124,12 +124,12 @@ TextureImporter:
       name: GralhaAnima_0
       rect:
         serializedVersion: 2
-        x: 424
+        x: 417
         y: 668
-        width: 300
-        height: 288
+        width: 330
+        height: 380
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,12 +144,12 @@ TextureImporter:
       name: GralhaAnima_1
       rect:
         serializedVersion: 2
-        x: 62
-        y: 134
-        width: 298
-        height: 278
+        x: 60
+        y: 133
+        width: 330
+        height: 380
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -164,12 +164,12 @@ TextureImporter:
       name: GralhaAnima_2
       rect:
         serializedVersion: 2
-        x: 453
-        y: 132
-        width: 298
-        height: 287
+        x: 448
+        y: 133
+        width: 330
+        height: 380
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,12 +184,12 @@ TextureImporter:
       name: GralhaAnima_3
       rect:
         serializedVersion: 2
-        x: 808
+        x: 795
         y: 136
-        width: 298
-        height: 288
+        width: 330
+        height: 380
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

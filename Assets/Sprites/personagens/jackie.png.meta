@@ -91,12 +91,12 @@ TextureImporter:
       name: jackie_0
       rect:
         serializedVersion: 2
-        x: 467
+        x: 429
         y: 668
-        width: 283
-        height: 349
+        width: 350
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -111,12 +111,12 @@ TextureImporter:
       name: jackie_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 133
-        width: 258
-        height: 353
+        x: 61
+        y: 134
+        width: 350
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,12 +131,12 @@ TextureImporter:
       name: jackie_2
       rect:
         serializedVersion: 2
-        x: 489
-        y: 132
-        width: 261
-        height: 358
+        x: 443
+        y: 133
+        width: 350
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,12 +151,12 @@ TextureImporter:
       name: jackie_3
       rect:
         serializedVersion: 2
-        x: 845
+        x: 806
         y: 136
-        width: 263
-        height: 356
+        width: 350
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

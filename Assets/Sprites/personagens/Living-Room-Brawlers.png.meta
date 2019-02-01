@@ -91,12 +91,12 @@ TextureImporter:
       name: Living-Room-Brawlers_0
       rect:
         serializedVersion: 2
-        x: 473
+        x: 423
         y: 669
-        width: 265
-        height: 312
+        width: 350
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -111,12 +111,12 @@ TextureImporter:
       name: Living-Room-Brawlers_1
       rect:
         serializedVersion: 2
-        x: 80
-        y: 134
-        width: 294
-        height: 324
+        x: 48
+        y: 133
+        width: 350
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,12 +131,12 @@ TextureImporter:
       name: Living-Room-Brawlers_2
       rect:
         serializedVersion: 2
-        x: 471
+        x: 458
         y: 133
-        width: 294
-        height: 333
+        width: 350
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,12 +151,12 @@ TextureImporter:
       name: Living-Room-Brawlers_3
       rect:
         serializedVersion: 2
-        x: 827
+        x: 810
         y: 137
-        width: 294
-        height: 329
+        width: 350
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
