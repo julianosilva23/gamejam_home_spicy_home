@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.AnimationModule;
 
 public class Player : MonoBehaviour
 {
@@ -110,7 +111,7 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (alive){
             PlayerMove();
@@ -207,29 +208,32 @@ public class Player : MonoBehaviour
             if (Input.GetAxisRaw("Horizontal" + typeInput) > 0){
                 
                 direction = 1;
+                Debug.Log("->");
+                setIsMoving(true);
 
-                setIsMoveing(true);
-
-                // animator.SetBool("isMoving", isMoving);
             }
             if (Input.GetAxisRaw("Horizontal" + typeInput) < 0){
                 
                 direction = -1;
-
-                setIsMoveing(false);
+                Debug.Log("<-");
+                setIsMoving(true);
 
             }
-            if (Input.GetAxisRaw("Horizontal" + typeInput) == 0){
-
-                setIsMoveing(false);
+            if (Input.GetAxisRaw("Vertical" + typeInput) != 0){
+                Debug.Log("^v");
+                setIsMoving(true);
+            }
+            if (Input.GetAxisRaw("Horizontal" + typeInput) == 0 && Input.GetAxisRaw("Vertical" + typeInput) == 0){
+                Debug.Log("x");
+                setIsMoving(false);
             }
             SpriteWork();
     }
 
-    public bool setIsMoveing(bool mov){
+    public bool setIsMoving(bool mov){
         isMoving = mov;
-
-        //animator.SetBool("isMoving", isMoving);
+        Debug.Log(mov);
+        gameObject.GetComponent<Animator>().SetBool("isMoving", mov);
 
         return isMoving;
 
