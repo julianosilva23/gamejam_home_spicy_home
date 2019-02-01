@@ -62,6 +62,10 @@ public class Choise : MonoBehaviour
     	}        
     }
 
+	public void changeCharOnClick(float next){
+		StartCoroutine(changeChar(next));
+	}
+
     public IEnumerator changeChar(float keyPress){
 
     	trigger = false;
