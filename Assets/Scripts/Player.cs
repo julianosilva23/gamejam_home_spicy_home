@@ -150,7 +150,9 @@ public class Player : MonoBehaviour
             builtHome,
             new Vector2(transform.position.x + direction, transform.position.y),
             transform.rotation);
-
+        
+        SpriteRenderer shadow = building.GetComponent<Transform>().GetChild(0).gameObject.GetComponent<SpriteRenderer>();
+        Debug.Log("Definiu sombra aqui");
         Home house = building.GetComponent<Home>();
 
         house.owner = gameObject.GetComponent<Player>();
@@ -161,30 +163,36 @@ public class Player : MonoBehaviour
 
         while (buildTime > 0){
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.2f);
 
             if (buildTime % 2 != 0){
 
                 building.GetComponent<SpriteRenderer>().sprite = house.halfDone;
+                shadow.enabled = true;
 
                 if (buildTime >= 5 ){
 
-                     building.GetComponent<SpriteRenderer>().enabled = true;  
+                     building.GetComponent<SpriteRenderer>().enabled = true; 
+                     shadow.enabled = true; 
                 }
             } else{
 
                 if (buildTime < 5 ){
 
                     building.GetComponent<SpriteRenderer>().sprite = house.done;
+                    shadow.enabled = true;
 
                 } else {
 
                     building.GetComponent<SpriteRenderer>().enabled = false;
+                    shadow.enabled = false;
+                    Debug.Log("Fez sombra sumir aqui");
                 }
             }
             buildTime --;
         }
         building.GetComponent<SpriteRenderer>().sprite = house.done;
+        shadow.enabled = true;
         alive = true;
     }
 
