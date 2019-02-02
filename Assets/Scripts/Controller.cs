@@ -35,6 +35,8 @@ public class Controller : MonoBehaviour
 
 	AudioSource audioSource;
 
+	public GameObject pauseMenu;
+
 	bool finish;
 
     // Start is called before the first frame update
@@ -91,13 +93,16 @@ public class Controller : MonoBehaviour
     }
 
     // Update is called once per frame
-	void Update()
+	void FixedUpdate()
 	{
 		// assigned resource value in text field
 		//countPlayers = players.Length;
 		countPlayers = Keyboard.TypeInput.Length;
 
 		if (!finish){
+			if (Input.GetButtonDown("Pause")){
+				Pause();
+			}
 			for (int i = 0; i < countPlayers; i++){
 			
 				playerResources[i].text = setMask(i, "res", players[i].getResource());
@@ -142,6 +147,7 @@ public class Controller : MonoBehaviour
 		} else {
 			gameOverText.text = "DRAW!";
 		}
+		Time.timeScale = 0f;
 	}
 
 	public void SetCount(int timeLeft){
@@ -164,9 +170,16 @@ public class Controller : MonoBehaviour
 
 	}
 
-	//void Replay(){
-	//
-	//}
+	public void Pause(){
+		Time.timeScale = 0f;
+		pauseMenu.SetActive(true);
+	}
+
+	public void unpause(){
+		Time.timeScale = 1f;
+		pauseMenu.SetActive(false);
+		gameOver.SetActive(false);
+	}
 
 	public void Return(){
 		SceneManager.LoadScene("menu");

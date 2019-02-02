@@ -932,9 +932,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 791301820}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1950683189}
+        m_MethodName: unpause
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4801,9 +4801,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 172202242}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1950683189}
+        m_MethodName: unpause
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6696,6 +6696,7 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 0c355099ba6911d4d9e57b03e7a66526, type: 2}
   - {fileID: 9100000, guid: d8798533697b9aa488b8ae8afaee323a, type: 2}
   - {fileID: 9100000, guid: 89bbd887e3bff8e4b84ee47bc069b03c, type: 2}
+  pauseMenu: {fileID: 791301820}
 --- !u!4 &1950683190
 Transform:
   m_ObjectHideFlags: 0
@@ -6724,7 +6725,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
