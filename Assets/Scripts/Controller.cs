@@ -99,10 +99,11 @@ public class Controller : MonoBehaviour
 		//countPlayers = players.Length;
 		countPlayers = Keyboard.TypeInput.Length;
 
-		if (!finish){
-			if (Input.GetButtonDown("Pause")){
+		if (Input.GetButtonDown("Pause")){
 				Pause();
 			}
+
+		if (!finish){
 			for (int i = 0; i < countPlayers; i++){
 			
 				playerResources[i].text = setMask(i, "res", players[i].getResource());
@@ -182,6 +183,7 @@ public class Controller : MonoBehaviour
 	}
 
 	public void Return(){
+		Time.timeScale = 1f;
 		SceneManager.LoadScene("menu");
 	}
 }
