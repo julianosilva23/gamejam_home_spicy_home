@@ -84,7 +84,7 @@ public class Menu : MonoBehaviour
 	}
 
 	private void Main_Exit(){
-
+		Application.Quit();
 	}
 
 	private void How_To_Play(){
@@ -120,7 +120,7 @@ public class Menu : MonoBehaviour
 	}
 
 	private void Play_Exit(){
-
+		Application.Quit();
 	}
 
 	private void Choise_Play(){

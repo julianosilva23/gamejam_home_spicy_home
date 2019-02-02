@@ -114,9 +114,9 @@ public class Choise : MonoBehaviour
 
     		if(charCount == 0){
 
-    			// name.text = names[charCount];
+    			 name.text = names[charCount];
 
-    			// imageContainer.sprite = image[charCount];
+    			 imageContainer.sprite = image[charCount];
 
     		}else{
 
@@ -159,7 +159,7 @@ public class Choise : MonoBehaviour
 
     private void ChoiseNext(int number_player){
 
-    	player.text = "Player " + number_player.ToString() + ": Select Yout Character";
+    	player.text = "Player " + number_player.ToString() + ": Select Your Character";
 
 
     }
