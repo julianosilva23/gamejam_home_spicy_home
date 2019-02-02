@@ -5898,11 +5898,12 @@ MonoBehaviour:
   - {fileID: 1047785010}
   - {fileID: 695271007}
   - {fileID: 498255680}
-  timer: 5
+  timer: 100
   gameCounter: {fileID: 828912814}
   playerPrefab: {fileID: 256175392684628159, guid: 335b48dcca40f504d8794a2091c245d0,
     type: 3}
   gameOver: {fileID: 172202242}
+  gameOverText: {fileID: 474592038}
   rac:
   - {fileID: 9100000, guid: a014165d13e064947a604d2953252456, type: 2}
   - {fileID: 9100000, guid: 76b61b1b05ba98b40a3bd5a4538a5963, type: 2}

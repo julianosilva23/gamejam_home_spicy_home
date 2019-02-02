@@ -21,6 +21,7 @@ public class Controller : MonoBehaviour
 	public GameObject playerPrefab;
 
 	public GameObject gameOver;
+	public Text gameOverText;
 
 	public RuntimeAnimatorController[] rac;
 
@@ -34,12 +35,16 @@ public class Controller : MonoBehaviour
 
 	AudioSource audioSource;
 
+	bool finish;
+
     // Start is called before the first frame update
 	void Start()
 	{
 		audioSource = GetComponent<AudioSource> ();
 
 		audioSource.Play();
+
+		finish = false;
 
 		highScore = 0;
 
@@ -89,37 +94,54 @@ public class Controller : MonoBehaviour
 	void Update()
 	{
 		// assigned resource value in text field
-		countPlayers = players.Length;
+		//countPlayers = players.Length;
+		countPlayers = Keyboard.TypeInput.Length;
 
-		for (int i = 0; i < countPlayers; i++){
-		
-			playerResources[i].text = setMask(i, "res", players[i].getResource());
+		if (!finish){
+			for (int i = 0; i < countPlayers; i++){
+			
+				playerResources[i].text = setMask(i, "res", players[i].getResource());
 
-			playerHouses[i].text = setMask(i, "home", players[i].getHome());
+				playerHouses[i].text = setMask(i, "home", players[i].getHome());
 
+			}
 		}
-
 
 	}
 
 	public void EndTime(){
-		SetCount(999);
+		SetCount(0);
+		string nameWin = "";
+		bool tie = false;
+		int noScore = 0;
 
 		for (int i = 0; i < countPlayers; i++){
-			Debug.Log(players[i].getCharName());
+			Debug.Log(players[i]);
 			if (players[i].getHome() > highScore){
 
 				highScore = players[i].getHome();
 
 				winner = players[i];
+
+				tie = false;
+
+				nameWin = "Player " + (i + 1).ToString();
+			} else if (players[i].getHome() == 0) {
+				noScore ++;
+			} else if (players[i].getHome() == highScore) {
+				tie = true;
 			}
 
 		}
-
+		finish = true;
+		//Debug.Log("Veio ate aqui");
 		gameOver.SetActive(true);
 
-		gameOver.GetComponent<Text>().text = winner.getCharName() + "'s crew now owns the Land!";
-
+		if (!tie && noScore < countPlayers) {
+			gameOverText.text = nameWin + "'s tribe now owns the Land!";
+		} else {
+			gameOverText.text = "DRAW!";
+		}
 	}
 
 	public void SetCount(int timeLeft){

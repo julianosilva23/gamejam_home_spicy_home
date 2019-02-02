@@ -158,7 +158,7 @@ public class Player : MonoBehaviour
 
         house.owner = gameObject.GetComponent<Player>();
 
-        setResource(getResource() - 3);
+        setResource(getResource() - 5);
 
         buildTime = buildTime * 2;
 
