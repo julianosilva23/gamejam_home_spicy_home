@@ -200,4 +200,9 @@ public class Controller : MonoBehaviour
 		Time.timeScale = 1f;
 		SceneManager.LoadScene("menu");
 	}
+
+	public void Retry(){
+		Time.timeScale = 1f;
+		SceneManager.LoadScene("Map1");
+	}
 }
