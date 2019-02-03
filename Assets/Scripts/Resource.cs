@@ -14,7 +14,7 @@ public class Resource : MonoBehaviour
     }
 
     IEnumerator Mortality(){
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         immortal = false;
     }
 

@@ -68,13 +68,14 @@ public class Player : MonoBehaviour
             
             setResource(resource + 1);
 
-            //col.gameObject.GetComponent<AudioSource>().Play ();
+            col.gameObject.GetComponent<AudioSource>().Play ();
 
             Destroy(col.gameObject);
         }
 
         if (col.tag == "Boom"){
             alive = false;
+            gameObject.GetComponent<AudioSource>().Play();
             StartCoroutine(BlastCooldown(blastCooldown));
         }
     }

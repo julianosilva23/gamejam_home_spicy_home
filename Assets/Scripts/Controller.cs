@@ -155,6 +155,7 @@ public class Controller : MonoBehaviour
 		gameOver.SetActive(true);
 
 		if (!tie && noScore < countPlayers) {
+			gameOver.GetComponent<AudioSource>().Play();
 			gameOverText.text = nameWin + "'s tribe now owns the Land!";
 		} else {
 			gameOverText.text = "DRAW!";
