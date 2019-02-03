@@ -37,6 +37,8 @@ public class Controller : MonoBehaviour
 
 	public GameObject pauseMenu;
 
+	bool paused;
+
 	bool finish;
 
     // Start is called before the first frame update
@@ -47,6 +49,8 @@ public class Controller : MonoBehaviour
 		audioSource.Play();
 
 		finish = false;
+
+		paused = false;
 
 		highScore = 0;
 
@@ -99,10 +103,6 @@ public class Controller : MonoBehaviour
 		//countPlayers = players.Length;
 		countPlayers = Keyboard.TypeInput.Length;
 
-		if (Input.GetButtonDown("Pause")){
-				Pause();
-			}
-
 		if (!finish){
 			for (int i = 0; i < countPlayers; i++){
 			
@@ -112,8 +112,19 @@ public class Controller : MonoBehaviour
 
 			}
 		}
-
 	}
+
+	void Update()
+	{
+		if (Input.GetButtonDown("Pause")){
+			if (paused){
+				unpause();
+			} else {
+				Pause();
+			}
+		}
+	}
+	
 
 	public void EndTime(){
 		SetCount(0);
@@ -172,12 +183,14 @@ public class Controller : MonoBehaviour
 	}
 
 	public void Pause(){
+		paused = true;
 		Time.timeScale = 0f;
 		pauseMenu.SetActive(true);
 	}
 
 	public void unpause(){
 		Time.timeScale = 1f;
+		paused = false;
 		pauseMenu.SetActive(false);
 		gameOver.SetActive(false);
 	}
