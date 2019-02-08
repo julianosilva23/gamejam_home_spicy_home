@@ -76,11 +76,6 @@ public class Controller : MonoBehaviour
 		return Keyboard.NumberChar[key];
 	}
 
-	private string setMask(int number, string type, int score){
-
-		return score.ToString();
-	}
-
 	IEnumerator GameTimer(int timeLeft){
 		SetCount(timeLeft);
 		
@@ -103,14 +98,18 @@ public class Controller : MonoBehaviour
 		//countPlayers = players.Length;
 		countPlayers = Keyboard.TypeInput.Length;
 
-		if (!finish){
-			for (int i = 0; i < countPlayers; i++){
-			
-				playerResources[i].text = setMask(i, "res", players[i].getResource());
+		for (int i = 0; i < countPlayers; i++){
+		
+			playerResources[i].text = players[i].getResource().ToString() + "/15";
 
-				playerHouses[i].text = setMask(i, "home", players[i].getHome());
-
+			if (players[i].getResource() == 15){
+				playerResources[i].color = new Color(255,0,0);
+			} else{
+				playerResources[i].color = new Color(0,0,0);
 			}
+
+			playerHouses[i].text = players[i].getHome().ToString();
+
 		}
 	}
 

@@ -31,25 +31,12 @@ public class Player : MonoBehaviour
 
     public GameObject bomb;
 
-    public GameObject builtHome;
+    public GameObject resourceDrop;
 
-    // private RuntimeAnimatorController rac;
+    public GameObject builtHome;
 
     public Animator anim;
 
-    // public AnimationClip[] animationsStop;
-
-    // public AnimationClip[] animationsRun;
-
-    // public Animator animator;
-    
-    // public AnimatorOverrideController animatorOverrideController;
-
-    // public AnimatorOverrideController teste;
-
-    // public RuntimeAnimatorController teste1;
-
-    // Start is called before the first frame update
     void Start()
     {
         setResource(0);
@@ -62,23 +49,51 @@ public class Player : MonoBehaviour
         
     }
 
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Resource" && !alive)
+        {
+            Physics2D.IgnoreCollision(col.collider, GetComponent<Collider2D>());
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D col){
         
-        if (col.tag == "Resource"){
-            
-            setResource(resource + 1);
-
-            col.gameObject.GetComponent<AudioSource>().Play ();
-
-            Destroy(col.gameObject);
+        if (col.tag == "Resource" && alive && getResource() < 15){
+            StartCoroutine(TakeResource(col.gameObject));
         }
 
         if (col.tag == "Boom"){
-            alive = false;
-            gameObject.GetComponent<AudioSource>().Play();
-            StartCoroutine(BlastCooldown(blastCooldown));
+            BombHit();
         }
     }
+
+    void BombHit(){
+        int drop = 3;
+        alive = false;
+        gameObject.GetComponent<AudioSource>().Play();
+        StartCoroutine(BlastCooldown(blastCooldown));
+        while (drop > 0 && getResource() > 0){
+            setResource(getResource() -1);
+            Instantiate(resourceDrop, transform.position, transform.rotation);
+            drop--;
+        }
+    }
+
+    IEnumerator TakeResource(GameObject res){
+        setResource(resource + 1);
+        res.GetComponent<AudioSource>().Play ();
+        res.SetActive(false);
+        yield return new WaitForSeconds(1);
+        Destroy(res);
+    }
+
+    /*IEnumerator FreezeMove(RigidbodyConstraints2D freeze){
+        freeze = RigidbodyConstraints2D.FreezePosition;
+        yield return new WaitForSeconds(1);
+        freeze = RigidbodyConstraints2D.None;
+        freeze = RigidbodyConstraints2D.FreezeRotation;
+    }*/
 
     IEnumerator BlastCooldown(int timer){
         int i;
@@ -111,7 +126,6 @@ public class Player : MonoBehaviour
         hasBomb = true;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (alive){
@@ -154,7 +168,7 @@ public class Player : MonoBehaviour
             transform.rotation);
         
         SpriteRenderer shadow = building.GetComponent<Transform>().GetChild(0).gameObject.GetComponent<SpriteRenderer>();
-        Debug.Log("Definiu sombra aqui");
+        //Debug.Log("Definiu sombra aqui");
         Home house = building.GetComponent<Home>();
 
         house.owner = gameObject.GetComponent<Player>();
@@ -188,7 +202,7 @@ public class Player : MonoBehaviour
 
                     building.GetComponent<SpriteRenderer>().enabled = false;
                     shadow.enabled = false;
-                    Debug.Log("Fez sombra sumir aqui");
+                    //Debug.Log("Fez sombra sumir aqui");
                 }
             }
             buildTime --;
@@ -308,30 +322,5 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
 
         anim.runtimeAnimatorController = rac as RuntimeAnimatorController;
-     
-        // animator.runtimeAnimatorController = rac as RuntimeAnimatorController;
-
-        // Debug.Log(animator.runtimeAnimatorController);
-
-        // animator = GetComponent<Animator>();
-
-        // animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
-
-        // animator.runtimeAnimatorController = animatorOverrideController;
-
-        // animatorOverrideController = teste1 as AnimatorOverrideController;
-
-        // Debug.Log(animatorOverrideController.name);
-
-        // Animator animator = GetComponent<Animator>();
-
-        // animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
-
-        // animator.runtimeAnimatorController = animatorOverrideController;
-
-        // animatorOverrideController["LandGuy_Main"] = animRun;
-
-        // animatorOverrideController["LandGuy_Stop"] = animStop;
-
     }
 }
