@@ -40,8 +40,8 @@ public class Cursor : MonoBehaviour
     }
 
     void ActivateButton(){
-            if (Input.GetButtonDown("Submit")){
-                target.onClick.Invoke();
-            }
+        if (Input.GetButtonDown("Submit")){
+            target.onClick.Invoke();
+        }
     }
 }
