@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Bomb.cs" />
      <Compile Include="Assets\Scripts\Choise.cs" />
      <Compile Include="Assets\Scripts\Controller.cs" />
+     <Compile Include="Assets\Scripts\Cursor.cs" />
      <Compile Include="Assets\Scripts\Home.cs" />
      <Compile Include="Assets\Scripts\Intro.cs" />
      <Compile Include="Assets\Scripts\Keyboard.cs" />
