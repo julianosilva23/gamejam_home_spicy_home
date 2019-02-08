@@ -105,7 +105,7 @@ public class Controller : MonoBehaviour
 			if (players[i].getResource() == 15){
 				playerResources[i].color = new Color(255,0,0);
 			} else{
-				playerResources[i].color = new Color(0,0,0);
+				playerResources[i].color = new Color(255,255,255);
 			}
 
 			playerHouses[i].text = players[i].getHome().ToString();
