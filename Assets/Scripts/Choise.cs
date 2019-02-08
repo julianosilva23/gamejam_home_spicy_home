@@ -144,7 +144,7 @@ public class Choise : MonoBehaviour
     		canvas.SetActive(false);
 
     		// Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
-        	SceneManager.LoadScene("Map1", LoadSceneMode.Single);
+        	SceneManager.LoadScene("Map2", LoadSceneMode.Single);
 
 
 
