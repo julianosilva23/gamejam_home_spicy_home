@@ -58,6 +58,9 @@ public class Home : MonoBehaviour
         owner.LessHome();
 
         Destroy(burning);
+        for (int i = 3; i > 0; i--){
+            Instantiate(owner.resourceDrop, transform.position, transform.rotation);
+        }
         Destroy(gameObject);
     }
 
