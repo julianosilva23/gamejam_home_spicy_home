@@ -40,6 +40,10 @@ public class Choise : MonoBehaviour
 
 	private GameObject gameManager;
 
+	public GameObject Mapas;
+
+	private GameObject PlayerChoise;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -139,13 +143,19 @@ public class Choise : MonoBehaviour
 
     	if(choiseController >= playerCount){
 
-    		canvas = GameObject.Find("Canvas");
+    		//canvas = GameObject.Find("Canvas");
 
-    		canvas.SetActive(false);
+    		//canvas.SetActive(false);
+
+
 
     		// Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
-        	SceneManager.LoadScene("Map2", LoadSceneMode.Single);
+        	
+        	PlayerChoise = GameObject.Find("Player Choise");
 
+        	PlayerChoise.SetActive(false);
+
+    		Mapas.SetActive(true);
 
 
     	}else{
@@ -162,5 +172,12 @@ public class Choise : MonoBehaviour
     	player.text = "Player " + number_player.ToString() + ": Select Your Character";
 
 
+    }
+
+    public void ChoseMap1(){
+		SceneManager.LoadScene("Map1", LoadSceneMode.Single);
+    }
+    public void ChoseMap2(){
+    	SceneManager.LoadScene("Map2", LoadSceneMode.Single);
     }
 }
