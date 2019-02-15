@@ -6,24 +6,30 @@ public class Bomb : MonoBehaviour
 {
     public int timer;
     public GameObject blast;
-    // Start is called before the first frame update
+
+    bool alive;
+
     void Start()
     {
         StartCoroutine(BombTimer(timer));
+        alive = true;
     }
 
     IEnumerator BombTimer(int countdown){
         yield return new WaitForSeconds(countdown);
-        Explode();
-        Destroy(gameObject);
+        if (alive){
+            Explode();
+            Destroy(gameObject);
+        }
     }
 
     void Explode(){
+        alive = false;
         GameObject objBlast = Instantiate(blast, transform.position, transform.rotation);
     }
 
    void OnTriggerEnter2D(Collider2D col){
-        if (col.tag == "Boom"){
+        if (col.tag == "Boom" && alive){
             Explode();
         }
     } 

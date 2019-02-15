@@ -86,6 +86,7 @@ public class Controller : MonoBehaviour
 			timeLeft--;
 
         	SetCount(timeLeft);
+
         }
 
         EndTime();
@@ -164,6 +165,9 @@ public class Controller : MonoBehaviour
 
 	public void SetCount(int timeLeft){
 		gameCounter.text = timeLeft.ToString();
+		if (timeLeft <= 15){
+			gameCounter.color = new Color (255,0,0);
+		}
 	}
 
 	public GameObject StartPlayer(string type_input, GameObject house, RuntimeAnimatorController rac, int number){
