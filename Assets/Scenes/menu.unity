@@ -3751,7 +3751,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 497415883}
+      - m_Target: {fileID: 734968641}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -3771,7 +3771,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 756995048}
         m_MethodName: SetActive
@@ -3785,22 +3785,11 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1372349203}
-        m_MethodName: SingleCursor
+        m_MethodName: NoCursor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 312965895}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4316,7 +4305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &354351878
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5117,6 +5106,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cursor0
+      objectReference: {fileID: 0}
+    - target: {fileID: 798652718876695919, guid: 77512f42e49f94f49b3f13b73be04ecc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 798652718876695918, guid: 77512f42e49f94f49b3f13b73be04ecc,
         type: 3}
@@ -7734,7 +7728,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &756995049
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11849,6 +11843,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 207180500}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1357554064
@@ -12352,8 +12357,7 @@ MonoBehaviour:
   - {fileID: 819933100}
   - {fileID: 108174126}
   - {fileID: 1323014681}
-  - {fileID: 1843359562}
-  start: {fileID: 0}
+  start: {fileID: 1413881693}
   playersReady: 0
 --- !u!1 &1374303933
 GameObject:
@@ -12723,7 +12727,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1413881691
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12828,6 +12832,17 @@ MonoBehaviour:
       - m_Target: {fileID: 497415883}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2097424441}
+        m_MethodName: Select
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18159,12 +18174,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839773601}
   m_CullTransparentMesh: 0
---- !u!1 &1843359562 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 798652718876695919, guid: 77512f42e49f94f49b3f13b73be04ecc,
-    type: 3}
-  m_PrefabInstance: {fileID: 427294271}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1843359563 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 798652718876695918, guid: 77512f42e49f94f49b3f13b73be04ecc,
@@ -21181,6 +21190,17 @@ MonoBehaviour:
       - m_Target: {fileID: 354351877}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 848322071}
+        m_MethodName: Select
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
