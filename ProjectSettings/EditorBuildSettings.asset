@@ -15,9 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/menu.unity
     guid: 03a126f07f2835440b1676937bdf27c0
   - enabled: 1
-    path: Assets/Scenes/Map1.unity
+    path: Assets/Scenes/Hill1.unity
     guid: eb219502a21807944a0db1df9b9168e7
   - enabled: 1
-    path: Assets/Scenes/Map2.unity
+    path: Assets/Scenes/Sand1.unity
     guid: 3ac79b2047159f94d825598693a20488
   m_configObjects: {}
