@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Home : MonoBehaviour
 {
+    public bool ghost;    
     public bool fire;
     public GameObject flames;
     public Player owner;
@@ -19,7 +20,6 @@ public class Home : MonoBehaviour
     void Start()
     {
        fire = false;
-       owner.setHome(owner.getHome() + 1);
        audioSource = GetComponent<AudioSource> ();
     }
 

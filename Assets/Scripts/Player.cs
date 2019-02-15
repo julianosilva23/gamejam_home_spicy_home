@@ -207,6 +207,7 @@ public class Player : MonoBehaviour
             }
             buildTime --;
         }
+        home ++;
         building.GetComponent<SpriteRenderer>().sprite = house.done;
         shadow.enabled = true;
         alive = true;
