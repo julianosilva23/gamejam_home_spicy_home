@@ -175,9 +175,9 @@ public class Choise : MonoBehaviour
     }
 
     public void ChoseMap1(){
-		SceneManager.LoadScene("Map1", LoadSceneMode.Single);
+		SceneManager.LoadScene("Hill1", LoadSceneMode.Single);
     }
     public void ChoseMap2(){
-    	SceneManager.LoadScene("Map2", LoadSceneMode.Single);
+    	SceneManager.LoadScene("Sand1", LoadSceneMode.Single);
     }
 }

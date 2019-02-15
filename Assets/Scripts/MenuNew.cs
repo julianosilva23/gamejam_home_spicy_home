@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuNew : MonoBehaviour
 {
@@ -58,6 +59,10 @@ public class MenuNew : MonoBehaviour
         }
     }
 
+    public void CharSelect(){
+
+    }
+
     public void SingleCursor(){
         for (int i = 0; i < Keyboard.CountPlayer; i ++){
             cursors[i].SetActive(true);
@@ -67,4 +72,16 @@ public class MenuNew : MonoBehaviour
     }
 
 
+
+//--------------------------------------------------------------------------------------------------------------------
+//============================LEVEL SELLECT===========================================================================
+//--------------------------------------------------------------------------------------------------------------------
+
+    public void Hill1(){
+        SceneManager.LoadScene("Hill1");
+    }
+
+    public void Sand1(){
+        SceneManager.LoadScene("Sand1");
+    }
 }

@@ -167,6 +167,7 @@ public class Controller : MonoBehaviour
 		gameCounter.text = timeLeft.ToString();
 		if (timeLeft <= 15 && gameCounter.color != new Color (255,0,0)){
 			gameCounter.color = new Color (255,0,0);
+			audioSource.pitch = 1.5f;
 		}
 	}
 
@@ -206,6 +207,6 @@ public class Controller : MonoBehaviour
 
 	public void Retry(){
 		Time.timeScale = 1f;
-		SceneManager.LoadScene("Map1");
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 }
