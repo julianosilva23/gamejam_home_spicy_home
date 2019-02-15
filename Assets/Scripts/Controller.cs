@@ -165,7 +165,7 @@ public class Controller : MonoBehaviour
 
 	public void SetCount(int timeLeft){
 		gameCounter.text = timeLeft.ToString();
-		if (timeLeft <= 15){
+		if (timeLeft <= 15 && gameCounter.color != new Color (255,0,0)){
 			gameCounter.color = new Color (255,0,0);
 		}
 	}

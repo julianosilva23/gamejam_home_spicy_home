@@ -17,8 +17,8 @@ public class Cursor : MonoBehaviour
 
     void Update(){
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(
-            28000 * Time.fixedDeltaTime * Input.GetAxisRaw("Horizontal" + typeInput),
-            28000 * Time.fixedDeltaTime * Input.GetAxisRaw("Vertical" + typeInput)
+            280 * Time.fixedDeltaTime * Input.GetAxisRaw("Horizontal" + typeInput),
+            280 * Time.fixedDeltaTime * Input.GetAxisRaw("Vertical" + typeInput)
         );
         if (Input.GetButtonDown("Submit") && onButton){
             target.onClick.Invoke();
@@ -28,6 +28,7 @@ public class Cursor : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col){
         if (col.tag == "Button"){
             target = col.GetComponent<Button>();
+            target.Select();
             onButton = true;
         }
     }
