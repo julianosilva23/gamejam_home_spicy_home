@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Blast.cs" />
      <Compile Include="Assets\Scripts\Bomb.cs" />
+     <Compile Include="Assets\Scripts\CharButton.cs" />
      <Compile Include="Assets\Scripts\Choise.cs" />
      <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\Cursor.cs" />

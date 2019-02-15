@@ -1,21 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MenuNew : MonoBehaviour
 {
     public GameObject[] cursors;
+    public Button start;
+
+    public int playersReady;
+    bool ready;
+    
 
     void Start()
     {
-        
+        start.Select();
+        ready = false;
+        playersReady = 0;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void FixedUpdate(){
+        if (playersReady == Keyboard.CountPlayer){
+            
+        }
     }
 
     public void Key2(){
@@ -51,7 +59,6 @@ public class MenuNew : MonoBehaviour
     }
 
     public void CharSelectScreen(){
-        cursors[4].SetActive(false);
         for (int i = 0; i < Keyboard.CountPlayer; i ++){
             Debug.Log(cursors[i]);
             cursors[i].SetActive(true);
@@ -59,16 +66,10 @@ public class MenuNew : MonoBehaviour
         }
     }
 
-    public void CharSelect(){
-
-    }
-
-    public void SingleCursor(){
+    public void NoCursor(){
         for (int i = 0; i < Keyboard.CountPlayer; i ++){
             cursors[i].SetActive(true);
         }
-        cursors[4].SetActive(true);
-        cursors[4].GetComponent<Cursor>().typeInput = "";
     }
 
 
