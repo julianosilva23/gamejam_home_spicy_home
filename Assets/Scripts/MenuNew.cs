@@ -69,7 +69,7 @@ public class MenuNew : MonoBehaviour
 
     public void NoCursor(){
         for (int i = 0; i < Keyboard.CountPlayer; i ++){
-            cursors[i].SetActive(true);
+            cursors[i].SetActive(false);
         }
     }
 
