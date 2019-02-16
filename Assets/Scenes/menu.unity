@@ -1552,7 +1552,7 @@ GameObject:
   - component: {fileID: 150060883}
   m_Layer: 5
   m_Name: Personagem (5)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2833,7 +2833,7 @@ GameObject:
   - component: {fileID: 266336986}
   m_Layer: 5
   m_Name: Personagem (4)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3652,7 +3652,7 @@ GameObject:
   - component: {fileID: 312965897}
   m_Layer: 5
   m_Name: Next
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4905,6 +4905,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 312965899}
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &418182739
@@ -5239,6 +5250,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 798652718876695905, guid: 77512f42e49f94f49b3f13b73be04ecc,
+        type: 3}
+      propertyPath: menuManager
+      value: 
+      objectReference: {fileID: 1372349203}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77512f42e49f94f49b3f13b73be04ecc, type: 3}
 --- !u!1 &449112013
@@ -5641,6 +5657,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1372349203}
         m_MethodName: Key2
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 312965899}
+        m_MethodName: set_interactable
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7472,7 +7499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &734968642
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8715,7 +8742,7 @@ GameObject:
   - component: {fileID: 865829530}
   m_Layer: 5
   m_Name: Personagem (2)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9168,6 +9195,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3156779543212900113, guid: 0ae5b8244bb005d4bbaa241c85da4e6e,
+        type: 3}
+      propertyPath: menuManager
+      value: 
+      objectReference: {fileID: 1372349203}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ae5b8244bb005d4bbaa241c85da4e6e, type: 3}
 --- !u!1 &919193506
@@ -12402,6 +12434,7 @@ MonoBehaviour:
   - {fileID: 108174126}
   - {fileID: 1323014681}
   start: {fileID: 1413881693}
+  goToMap: {fileID: 312965899}
   playersReady: 0
 --- !u!1 &1374303933
 GameObject:
@@ -13846,6 +13879,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 312965899}
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1487623911
@@ -14562,6 +14606,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 613364587240403038, guid: cde20013affe4dc449d27dcb37466268,
+        type: 3}
+      propertyPath: menuManager
+      value: 
+      objectReference: {fileID: 1372349203}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cde20013affe4dc449d27dcb37466268, type: 3}
 --- !u!1 &1568731827
@@ -15930,7 +15979,7 @@ GameObject:
   - component: {fileID: 1667293689}
   m_Layer: 5
   m_Name: Personagem
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16215,6 +16264,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 312965899}
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1669152877
@@ -16351,7 +16411,7 @@ GameObject:
   - component: {fileID: 1696355703}
   m_Layer: 5
   m_Name: Personagem (1)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16550,7 +16610,7 @@ GameObject:
   - component: {fileID: 1711070963}
   m_Layer: 5
   m_Name: Personagem (3)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18058,6 +18118,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6370364212226475558, guid: dc64ac72415c96b4390d7498defb1b49,
+        type: 3}
+      propertyPath: menuManager
+      value: 
+      objectReference: {fileID: 1372349203}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc64ac72415c96b4390d7498defb1b49, type: 3}
 --- !u!1 &1839440864
@@ -18932,6 +18997,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7294490092737122425, guid: 1866179f3097464498a6a60aa29196f3,
+        type: 3}
+      propertyPath: menuManager
+      value: 
+      objectReference: {fileID: 1372349203}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1866179f3097464498a6a60aa29196f3, type: 3}
 --- !u!1 &1921699387
