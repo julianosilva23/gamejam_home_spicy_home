@@ -86,4 +86,12 @@ public class MenuNew : MonoBehaviour
     public void Sand1(){
         SceneManager.LoadScene("Sand1");
     }
+
+    public void Forest1(){
+        SceneManager.LoadScene("Forest1");
+    }
+
+    public void Main_Exit(){
+		Application.Quit();
+	}
 }

@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sand1.unity
     guid: 3ac79b2047159f94d825598693a20488
+  - enabled: 1
+    path: Assets/Scenes/Forest1.unity
+    guid: b8467548aedfbe044aeb96bbbe976247
   m_configObjects: {}
