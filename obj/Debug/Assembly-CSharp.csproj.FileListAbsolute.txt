@@ -168,3 +168,6 @@ C:\Users\Allan\Documents\Land_repositorio\Temp\bin\Debug\UnityEngine.SpatialTrac
 C:\Users\Allan\Documents\Land_repositorio\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\Allan\Documents\Land_repositorio\obj\Debug\Assembly-CSharp.dll
 C:\Users\Allan\Documents\Land_repositorio\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Allan\Documents\Land_repositorio\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
+C:\Users\Allan\Documents\Land_repositorio\Temp\bin\Debug\UnityEngine.WebGLModule.dll
+C:\Users\Allan\Documents\Land_repositorio\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml

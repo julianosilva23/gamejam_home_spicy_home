@@ -8,6 +8,7 @@ public class Cursor : MonoBehaviour
     Button target;
     public GameObject targetChar;
     public GameObject selectedChar;
+	Image image;
     bool onButton;
     bool onChar;
 
@@ -32,19 +33,20 @@ public class Cursor : MonoBehaviour
             target.onClick.Invoke();
         }
         if (Input.GetButtonDown("Fire1" + typeInput) && onChar){
+			Debug.Log ("Tá clicando");
             if (!targetChar.GetComponent<CharButton>().isSelected){
+				Debug.Log ("esse botao nao foi escolhido por alguem");
                 if (selectedChar != null){
-                    selectedChar.GetComponent<Image>().color = new Color (0,0,0);
+                    selectedChar.GetComponent<Image>().color = new Color (0,0,0,0);
                     selectedChar.GetComponent<CharButton>().isSelected = false;
-                    selectedChar.GetComponent<Button>().interactable = true;
                     Debug.Log("pt2");
                 } else {
                     menuManager.playersReady ++;
                     Debug.Log("pt3");
                 }
                 selectedChar = targetChar;
-                selectedChar.GetComponent<Image>().color = Color.red;
-                selectedChar.GetComponent<Button>().interactable = true;
+				image = selectedChar.GetComponent<Image> ();
+				image.color = playerColor;
                 selectedChar.GetComponent<CharButton>().isSelected = true;
                 Keyboard.NumberChar[playerNumber] = targetChar.GetComponent<CharButton>().charNumber;
                 Debug.Log(selectedChar.GetComponent<Image>().color.ToString());
@@ -56,13 +58,14 @@ public class Cursor : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col){
         if (col.tag == "Button"){
             target = col.GetComponent<Button>();
-            target.Select();
+            //target.Select();
             onButton = true;
         }
         if (col.tag == "CharButton"){
             targetChar = col.gameObject;
             //targetChar.GetComponent<Button>().Select();
             onChar = true;
+			Debug.Log ("tá em cima do char");
         }
     }
 
