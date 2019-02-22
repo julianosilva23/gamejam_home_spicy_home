@@ -53,21 +53,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\bgm.cs" />
-     <Compile Include="Assets\Scripts\Blast.cs" />
-     <Compile Include="Assets\Scripts\Bomb.cs" />
-     <Compile Include="Assets\Scripts\CharButton.cs" />
-     <Compile Include="Assets\Scripts\Choise.cs" />
-     <Compile Include="Assets\Scripts\Controller.cs" />
-     <Compile Include="Assets\Scripts\Cursor.cs" />
-     <Compile Include="Assets\Scripts\Home.cs" />
-     <Compile Include="Assets\Scripts\Intro.cs" />
-     <Compile Include="Assets\Scripts\Keyboard.cs" />
-     <Compile Include="Assets\Scripts\Menu.cs" />
-     <Compile Include="Assets\Scripts\MenuNew.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\Resource.cs" />
-     <Compile Include="Assets\Scripts\Treevore.cs" />
+     <Compile Include="Assets\Scripts\Game Manager\bgm.cs" />
+     <Compile Include="Assets\Scripts\Game Manager\Controller.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Blast.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Bomb.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Home.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Resource.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Treevore.cs" />
+     <Compile Include="Assets\Scripts\Menu\CharButton.cs" />
+     <Compile Include="Assets\Scripts\Menu\Choise.cs" />
+     <Compile Include="Assets\Scripts\Menu\Cursor.cs" />
+     <Compile Include="Assets\Scripts\Menu\Intro.cs" />
+     <Compile Include="Assets\Scripts\Menu\Keyboard.cs" />
+     <Compile Include="Assets\Scripts\Menu\Menu.cs" />
+     <Compile Include="Assets\Scripts\Menu\MenuNew.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Vinicius/Documents/homespicyhome/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
