@@ -189,7 +189,7 @@ public class Controller : MonoBehaviour
 
 	public void Pause(){
 		paused = true;
-		Time.timeScale = 1f;
+		Time.timeScale = 0f;
 		pauseMenu.SetActive(true);
 	}
 

@@ -8,6 +8,7 @@ public class Cursor : MonoBehaviour
     Button target;
     public GameObject targetChar;
     public GameObject selectedChar;
+    Color32 playerColor;
 	Image image;
     bool onButton;
     bool onChar;
@@ -15,7 +16,6 @@ public class Cursor : MonoBehaviour
     public MenuNew menuManager;
     public string typeInput;
     public int playerNumber;
-    public Color playerColor;
 
     void Start(){
         onButton = false;
@@ -24,33 +24,31 @@ public class Cursor : MonoBehaviour
         selectedChar = null;
     }
 
-    void FixedUpdate(){
+    void Update(){
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(
             280 * Time.fixedDeltaTime * Input.GetAxisRaw("Horizontal" + typeInput),
             280 * Time.fixedDeltaTime * Input.GetAxisRaw("Vertical" + typeInput)
         );
-        if ((Input.GetButtonDown("Submit") || Input.GetButtonDown("Fire1" + typeInput)) && onButton){
+        if ((Input.GetButtonDown("Submit") || Input.GetButtonDown("Fire1" + typeInput) || Input.GetButtonDown("Fire2" + typeInput)) && onButton){
             target.onClick.Invoke();
         }
         if (Input.GetButtonDown("Fire1" + typeInput) && onChar){
-			Debug.Log ("Tá clicando");
+			//Debug.Log ("Tá clicando");
             if (!targetChar.GetComponent<CharButton>().isSelected){
-				Debug.Log ("esse botao nao foi escolhido por alguem");
+				//Debug.Log ("esse botao nao foi escolhido por alguem");
                 if (selectedChar != null){
-                    selectedChar.GetComponent<Image>().color = new Color (0,0,0,0);
+                    selectedChar.GetComponent<Image>().color = new Color32(0,0,0,80);
                     selectedChar.GetComponent<CharButton>().isSelected = false;
-                    Debug.Log("pt2");
+                    //Debug.Log("pt2");
                 } else {
                     menuManager.playersReady ++;
-                    Debug.Log("pt3");
+                    //Debug.Log("pt3");
                 }
                 selectedChar = targetChar;
 				image = selectedChar.GetComponent<Image> ();
-				image.color = playerColor;
+				image.color = GetComponent<Image>().color;
                 selectedChar.GetComponent<CharButton>().isSelected = true;
                 Keyboard.NumberChar[playerNumber] = targetChar.GetComponent<CharButton>().charNumber;
-                Debug.Log(selectedChar.GetComponent<Image>().color.ToString());
-                Debug.Log(playerColor.ToString());
             }
         }
     }
