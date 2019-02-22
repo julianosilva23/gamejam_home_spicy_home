@@ -44,9 +44,7 @@ public class Controller : MonoBehaviour
     // Start is called before the first frame update
 	void Start()
 	{
-		audioSource = GetComponent<AudioSource> ();
-
-		audioSource.Play();
+		audioSource = FindObjectOfType<bgm>().GetComponent<AudioSource>();
 
 		finish = false;
 
@@ -165,9 +163,9 @@ public class Controller : MonoBehaviour
 
 	public void SetCount(int timeLeft){
 		gameCounter.text = timeLeft.ToString();
-		if (timeLeft <= 15 && gameCounter.color != new Color (255,0,0)){
+		if (timeLeft <= 20 && gameCounter.color != new Color (255,0,0)){
 			gameCounter.color = new Color (255,0,0);
-			audioSource.pitch = 1.5f;
+			audioSource.pitch = 1.2f;
 		}
 	}
 
@@ -202,11 +200,13 @@ public class Controller : MonoBehaviour
 
 	public void Return(){
 		Time.timeScale = 1f;
+		Destroy(audioSource.gameObject);
 		SceneManager.LoadScene("menu");
 	}
 
 	public void Retry(){
 		Time.timeScale = 1f;
+		audioSource.pitch = 1f;
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 }
