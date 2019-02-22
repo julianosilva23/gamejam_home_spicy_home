@@ -2224,11 +2224,6 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 345261854}
-    - target: {fileID: 1453002299434157978, guid: 3f4a8da50028dce4e8d55a53e96d881f,
-        type: 3}
-      propertyPath: timer
-      value: 30
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f4a8da50028dce4e8d55a53e96d881f, type: 3}
 --- !u!1001 &709586239
