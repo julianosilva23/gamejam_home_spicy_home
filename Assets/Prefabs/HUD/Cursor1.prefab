@@ -117,40 +117,20 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 798652718876695905, guid: 77512f42e49f94f49b3f13b73be04ecc,
-        type: 3}
-      propertyPath: playerColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 798652718876695905, guid: 77512f42e49f94f49b3f13b73be04ecc,
-        type: 3}
-      propertyPath: playerColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 798652718876695905, guid: 77512f42e49f94f49b3f13b73be04ecc,
-        type: 3}
-      propertyPath: playerColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 798652718876695905, guid: 77512f42e49f94f49b3f13b73be04ecc,
-        type: 3}
-      propertyPath: playerColor.a
-      value: 0.3137255
-      objectReference: {fileID: 0}
     - target: {fileID: 798652718876695907, guid: 77512f42e49f94f49b3f13b73be04ecc,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.92549026
+      value: 0.9245283
       objectReference: {fileID: 0}
     - target: {fileID: 798652718876695907, guid: 77512f42e49f94f49b3f13b73be04ecc,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.25490198
+      value: 0.2939329
       objectReference: {fileID: 0}
     - target: {fileID: 798652718876695907, guid: 77512f42e49f94f49b3f13b73be04ecc,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.21568629
+      value: 0.23985407
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77512f42e49f94f49b3f13b73be04ecc, type: 3}

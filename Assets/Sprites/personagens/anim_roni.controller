@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: anim_couch
+  m_Name: anim_roni
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isMoving
@@ -99,7 +99,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5e15c733859019742acbb2e5be2de3d6, type: 2}
+  m_Motion: {fileID: 7400000, guid: d5ec18882e824b54c9217b2b5ee98d09, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -126,7 +126,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ea4dbb815425a024d972ffc3723a2d7e, type: 2}
+  m_Motion: {fileID: 7400000, guid: 9ce3a623777e9d4438724b054835ebdc, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
