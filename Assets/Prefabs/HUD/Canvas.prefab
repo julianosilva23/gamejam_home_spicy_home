@@ -893,6 +893,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 256175392684628159, guid: 335b48dcca40f504d8794a2091c245d0,
     type: 3}
   gameOver: {fileID: 1453002300350319040}
+  gameOverDefaultButton: {fileID: 1453002299987114494}
   gameOverText: {fileID: 1453002299430959104}
   rac:
   - {fileID: 9100000, guid: a014165d13e064947a604d2953252456, type: 2}
@@ -907,6 +908,7 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 28e05cc9fc7bdbe4fa381b60870794f2, type: 2}
   - {fileID: 9100000, guid: 50d40690ba15369439d963c1bdb7e879, type: 2}
   pauseMenu: {fileID: 1453002300769447627}
+  pauseMenuDefaultButton: {fileID: 1453002299992013586}
 --- !u!1 &1453002299553196406
 GameObject:
   m_ObjectHideFlags: 0

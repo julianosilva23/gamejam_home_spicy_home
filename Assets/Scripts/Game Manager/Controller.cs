@@ -21,6 +21,7 @@ public class Controller : MonoBehaviour
 	public GameObject playerPrefab;
 
 	public GameObject gameOver;
+	public Button gameOverDefaultButton;
 	public Text gameOverText;
 
 	public RuntimeAnimatorController[] rac;
@@ -36,6 +37,7 @@ public class Controller : MonoBehaviour
 	AudioSource audioSource;
 
 	public GameObject pauseMenu;
+	public Button pauseMenuDefaultButton;
 
 	bool paused;
 
@@ -158,6 +160,7 @@ public class Controller : MonoBehaviour
 		} else {
 			gameOverText.text = "DRAW!";
 		}
+		gameOverDefaultButton.Select();
 		Time.timeScale = 0f;
 	}
 
@@ -189,6 +192,7 @@ public class Controller : MonoBehaviour
 		paused = true;
 		Time.timeScale = 0f;
 		pauseMenu.SetActive(true);
+		pauseMenuDefaultButton.Select();
 	}
 
 	public void unpause(){

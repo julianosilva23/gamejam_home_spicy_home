@@ -49,7 +49,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 70
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,6 +106,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -124,7 +135,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 092aef86d64762548be336693db0ec9f
+      spriteID: b9096d505a6aebf439c32294cd73c336
       vertices: []
       indices: 
       edges: []
@@ -144,7 +155,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf15632121cec7e47b95de32368cc4bc
+      spriteID: d35ad4551f63a6449a6116c051fdde8b
       vertices: []
       indices: 
       edges: []
@@ -164,7 +175,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80ccce410467a58488b2f80967b62171
+      spriteID: 206b04c74806caa42b211ae9ef7e104a
       vertices: []
       indices: 
       edges: []
@@ -184,7 +195,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0303d534189c1114f9bf13b489c8a0df
+      spriteID: 98a70eeb3fb425f44b7380a77e9707c5
       vertices: []
       indices: 
       edges: []

@@ -34,7 +34,7 @@ public class Cursor : MonoBehaviour
                 target.onClick.Invoke();
             }
         }
-        if (Input.GetButtonDown("Fire1" + typeInput) && onChar){
+        if ((Input.GetButtonDown("Fire1" + typeInput) || Input.GetButtonDown("Fire2" + typeInput)) && onChar){
 			//Debug.Log ("Tá clicando");
             if (!targetChar.GetComponent<CharButton>().isSelected){
 				//Debug.Log ("esse botao nao foi escolhido por alguem");
