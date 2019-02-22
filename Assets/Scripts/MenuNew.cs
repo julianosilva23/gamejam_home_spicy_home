@@ -67,7 +67,14 @@ public class MenuNew : MonoBehaviour
         }
     }
 
-    public void NoCursor(){
+    public void NoCursor(string action){
+        if (action == "back"){
+            for (int i = 0; i < Keyboard.CountPlayer; i ++){
+                cursors[i].GetComponent<Cursor>().UnselectChar();
+                playersReady = 0;
+                //Keyboard.CountPlayer = 0;
+            }
+        }
         for (int i = 0; i < Keyboard.CountPlayer; i ++){
             cursors[i].SetActive(false);
         }

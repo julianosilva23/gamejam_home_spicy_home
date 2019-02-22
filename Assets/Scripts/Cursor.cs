@@ -30,26 +30,39 @@ public class Cursor : MonoBehaviour
             280 * Time.fixedDeltaTime * Input.GetAxisRaw("Vertical" + typeInput)
         );
         if ((Input.GetButtonDown("Submit") || Input.GetButtonDown("Fire1" + typeInput) || Input.GetButtonDown("Fire2" + typeInput)) && onButton){
-            target.onClick.Invoke();
+            if(target.interactable){
+                target.onClick.Invoke();
+            }
         }
         if (Input.GetButtonDown("Fire1" + typeInput) && onChar){
 			//Debug.Log ("Tá clicando");
             if (!targetChar.GetComponent<CharButton>().isSelected){
 				//Debug.Log ("esse botao nao foi escolhido por alguem");
                 if (selectedChar != null){
-                    selectedChar.GetComponent<Image>().color = new Color32(0,0,0,80);
-                    selectedChar.GetComponent<CharButton>().isSelected = false;
+                    UnselectChar();
                     //Debug.Log("pt2");
                 } else {
                     menuManager.playersReady ++;
                     //Debug.Log("pt3");
                 }
-                selectedChar = targetChar;
-				image = selectedChar.GetComponent<Image> ();
-				image.color = GetComponent<Image>().color;
-                selectedChar.GetComponent<CharButton>().isSelected = true;
-                Keyboard.NumberChar[playerNumber] = targetChar.GetComponent<CharButton>().charNumber;
+                SelectChar();
             }
+        }
+    }
+
+    public void SelectChar(){
+        selectedChar = targetChar;
+        image = selectedChar.GetComponent<Image> ();
+        image.color = GetComponent<Image>().color;
+        selectedChar.GetComponent<CharButton>().isSelected = true;
+        Keyboard.NumberChar[playerNumber] = targetChar.GetComponent<CharButton>().charNumber;
+    }
+
+    public void UnselectChar(){
+        if (selectedChar != null){
+            selectedChar.GetComponent<Image>().color = new Color32(0,0,0,80);
+            selectedChar.GetComponent<CharButton>().isSelected = false;
+            selectedChar = null;
         }
     }
 
@@ -58,6 +71,7 @@ public class Cursor : MonoBehaviour
             target = col.GetComponent<Button>();
             //target.Select();
             onButton = true;
+            Debug.Log(target.interactable);
         }
         if (col.tag == "CharButton"){
             targetChar = col.gameObject;
@@ -78,9 +92,9 @@ public class Cursor : MonoBehaviour
         }
     }
 
-    void ActivateButton(){
-        if (Input.GetButtonDown("Submit")){
+    /*void ActivateButton(){
+        if (Input.GetButtonDown("Submit") && target.interactable == true){
             target.onClick.Invoke();
         }
-    }
+    } */
 }
