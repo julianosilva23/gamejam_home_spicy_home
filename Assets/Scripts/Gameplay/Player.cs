@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
 
     public string typeInput;
 
-    float direction;
+    public float direction;
 
     float bombSpawn;
 
@@ -27,26 +27,29 @@ public class Player : MonoBehaviour
 
     bool hasBomb;
 
+    bool ghostBuild;
+
     string charName;
+
+    GameObject ghostHome;
 
     public GameObject bomb;
 
     public GameObject resourceDrop;
 
     public GameObject builtHome;
+    public GameObject ghostHomePrefab;
 
     public Animator anim;
 
     void Start()
     {
         setResource(0);
-
         setHome(0);
-
         alive = true;
-
-        hasBomb = true;        
-        
+        hasBomb = true;    
+        ghostBuild = false;
+        ghostHome = null;
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -71,6 +74,10 @@ public class Player : MonoBehaviour
     void BombHit(){
         int drop = 3;
         alive = false;
+        if (ghostHome != null){
+            ghostBuild = false;
+            Destroy(ghostHome);
+        }
         gameObject.GetComponent<AudioSource>().Play();
         StartCoroutine(BlastCooldown(blastCooldown));
         while (drop > 0 && getResource() > 0){
@@ -148,20 +155,36 @@ public class Player : MonoBehaviour
                 }
             }
             if (getResource() >= 5){
-
                 if (Input.GetButtonDown("Fire2" + typeInput)){
-                    StartCoroutine(BuildHome(bombCooldown + 3));
+                    if (ghostBuild) {
+                        if (ghostHome.GetComponent<GhostHome>().canBuild){
+                            StartCoroutine(BuildHome(bombCooldown + 3));
+                        }
+                    } else {
+                        CreateGhostHome();
+                    }
+                }
             }
-        }
 
         } else {
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
     }
 
+    void CreateGhostHome(){
+        ghostBuild = true;
+        ghostHome = Instantiate(
+            ghostHomePrefab,
+            new Vector2(transform.position.x + direction, transform.position.y),
+            transform.rotation);
+        ghostHome.GetComponent<GhostHome>().owner = gameObject;
+    }
+
     IEnumerator BuildHome(int buildTime){
 
         alive = false;
+        ghostBuild = false;
+        Destroy(ghostHome);
         GameObject building = Instantiate(
             builtHome,
             new Vector2(transform.position.x + direction, transform.position.y),

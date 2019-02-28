@@ -102,10 +102,13 @@ MonoBehaviour:
   resource: 0
   home: 0
   typeInput: Joy1
+  direction: 0
   bomb: {fileID: 2155331609324510802, guid: 8a6f16c5173dcb0438fe9165ae68b2bd, type: 3}
   resourceDrop: {fileID: 7065107467758746964, guid: 1c2007ccbb638264cbbf1f8df9e5f734,
     type: 3}
   builtHome: {fileID: 222669640926418954, guid: 6746b88bd43c5e341a65696a0d3988ff,
+    type: 3}
+  ghostHomePrefab: {fileID: 7422291951346440800, guid: 6cb3e508badd83841b49c04f1680e821,
     type: 3}
   anim: {fileID: 0}
 --- !u!50 &256175392684628147
