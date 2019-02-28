@@ -140,11 +140,12 @@ public class Player : MonoBehaviour
             if (hasBomb){
 
             if (Input.GetButtonDown("Fire1" + typeInput)){
-
+                if (ghostBuild){
+                    Destroy(ghostHome);
+                    ghostBuild = false;
+                }
                 bombSpawn = direction / 3;
-
                 hasBomb = false;
-
                 Instantiate(
                     bomb,
                     new Vector2((float)transform.position.x + bombSpawn, transform.position.y),

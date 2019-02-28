@@ -26,6 +26,7 @@ public class Bomb : MonoBehaviour
     void Explode(){
         alive = false;
         GameObject objBlast = Instantiate(blast, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 
    void OnTriggerEnter2D(Collider2D col){

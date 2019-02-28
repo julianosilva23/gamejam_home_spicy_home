@@ -14,6 +14,8 @@ public class Controller : MonoBehaviour
 
 	public Text[] playerHouses;
 
+	public GameObject[] playerHUD;
+
 	public int timer;
 
 	public Text gameCounter;
@@ -67,7 +69,10 @@ public class Controller : MonoBehaviour
 
 			i++;
 		}
-
+		if (Keyboard.CountPlayer == 2){
+			Destroy(playerHUD[2]);
+			Destroy(playerHUD[3]);
+		}
 		StartCoroutine(GameTimer(timer));
 	}
 
