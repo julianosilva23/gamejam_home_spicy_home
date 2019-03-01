@@ -56,6 +56,7 @@ public class Cursor : MonoBehaviour
         image.color = GetComponent<Image>().color;
         selectedChar.GetComponent<CharButton>().isSelected = true;
         Keyboard.NumberChar[playerNumber] = targetChar.GetComponent<CharButton>().charNumber;
+        Keyboard.NameChar[playerNumber] = targetChar.GetComponent<CharButton>().displayName.text;
     }
 
     public void UnselectChar(){

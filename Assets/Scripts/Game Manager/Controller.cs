@@ -8,6 +8,10 @@ public class Controller : MonoBehaviour
 {
 	public Player[] players;
 
+	public Text[] playerNames;
+
+	public Animator[] playerImg;
+
 	public GameObject[] houses;
 
 	public Text[] playerResources;
@@ -62,10 +66,12 @@ public class Controller : MonoBehaviour
 
 			int value = Keyboard.NumberChar[i];
 
-			Debug.Log(value);
-			Debug.Log(rac[value]);
+			//Debug.Log(value);
+			//Debug.Log(rac[value]);
 
 			players[i] = StartPlayer(input, houses[i], rac[value], i).GetComponent<Player>();
+			playerNames[i].text = Keyboard.NameChar[i];
+			playerImg[i].runtimeAnimatorController = rac[value] as RuntimeAnimatorController;
 
 			i++;
 		}
@@ -105,7 +111,7 @@ public class Controller : MonoBehaviour
 		countPlayers = Keyboard.TypeInput.Length;
 
 		for (int i = 0; i < countPlayers; i++){
-		
+
 			playerResources[i].text = players[i].getResource().ToString() + "/15";
 
 			if (players[i].getResource() == 15){

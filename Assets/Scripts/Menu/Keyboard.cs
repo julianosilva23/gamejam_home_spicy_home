@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 
 public static class Keyboard
@@ -10,6 +11,8 @@ public static class Keyboard
 	public static string Control;
 
 	public static int[] NumberChar = {0,0,0,0,0,0,0,0,0,0,0,0};
+
+	public static string[] NameChar = {"", "", "", ""}; 
 
 	public static string[] TypeInput;
 
