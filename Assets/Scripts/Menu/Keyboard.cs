@@ -14,6 +14,8 @@ public static class Keyboard
 
 	public static string[] NameChar = {"", "", "", ""}; 
 
+	public static Image[] ImgChar = {null, null, null, null}; 
+
 	public static string[] TypeInput;
 
 	public static Animator[] animatorPlayer;

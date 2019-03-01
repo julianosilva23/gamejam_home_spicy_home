@@ -10,7 +10,7 @@ public class Controller : MonoBehaviour
 
 	public Text[] playerNames;
 
-	public Animator[] playerImg;
+	public Image[] playerImg;
 
 	public GameObject[] houses;
 
@@ -71,7 +71,7 @@ public class Controller : MonoBehaviour
 
 			players[i] = StartPlayer(input, houses[i], rac[value], i).GetComponent<Player>();
 			playerNames[i].text = Keyboard.NameChar[i];
-			playerImg[i].runtimeAnimatorController = rac[value] as RuntimeAnimatorController;
+			playerImg[i] = Keyboard.ImgChar[i];
 
 			i++;
 		}
