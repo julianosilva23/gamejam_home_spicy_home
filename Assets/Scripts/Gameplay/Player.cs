@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
 
     bool isMoving;
 
-    bool alive;
+    public bool alive;
 
     bool hasBomb;
 
