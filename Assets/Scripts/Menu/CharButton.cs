@@ -9,6 +9,7 @@ public class CharButton : MonoBehaviour
     public int charNumber;
     public string charName;
     public Text displayName;
+    public Image displayImage;
 
     void Start(){
         displayName.text = charName;
