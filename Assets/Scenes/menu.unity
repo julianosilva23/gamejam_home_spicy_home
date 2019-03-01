@@ -451,6 +451,7 @@ MonoBehaviour:
   charNumber: 9
   charName: Roni
   displayName: {fileID: 709454918}
+  displayImage: {fileID: 1666475483}
 --- !u!1 &43595050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,6 +1260,7 @@ MonoBehaviour:
   charNumber: 5
   charName: Livingroom Brawler
   displayName: {fileID: 1572929385}
+  displayImage: {fileID: 1565244892}
 --- !u!1 &118175931
 GameObject:
   m_ObjectHideFlags: 0
@@ -3256,6 +3258,7 @@ MonoBehaviour:
   charNumber: 6
   charName: Jackie
   displayName: {fileID: 1439646893}
+  displayImage: {fileID: 1921699389}
 --- !u!1 &354351877
 GameObject:
   m_ObjectHideFlags: 0
@@ -5649,6 +5652,7 @@ MonoBehaviour:
   charNumber: 0
   charName: Landguy
   displayName: {fileID: 2085079920}
+  displayImage: {fileID: 1589113896}
 --- !u!1 &648398402
 GameObject:
   m_ObjectHideFlags: 0
@@ -7335,6 +7339,7 @@ MonoBehaviour:
   charNumber: 7
   charName: "Trajeto do Invis\xEDvel"
   displayName: {fileID: 1389551444}
+  displayImage: {fileID: 1435460382}
 --- !u!1 &857060164
 GameObject:
   m_ObjectHideFlags: 0
@@ -8163,6 +8168,7 @@ MonoBehaviour:
   charNumber: 1
   charName: Curitibinha
   displayName: {fileID: 1361815119}
+  displayImage: {fileID: 1463735426}
 --- !u!1 &965198827
 GameObject:
   m_ObjectHideFlags: 0
@@ -8414,6 +8420,7 @@ MonoBehaviour:
   charNumber: 3
   charName: O Gralha
   displayName: {fileID: 800839362}
+  displayImage: {fileID: 1569715830}
 --- !u!1 &1037417993
 GameObject:
   m_ObjectHideFlags: 0
@@ -9061,6 +9068,7 @@ MonoBehaviour:
   charNumber: 2
   charName: Kek
   displayName: {fileID: 449112016}
+  displayImage: {fileID: 310205153}
 --- !u!1 &1172807200
 GameObject:
   m_ObjectHideFlags: 0
@@ -11296,6 +11304,7 @@ MonoBehaviour:
   charNumber: 8
   charName: Holy Hermit
   displayName: {fileID: 1898941050}
+  displayImage: {fileID: 1112537382}
 --- !u!1 &1431607182
 GameObject:
   m_ObjectHideFlags: 0
@@ -12704,6 +12713,7 @@ MonoBehaviour:
   charNumber: 4
   charName: Lesmo
   displayName: {fileID: 648398405}
+  displayImage: {fileID: 1944634608}
 --- !u!1 &1569715828
 GameObject:
   m_ObjectHideFlags: 0
@@ -16341,6 +16351,7 @@ MonoBehaviour:
   charNumber: 10
   charName: "Curitic\xE3o"
   displayName: {fileID: 1793122063}
+  displayImage: {fileID: 813422228}
 --- !u!1 &1908853990 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7294490092737122423, guid: 1866179f3097464498a6a60aa29196f3,
