@@ -71,7 +71,7 @@ public class Controller : MonoBehaviour
 
 			players[i] = StartPlayer(input, houses[i], rac[value], i).GetComponent<Player>();
 			playerNames[i].text = Keyboard.NameChar[i];
-			playerImg[i] = Keyboard.ImgChar[i];
+			playerImg[i].sprite = Keyboard.ImgChar[i].sprite;
 
 			i++;
 		}
