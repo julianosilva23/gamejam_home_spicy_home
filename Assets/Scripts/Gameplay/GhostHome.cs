@@ -6,10 +6,15 @@ public class GhostHome : MonoBehaviour
 {
     public GameObject owner;
     //public GameObject forbiddenImage;
-    public bool canBuild = false;
+    public bool canBuild;
 
     public List<GameObject> obstacles;
     public List<GameObject> playerObstacles;
+
+    void Start(){
+       canBuild = true;
+        CheckObstacles();
+    }
 
     void Update()
     {
