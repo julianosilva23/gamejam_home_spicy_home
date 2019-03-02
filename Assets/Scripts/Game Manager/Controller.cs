@@ -153,7 +153,7 @@ public class Controller : MonoBehaviour
 
 				tie = false;
 
-				nameWin = "Player " + (i + 1).ToString();
+				nameWin = Keyboard.NameChar[i];
 			} else if (players[i].getHome() == 0) {
 				noScore ++;
 			} else if (players[i].getHome() == highScore) {

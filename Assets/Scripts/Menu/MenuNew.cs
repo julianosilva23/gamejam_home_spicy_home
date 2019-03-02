@@ -98,6 +98,10 @@ public class MenuNew : MonoBehaviour
         SceneManager.LoadScene("Forest1");
     }
 
+    public void GoToLevel(string levelName){
+        SceneManager.LoadScene(levelName);
+    }
+
     public void Main_Exit(){
 		Application.Quit();
 	}
