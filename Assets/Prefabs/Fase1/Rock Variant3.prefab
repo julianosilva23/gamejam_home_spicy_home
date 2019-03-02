@@ -36,17 +36,8 @@ PolygonCollider2D:
       - {x: 1.23, y: 0.055}
       - {x: 1.17, y: 0.16499999}
       - {x: 1.11, y: 0.24499999}
-      - {x: 1.11, y: 0.85499996}
-      - {x: 0.94, y: 1.125}
-      - {x: 0.82, y: 1.2149999}
-      - {x: 0.71999997, y: 1.255}
-      - {x: 0.68, y: 1.255}
-      - {x: 0.65, y: 1.225}
-      - {x: 0.55, y: 1.245}
-      - {x: 0.26999998, y: 0.92499995}
-      - {x: 0.26, y: 0.905}
-      - {x: 0.099999994, y: 0.825}
-      - {x: -0.02, y: 0.755}
+      - {x: 0.6510609, y: 0.28377903}
+      - {x: -0.039680485, y: 0.33186376}
       - {x: -0.44, y: 0.114999995}
       - {x: -0.47, y: 0.074999996}
       - {x: -0.61, y: -0.015}
@@ -142,6 +133,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6438089593152725105, guid: 0b2698c3a326e3e42a415ad4fcb38a51,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300024, guid: 332851c4b07def349b5c82e02969d361,
+        type: 3}
     - target: {fileID: 8546724467629432005, guid: 0b2698c3a326e3e42a415ad4fcb38a51,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -152,12 +149,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.52
       objectReference: {fileID: 0}
-    - target: {fileID: 6438089593152725105, guid: 0b2698c3a326e3e42a415ad4fcb38a51,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300024, guid: 332851c4b07def349b5c82e02969d361,
-        type: 3}
     - target: {fileID: 6344344234017774071, guid: 0b2698c3a326e3e42a415ad4fcb38a51,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x

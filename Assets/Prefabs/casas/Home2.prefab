@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a27f5595dc469a438ec289b132fbc78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ghost: 0
   fire: 0
   flames: {fileID: 4323930718774654722, guid: b3b704ab80a7c094f80ab7b26c6dca4e, type: 3}
   owner: {fileID: 0}
@@ -125,6 +126,7 @@ MonoBehaviour:
   halfDone: {fileID: 21300044, guid: 332851c4b07def349b5c82e02969d361, type: 3}
   done: {fileID: 21300046, guid: 332851c4b07def349b5c82e02969d361, type: 3}
   incendio: {fileID: 8300000, guid: 566ec6bf5caa1f94890bca9b4e188f55, type: 3}
+  neighborhood: []
 --- !u!58 &6842683331793597434
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -159,8 +161,8 @@ EdgeCollider2D:
   m_Points:
   - {x: -1.9799998, y: -0.7502897}
   - {x: -1.9828882, y: 0.51570016}
-  - {x: -0.9288342, y: 1.874701}
-  - {x: -0.009421109, y: 1.824994}
+  - {x: -0.50693506, y: 0.91451716}
+  - {x: 0.3979293, y: 0.9811957}
   - {x: 1.9052716, y: 0.70027107}
   - {x: 1.8197408, y: -0.6999063}
   - {x: -0.09712934, y: -1.7499548}

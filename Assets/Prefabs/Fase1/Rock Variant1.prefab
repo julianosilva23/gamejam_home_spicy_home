@@ -33,26 +33,10 @@ PolygonCollider2D:
       - {x: 1.105, y: -0.53}
       - {x: 1.025, y: -0.19999999}
       - {x: 0.98499995, y: 0}
-      - {x: 0.91499996, y: 0.26}
-      - {x: 0.78499997, y: 0.42}
-      - {x: 0.45499998, y: 0.84999996}
-      - {x: 0.415, y: 0.85999995}
-      - {x: 0.265, y: 0.78999996}
-      - {x: 0.235, y: 0.85999995}
-      - {x: 0.105, y: 1.0799999}
-      - {x: -0.044999998, y: 1.3299999}
-      - {x: -0.085, y: 1.36}
-      - {x: -0.095, y: 1.36}
-      - {x: -0.145, y: 1.31}
-      - {x: -0.195, y: 1.22}
-      - {x: -0.405, y: 0.84}
-      - {x: -0.515, y: 0.64}
-      - {x: -0.615, y: 0.45999998}
-      - {x: -0.705, y: 0.38}
-      - {x: -0.875, y: 0.28}
-      - {x: -1.0749999, y: 0.38}
-      - {x: -1.115, y: 0.39}
-      - {x: -1.125, y: 0.39}
+      - {x: 0.8161634, y: 0.14139606}
+      - {x: 0.57744384, y: 0.25197822}
+      - {x: 0.12871704, y: 0.28651625}
+      - {x: -0.85523266, y: 0.14162882}
       - {x: -1.125, y: 0.16}
       - {x: -1.115, y: 0.11}
       - {x: -1.0749999, y: -0.29}
@@ -147,16 +131,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300022, guid: 332851c4b07def349b5c82e02969d361,
         type: 3}
-    - target: {fileID: 6344344234017774071, guid: 0b2698c3a326e3e42a415ad4fcb38a51,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6344344234017774071, guid: 0b2698c3a326e3e42a415ad4fcb38a51,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.72
-      objectReference: {fileID: 0}
     - target: {fileID: 8546724467629432005, guid: 0b2698c3a326e3e42a415ad4fcb38a51,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -166,6 +140,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.776
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344344234017774071, guid: 0b2698c3a326e3e42a415ad4fcb38a51,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344344234017774071, guid: 0b2698c3a326e3e42a415ad4fcb38a51,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.72
       objectReference: {fileID: 0}
     - target: {fileID: 747942610723703800, guid: 0b2698c3a326e3e42a415ad4fcb38a51,
         type: 3}

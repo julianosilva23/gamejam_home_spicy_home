@@ -103,6 +103,7 @@ MonoBehaviour:
   home: 0
   typeInput: Joy1
   direction: 0
+  alive: 0
   bomb: {fileID: 2155331609324510802, guid: 8a6f16c5173dcb0438fe9165ae68b2bd, type: 3}
   resourceDrop: {fileID: 7065107467758746964, guid: 1c2007ccbb638264cbbf1f8df9e5f734,
     type: 3}
@@ -145,7 +146,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.028512418, y: 0.00000023841858}
+  m_Offset: {x: 0.047269464, y: -0.39393425}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -156,7 +157,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.6531553, y: 3.5079827}
+  m_Size: {x: 2.365523, y: 2.7201138}
   m_EdgeRadius: 0
 --- !u!95 &6330035634428373266
 Animator:

@@ -32,17 +32,8 @@ PolygonCollider2D:
       - {x: 1.165, y: -0.13}
       - {x: 1.005, y: 0.14}
       - {x: 0.97499996, y: 0.35999998}
-      - {x: 0.895, y: 0.44}
-      - {x: 0.625, y: 0.68}
-      - {x: 0.53499997, y: 0.77}
-      - {x: 0.505, y: 0.78}
-      - {x: 0.435, y: 0.78999996}
-      - {x: 0.155, y: 0.78999996}
-      - {x: 0.074999996, y: 0.74}
-      - {x: -0.044999998, y: 0.71999997}
-      - {x: -0.265, y: 0.59999996}
-      - {x: -0.525, y: 0.45}
-      - {x: -0.715, y: 0.34}
+      - {x: 0.26808056, y: 0.32096457}
+      - {x: -0.525, y: 0.36270726}
       - {x: -0.955, y: 0.28}
       - {x: -1.0649999, y: 0.16}
       - {x: -1.175, y: -0.07}
@@ -131,16 +122,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300016, guid: 332851c4b07def349b5c82e02969d361,
         type: 3}
-    - target: {fileID: 6344344234017774071, guid: 0b2698c3a326e3e42a415ad4fcb38a51,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 6344344234017774071, guid: 0b2698c3a326e3e42a415ad4fcb38a51,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.58
-      objectReference: {fileID: 0}
     - target: {fileID: 8546724467629432005, guid: 0b2698c3a326e3e42a415ad4fcb38a51,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -150,6 +131,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.212
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344344234017774071, guid: 0b2698c3a326e3e42a415ad4fcb38a51,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344344234017774071, guid: 0b2698c3a326e3e42a415ad4fcb38a51,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.58
       objectReference: {fileID: 0}
     - target: {fileID: 747942610723703800, guid: 0b2698c3a326e3e42a415ad4fcb38a51,
         type: 3}
