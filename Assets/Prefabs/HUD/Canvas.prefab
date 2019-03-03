@@ -942,6 +942,8 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 89bbd887e3bff8e4b84ee47bc069b03c, type: 2}
   - {fileID: 9100000, guid: 28e05cc9fc7bdbe4fa381b60870794f2, type: 2}
   - {fileID: 9100000, guid: 50d40690ba15369439d963c1bdb7e879, type: 2}
+  - {fileID: 9100000, guid: d106ee60c93d20b4e8e789ec816e8948, type: 2}
+  - {fileID: 9100000, guid: 3d0dd8f6eb54f6c44ad5cfdb21fa8d96, type: 2}
   pauseMenu: {fileID: 1453002300769447627}
   pauseMenuDefaultButton: {fileID: 1453002299992013586}
 --- !u!1 &1453002299553196406

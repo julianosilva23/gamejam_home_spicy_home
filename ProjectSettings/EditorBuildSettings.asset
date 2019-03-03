@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: 7ad5d4fa0dbc703449da9ff3c469ddcc
   - enabled: 1
@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest3.unity
     guid: 5f6236d206d6b174f8271a251692d94f
+  - enabled: 1
+    path: Assets/Scenes/Sand3.unity
+    guid: 6fc5457c070e75c418b0cc5c237ccb38
+  - enabled: 1
+    path: Assets/Scenes/Hill3.unity
+    guid: ed64ad0089da7b143a4eca4bca3707e5
   m_configObjects: {}
