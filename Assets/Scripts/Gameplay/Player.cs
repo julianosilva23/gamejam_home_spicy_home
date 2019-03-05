@@ -283,11 +283,13 @@ public class Player : MonoBehaviour
         if (direction == 1){
             if (gameObject.GetComponent<Transform>().localScale.x < 0){
                 gameObject.GetComponent<Transform>().localScale *= new Vector2(-1,1);
+                gameObject.GetComponent<Transform>().localScale = new Vector3(gameObject.GetComponent<Transform>().localScale.x,gameObject.GetComponent<Transform>().localScale.y,1);
             }
         }
         if (direction == -1){
             if (gameObject.GetComponent<Transform>().localScale.x > 0){
-                gameObject.GetComponent<Transform>().localScale*= new Vector2(-1,1);
+                gameObject.GetComponent<Transform>().localScale *= new Vector2(-1,1);
+                gameObject.GetComponent<Transform>().localScale = new Vector3(gameObject.GetComponent<Transform>().localScale.x,gameObject.GetComponent<Transform>().localScale.y,1);
             }
         }
     }
