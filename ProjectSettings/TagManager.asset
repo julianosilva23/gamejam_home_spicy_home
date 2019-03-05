@@ -9,6 +9,7 @@ TagManager:
   - Home
   - Button
   - CharButton
+  - Bomb
   layers:
   - Default
   - TransparentFX

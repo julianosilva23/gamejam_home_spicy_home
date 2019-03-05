@@ -27,6 +27,7 @@ public class Controller : MonoBehaviour
 	public GameObject playerPrefab;
 
 	public GameObject gameOver;
+	public GameObject gameOverOptions;
 	public Button gameOverDefaultButton;
 	public Text gameOverText;
 
@@ -171,6 +172,13 @@ public class Controller : MonoBehaviour
 		} else {
 			gameOverText.text = "DRAW!";
 		}
+		StartCoroutine(GameOverOptions());
+		//Time.timeScale = 0f;
+	}
+
+	IEnumerator GameOverOptions(){
+		yield return new WaitForSeconds(1);
+		gameOverOptions.SetActive(true);
 		gameOverDefaultButton.Select();
 		Time.timeScale = 0f;
 	}
