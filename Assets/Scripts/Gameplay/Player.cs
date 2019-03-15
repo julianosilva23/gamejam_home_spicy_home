@@ -176,7 +176,7 @@ public class Player : MonoBehaviour
         ghostBuild = true;
         ghostHome = Instantiate(
             ghostHomePrefab,
-            new Vector2(transform.position.x + direction, transform.position.y),
+            new Vector2(transform.position.x + direction/1.5f, transform.position.y),
             transform.rotation);
         ghostHome.GetComponent<GhostHome>().owner = gameObject;
     }
@@ -188,7 +188,7 @@ public class Player : MonoBehaviour
         Destroy(ghostHome);
         GameObject building = Instantiate(
             builtHome,
-            new Vector2(transform.position.x + direction, transform.position.y),
+            new Vector2(transform.position.x + direction/1.5f, transform.position.y),
             transform.rotation);
         
         SpriteRenderer shadow = building.GetComponent<Transform>().GetChild(0).gameObject.GetComponent<SpriteRenderer>();

@@ -19,7 +19,7 @@ public class GhostHome : MonoBehaviour
     void Update()
     {
         GetComponent<Transform>().position = new Vector2(
-            owner.transform.position.x + owner.GetComponent<Player>().direction, owner.transform.position.y);
+            owner.transform.position.x + owner.GetComponent<Player>().direction/1.5f, owner.transform.position.y);
         CheckObstacles();
     }
 
