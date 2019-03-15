@@ -10,6 +10,7 @@ TagManager:
   - Button
   - CharButton
   - Bomb
+  - Tournament
   layers:
   - Default
   - TransparentFX

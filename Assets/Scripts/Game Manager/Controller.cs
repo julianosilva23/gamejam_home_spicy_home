@@ -148,7 +148,7 @@ public class Controller : MonoBehaviour
 		string nameWin = "";
 		bool tie = false;
 		int noScore = 0;
-		int winnerNumber;
+		int winnerNumber = 9000;
 
 		for (int i = 0; i < countPlayers; i++){
 			Debug.Log(players[i]);

@@ -13,6 +13,21 @@ public class TournamentManager : MonoBehaviour
     public Color winColor;
     public Color loseColor;
 
+    public GameObject gameWin;
+    public Image winImage;
+    public Text gameWinText;
+    public Text gameWinScoreText;
+    public GameObject gameOverOptions;
+    public Button gameOverDefaultButton;
+
+    public GameObject matchWin;
+    public Text matchWinText;
+    public GameObject matchOverOptions;
+    public Button matchOverDefaultButton;
+    public Image firstImage;
+    public Image secondImage;
+    public Image thirdImage;
+
     List<Image[]> allTrophies;
 
     public void NextLevel(){
@@ -45,9 +60,52 @@ public class TournamentManager : MonoBehaviour
     }
 
     public void EndGame(bool draw, int winner, string winnerName){
-        Keyboard.playersWins[winner]++;
-        CountTrophies(allTrophies[winner], winner);
+        if (draw){
 
+        } else {        
+            Keyboard.playersWins[winner]++;
+            CountTrophies(allTrophies[winner], winner);
+            if (Keyboard.playersWins[winner] < 3){
+                winImage = Keyboard.ImgChar[winner];
+                gameWinText.text = winnerName + "'s tribe owns this Land!";
+                gameWinScoreText.text = "<b>" + (3 - Keyboard.playersWins[winner]).ToString() + "</b> more land(s) to win the tournament!";
+                gameWin.SetActive(true);
+                GameEndOptions(gameOverOptions,gameOverDefaultButton);
+            } else {
+                matchWinText.text = "<b>" + winnerName + "</b> is the winner!!!";
+                TournamentRank(winner);
+                matchWin.SetActive(true);
+                GameEndOptions(matchOverOptions,matchOverDefaultButton);
+            }
+        }
+    }
+
+    IEnumerator GameEndOptions(GameObject endOptions, Button endDefaultButton){
+		yield return new WaitForSeconds(1);
+		endOptions.SetActive(true);
+		endDefaultButton.Select();
+		Time.timeScale = 0f;
+	}
+
+    void TournamentRank(int winner){
+        int firstHighScore = Keyboard.playersWins[winner];
+        int secondHighScore = -1;
+        int thirdHighScore = -1;
+        firstImage = Keyboard.ImgChar[winner];
+        for (int player = 0; player < Keyboard.playersWins.Length; player++){
+            if (player != winner){
+                if (Keyboard.playersWins[player] > secondHighScore){
+                    secondHighScore = Keyboard.playersWins[player];
+                    secondImage = Keyboard.ImgChar[player];
+                } else if (Keyboard.playersWins[player] > thirdHighScore){
+                    thirdHighScore = Keyboard.playersWins[player];
+                    secondImage = Keyboard.ImgChar[player];
+                }
+            }
+        }
+        if (Keyboard.CountPlayer < 3){
+            Destroy(thirdImage.gameObject);
+        }
     }
 
     // Update is called once per frame
