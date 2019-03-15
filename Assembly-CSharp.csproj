@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Game Manager\bgm.cs" />
      <Compile Include="Assets\Scripts\Game Manager\Controller.cs" />
+     <Compile Include="Assets\Scripts\Game Manager\TournamentManager.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Blast.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Bomb.cs" />
      <Compile Include="Assets\Scripts\Gameplay\GhostHome.cs" />

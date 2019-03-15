@@ -31,6 +31,8 @@ public class Controller : MonoBehaviour
 	public Button gameOverDefaultButton;
 	public Text gameOverText;
 
+	public GameObject tournamentHUD;
+
 	public RuntimeAnimatorController[] rac;
 
 	int highScore;
@@ -79,6 +81,9 @@ public class Controller : MonoBehaviour
 		if (Keyboard.CountPlayer == 2){
 			Destroy(playerHUD[2]);
 			Destroy(playerHUD[3]);
+		}
+		if (Keyboard.gamemode==2){
+			Instantiate(tournamentHUD, new Vector2(0,0), new Quaternion());
 		}
 		StartCoroutine(GameTimer(timer));
 	}
@@ -143,6 +148,7 @@ public class Controller : MonoBehaviour
 		string nameWin = "";
 		bool tie = false;
 		int noScore = 0;
+		int winnerNumber;
 
 		for (int i = 0; i < countPlayers; i++){
 			Debug.Log(players[i]);
@@ -151,6 +157,7 @@ public class Controller : MonoBehaviour
 				highScore = players[i].getHome();
 
 				winner = players[i];
+				winnerNumber = i;
 
 				tie = false;
 
@@ -163,17 +170,21 @@ public class Controller : MonoBehaviour
 
 		}
 		finish = true;
-		//Debug.Log("Veio ate aqui");
-		gameOver.SetActive(true);
-
-		if (!tie && noScore < countPlayers) {
-			gameOver.GetComponent<AudioSource>().Play();
-			gameOverText.text = nameWin + "'s tribe now owns the Land!";
-		} else {
-			gameOverText.text = "DRAW!";
+		if (Keyboard.gamemode == 1){
+			gameOver.SetActive(true);
+			if (!tie && noScore < countPlayers) {
+				gameOver.GetComponent<AudioSource>().Play();
+				gameOverText.text = nameWin + "'s tribe now owns the Land!";
+			} else {
+				gameOverText.text = "DRAW!";
+			}
+			StartCoroutine(GameOverOptions());
+			//Time.timeScale = 0f;
 		}
-		StartCoroutine(GameOverOptions());
-		//Time.timeScale = 0f;
+		if (Keyboard.gamemode == 2){
+			TournamentManager tournamentManager = GameObject.FindGameObjectWithTag("tournament").GetComponent<TournamentManager>();
+			tournamentManager.EndGame(tie || noScore >= countPlayers, winnerNumber, nameWin);
+		}
 	}
 
 	IEnumerator GameOverOptions(){

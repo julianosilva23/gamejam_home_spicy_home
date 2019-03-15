@@ -20,5 +20,12 @@ public static class Keyboard
 
 	public static Animator[] animatorPlayer;
 
+	public static int gamemode;
+
+	//Variáveis específicas para o modo torneio
+	public static string[] levelsList;
+    public static int[] playersWins;
+	public static int currentRound;
+
 
 }
