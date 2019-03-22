@@ -41,7 +41,7 @@ public class TournamentManager : MonoBehaviour
 
     void Start()
     {
-        for(int player = 0; player <= Keyboard.CountPlayer; player++){
+        for(int player = 1; player <= Keyboard.CountPlayer; player++){
             CountTrophies(allTrophies[player], player);
         }
     }
