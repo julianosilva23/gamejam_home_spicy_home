@@ -4308,7 +4308,7 @@ GameObject:
   - component: {fileID: 352607469}
   - component: {fileID: 352607468}
   m_Layer: 5
-  m_Name: Hill1
+  m_Name: HillTournament
   m_TagString: FirstButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4326,8 +4326,8 @@ RectTransform:
   m_LocalScale: {x: 0.9997848, y: 0.9997848, z: 0.9997848}
   m_Children:
   - {fileID: 692231634}
-  - {fileID: 452738753}
-  - {fileID: 1244007905}
+  - {fileID: 1899268138}
+  - {fileID: 876154133}
   - {fileID: 1350321657}
   m_Father: {fileID: 936305579}
   m_RootOrder: 2
@@ -4434,14 +4434,14 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1372349203}
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: GoToLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Hill1
           m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -5202,7 +5202,7 @@ GameObject:
   - component: {fileID: 422962215}
   - component: {fileID: 422962214}
   m_Layer: 5
-  m_Name: Forest1
+  m_Name: ForestTournament
   m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5219,9 +5219,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 876154133}
+  - {fileID: 1265566505}
+  - {fileID: 452738753}
   - {fileID: 451289173}
-  - {fileID: 1371313443}
   - {fileID: 990252342}
   m_Father: {fileID: 936305579}
   m_RootOrder: 4
@@ -5327,26 +5327,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 756995048}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1372349203}
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: GoToLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Forest1
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -5751,6 +5740,7 @@ GameObject:
   - component: {fileID: 451289173}
   - component: {fileID: 451289175}
   - component: {fileID: 451289174}
+  - component: {fileID: 451289176}
   m_Layer: 5
   m_Name: Personagem (1)
   m_TagString: Untagged
@@ -5770,11 +5760,11 @@ RectTransform:
   m_LocalScale: {x: 1.000732, y: 1.000732, z: 1.000732}
   m_Children: []
   m_Father: {fileID: 422962213}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16.4, y: 2.2}
+  m_AnchoredPosition: {x: 63, y: -40}
   m_SizeDelta: {x: 246, y: 166.80002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &451289174
@@ -5814,6 +5804,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451289172}
   m_CullTransparentMesh: 0
+--- !u!114 &451289176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451289172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.16862746}
+  m_EffectDistance: {x: -5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &452738752
 GameObject:
   m_ObjectHideFlags: 0
@@ -5825,6 +5830,7 @@ GameObject:
   - component: {fileID: 452738753}
   - component: {fileID: 452738755}
   - component: {fileID: 452738754}
+  - component: {fileID: 452738756}
   m_Layer: 5
   m_Name: Personagem (1)
   m_TagString: Untagged
@@ -5841,14 +5847,14 @@ RectTransform:
   m_GameObject: {fileID: 452738752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0004302, y: 1.0004302, z: 1.0004302}
+  m_LocalScale: {x: 1.0002147, y: 1.0002147, z: 1.0002147}
   m_Children: []
-  m_Father: {fileID: 352607467}
+  m_Father: {fileID: 422962213}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23.238, y: -0.00000011921}
+  m_AnchoredPosition: {x: -17, y: -0.00002908091}
   m_SizeDelta: {x: 246, y: 166.80002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &452738754
@@ -5888,6 +5894,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452738752}
   m_CullTransparentMesh: 0
+--- !u!114 &452738756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452738752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.16862746}
+  m_EffectDistance: {x: -5, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &456536624
 GameObject:
   m_ObjectHideFlags: 0
@@ -6385,7 +6406,7 @@ GameObject:
   - component: {fileID: 489741257}
   - component: {fileID: 489741256}
   m_Layer: 5
-  m_Name: Sand1
+  m_Name: SandTournament
   m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6402,9 +6423,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1899268138}
-  - {fileID: 1265566505}
+  - {fileID: 1244007905}
   - {fileID: 1805924821}
+  - {fileID: 1371313443}
   - {fileID: 2016089156}
   m_Father: {fileID: 936305579}
   m_RootOrder: 3
@@ -6510,26 +6531,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 756995048}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1372349203}
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: GoToLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Sand1
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -8166,6 +8176,7 @@ GameObject:
   - component: {fileID: 692231634}
   - component: {fileID: 692231636}
   - component: {fileID: 692231635}
+  - component: {fileID: 692231637}
   m_Layer: 5
   m_Name: Personagem (1)
   m_TagString: Untagged
@@ -8229,6 +8240,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692231633}
   m_CullTransparentMesh: 0
+--- !u!114 &692231637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692231633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.11764706}
+  m_EffectDistance: {x: -5, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &694438059
 GameObject:
   m_ObjectHideFlags: 0
@@ -10244,14 +10270,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1372349203}
-        m_MethodName: Forest1
-        m_Mode: 1
+        m_MethodName: GoToLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Forest1
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -10349,6 +10375,7 @@ GameObject:
   - component: {fileID: 876154133}
   - component: {fileID: 876154135}
   - component: {fileID: 876154134}
+  - component: {fileID: 876154136}
   m_Layer: 5
   m_Name: Personagem (1)
   m_TagString: Untagged
@@ -10365,14 +10392,14 @@ RectTransform:
   m_GameObject: {fileID: 876154132}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9996525, y: 0.9996525, z: 0.9996525}
+  m_LocalScale: {x: 0.99986744, y: 0.99986744, z: 0.99986744}
   m_Children: []
-  m_Father: {fileID: 422962213}
-  m_RootOrder: 0
+  m_Father: {fileID: 352607467}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -75, y: 41}
+  m_AnchoredPosition: {x: 78, y: -42}
   m_SizeDelta: {x: 246, y: 166.80002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &876154134
@@ -10412,6 +10439,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876154132}
   m_CullTransparentMesh: 0
+--- !u!114 &876154136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876154132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.16862746}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &882173271
 GameObject:
   m_ObjectHideFlags: 0
@@ -11640,7 +11682,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Boss' Tournament
+  m_Text: Pineland Tournament
 --- !u!222 &990252346
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13201,6 +13243,7 @@ GameObject:
   - component: {fileID: 1244007905}
   - component: {fileID: 1244007907}
   - component: {fileID: 1244007906}
+  - component: {fileID: 1244007908}
   m_Layer: 5
   m_Name: Personagem (1)
   m_TagString: Untagged
@@ -13217,14 +13260,14 @@ RectTransform:
   m_GameObject: {fileID: 1244007904}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0004302, y: 1.0004302, z: 1.0004302}
+  m_LocalScale: {x: 1.0002147, y: 1.0002147, z: 1.0002147}
   m_Children: []
-  m_Father: {fileID: 352607467}
-  m_RootOrder: 2
+  m_Father: {fileID: 489741255}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 67, y: -39}
+  m_AnchoredPosition: {x: -69, y: 41}
   m_SizeDelta: {x: 246, y: 166.80002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1244007906
@@ -13264,6 +13307,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244007904}
   m_CullTransparentMesh: 0
+--- !u!114 &1244007908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244007904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.16862746}
+  m_EffectDistance: {x: -5, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1244623626
 GameObject:
   m_ObjectHideFlags: 0
@@ -13448,6 +13506,7 @@ GameObject:
   - component: {fileID: 1265566505}
   - component: {fileID: 1265566507}
   - component: {fileID: 1265566506}
+  - component: {fileID: 1265566508}
   m_Layer: 5
   m_Name: Personagem (1)
   m_TagString: Untagged
@@ -13464,14 +13523,14 @@ RectTransform:
   m_GameObject: {fileID: 1265566504}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0007318, y: 1.0007318, z: 1.0007318}
+  m_LocalScale: {x: 1.0007317, y: 1.0007317, z: 1.0007317}
   m_Children: []
-  m_Father: {fileID: 489741255}
-  m_RootOrder: 1
+  m_Father: {fileID: 422962213}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 6}
+  m_AnchoredPosition: {x: -67, y: 39}
   m_SizeDelta: {x: 246, y: 166.80002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1265566506
@@ -13511,6 +13570,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265566504}
   m_CullTransparentMesh: 0
+--- !u!114 &1265566508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265566504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.16862746}
+  m_EffectDistance: {x: 5, y: 5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1267111360
 GameObject:
   m_ObjectHideFlags: 0
@@ -14442,7 +14516,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Beginner's Tournament
+  m_Text: Green Hill Tournament
 --- !u!222 &1350321661
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14879,6 +14953,7 @@ GameObject:
   - component: {fileID: 1371313443}
   - component: {fileID: 1371313445}
   - component: {fileID: 1371313444}
+  - component: {fileID: 1371313446}
   m_Layer: 5
   m_Name: Personagem (1)
   m_TagString: Untagged
@@ -14895,14 +14970,14 @@ RectTransform:
   m_GameObject: {fileID: 1371313442}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.000732, y: 1.000732, z: 1.000732}
+  m_LocalScale: {x: 1.0007318, y: 1.0007318, z: 1.0007318}
   m_Children: []
-  m_Father: {fileID: 422962213}
+  m_Father: {fileID: 489741255}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71, y: -36}
+  m_AnchoredPosition: {x: 74, y: -31}
   m_SizeDelta: {x: 246, y: 166.80002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1371313444
@@ -14942,6 +15017,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371313442}
   m_CullTransparentMesh: 0
+--- !u!114 &1371313446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371313442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.16862746}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1372349197
 GameObject:
   m_ObjectHideFlags: 0
@@ -19382,14 +19472,14 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1372349203}
-        m_MethodName: Hill1
-        m_Mode: 1
+        m_MethodName: GoToLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Hill1
           m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -19900,14 +19990,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1372349203}
-        m_MethodName: Sand1
-        m_Mode: 1
+        m_MethodName: GoToLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Sand1
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -20761,6 +20851,7 @@ GameObject:
   - component: {fileID: 1805924821}
   - component: {fileID: 1805924823}
   - component: {fileID: 1805924822}
+  - component: {fileID: 1805924824}
   m_Layer: 5
   m_Name: Personagem (1)
   m_TagString: Untagged
@@ -20780,11 +20871,11 @@ RectTransform:
   m_LocalScale: {x: 1.000732, y: 1.000732, z: 1.000732}
   m_Children: []
   m_Father: {fileID: 489741255}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: -35}
+  m_AnchoredPosition: {x: -2, y: 6}
   m_SizeDelta: {x: 246, y: 166.80002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1805924822
@@ -20824,6 +20915,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805924820}
   m_CullTransparentMesh: 0
+--- !u!114 &1805924824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805924820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.16862746}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1810943212
 GameObject:
   m_ObjectHideFlags: 0
@@ -22152,6 +22258,7 @@ GameObject:
   - component: {fileID: 1899268138}
   - component: {fileID: 1899268140}
   - component: {fileID: 1899268139}
+  - component: {fileID: 1899268141}
   m_Layer: 5
   m_Name: Personagem (1)
   m_TagString: Untagged
@@ -22168,14 +22275,14 @@ RectTransform:
   m_GameObject: {fileID: 1899268137}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9996525, y: 0.9996525, z: 0.9996525}
+  m_LocalScale: {x: 0.99986744, y: 0.99986744, z: 0.99986744}
   m_Children: []
-  m_Father: {fileID: 489741255}
-  m_RootOrder: 0
+  m_Father: {fileID: 352607467}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -72, y: 40}
+  m_AnchoredPosition: {x: -24, y: 1}
   m_SizeDelta: {x: 246, y: 166.80002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1899268139
@@ -22215,6 +22322,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899268137}
   m_CullTransparentMesh: 0
+--- !u!114 &1899268141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899268137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.16862746}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1905148021
 GameObject:
   m_ObjectHideFlags: 0
@@ -23866,7 +23988,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1991362687
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24401,7 +24523,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Intermediate's Tournament
+  m_Text: Semi-Arid Tournament
 --- !u!222 &2016089160
 CanvasRenderer:
   m_ObjectHideFlags: 0

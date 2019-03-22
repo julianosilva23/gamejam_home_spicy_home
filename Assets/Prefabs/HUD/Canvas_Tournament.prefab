@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 631298143188912298}
   - component: {fileID: 631298143188912308}
   - component: {fileID: 631298143188912299}
+  - component: {fileID: 6853871291597203770}
   m_Layer: 5
   m_Name: Trofeu1_P4
   m_TagString: Untagged
@@ -282,10 +283,10 @@ RectTransform:
   m_Father: {fileID: 631298145160630024}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -104.56003, y: 5}
-  m_SizeDelta: {x: 24.480011, y: 24.479996}
+  m_AnchorMin: {x: 0.748, y: 0}
+  m_AnchorMax: {x: 0.8416094, y: 0.065000005}
+  m_AnchoredPosition: {x: -2.2999878, y: 5}
+  m_SizeDelta: {x: -72.52, y: -11.76}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &631298143188912308
 CanvasRenderer:
@@ -317,13 +318,28 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 740b916a1f4f5d642b99478989da39b9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &6853871291597203770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631298143188912297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.13333334}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &631298143192602495
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +574,7 @@ GameObject:
   - component: {fileID: 631298143217779460}
   - component: {fileID: 631298143217779462}
   - component: {fileID: 631298143217779461}
+  - component: {fileID: 94806941230024067}
   m_Layer: 5
   m_Name: Trofeu1_P2
   m_TagString: Untagged
@@ -579,10 +596,10 @@ RectTransform:
   m_Father: {fileID: 631298145160630024}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -104.56003, y: -11.4}
-  m_SizeDelta: {x: 24.480011, y: 24.480011}
+  m_AnchorMin: {x: 0.748, y: 0.93647224}
+  m_AnchorMax: {x: 0.8347735, y: 1}
+  m_AnchoredPosition: {x: 5.1999817, y: -11.399994}
+  m_SizeDelta: {x: -64.52, y: -12.52}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &631298143217779462
 CanvasRenderer:
@@ -614,13 +631,28 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 740b916a1f4f5d642b99478989da39b9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &94806941230024067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631298143217779579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.13333334}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &631298143269332786
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +664,7 @@ GameObject:
   - component: {fileID: 631298143269332787}
   - component: {fileID: 631298143269332797}
   - component: {fileID: 631298143269332796}
+  - component: {fileID: 7134416164536774383}
   m_Layer: 5
   m_Name: Trofeu3_P4
   m_TagString: Untagged
@@ -653,10 +686,10 @@ RectTransform:
   m_Father: {fileID: 631298145160630024}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -169.45996, y: 5}
-  m_SizeDelta: {x: 24.480011, y: 24.479996}
+  m_AnchorMin: {x: 0.748, y: 0}
+  m_AnchorMax: {x: 0.8347735, y: 0.054583337}
+  m_AnchoredPosition: {x: -59.69995, y: 5}
+  m_SizeDelta: {x: -65.52002, y: -5.5200195}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &631298143269332797
 CanvasRenderer:
@@ -688,13 +721,28 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 740b916a1f4f5d642b99478989da39b9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &7134416164536774383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631298143269332786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.13333334}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &631298143298381281
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,6 +1018,7 @@ GameObject:
   - component: {fileID: 631298143584338050}
   - component: {fileID: 631298143584338060}
   - component: {fileID: 631298143584338051}
+  - component: {fileID: 7269608498990229985}
   m_Layer: 5
   m_Name: Trofeu3_P2
   m_TagString: Untagged
@@ -991,10 +1040,10 @@ RectTransform:
   m_Father: {fileID: 631298145160630024}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -169.45996, y: -11.399994}
-  m_SizeDelta: {x: 24.480011, y: 24.480011}
+  m_AnchorMin: {x: 0.748, y: 0.93647224}
+  m_AnchorMax: {x: 0.8347735, y: 1}
+  m_AnchoredPosition: {x: -59.100006, y: -11.399994}
+  m_SizeDelta: {x: -64.92, y: -12.52}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &631298143584338060
 CanvasRenderer:
@@ -1026,13 +1075,28 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 740b916a1f4f5d642b99478989da39b9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &7269608498990229985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631298143584338049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.13333334}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &631298143645825350
 GameObject:
   m_ObjectHideFlags: 0
@@ -2017,6 +2081,7 @@ GameObject:
   - component: {fileID: 631298144196759003}
   - component: {fileID: 631298144196759013}
   - component: {fileID: 631298144196759012}
+  - component: {fileID: 6252090417094216093}
   m_Layer: 5
   m_Name: Trofeu2_P3
   m_TagString: Untagged
@@ -2038,10 +2103,10 @@ RectTransform:
   m_Father: {fileID: 631298145160630024}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 146.74994, y: 18}
-  m_SizeDelta: {x: 24.480011, y: 24.479996}
+  m_AnchorMin: {x: 0.15253319, y: 0}
+  m_AnchorMax: {x: 0.24785939, y: 0.065000005}
+  m_AnchoredPosition: {x: 6.700012, y: -0.5}
+  m_SizeDelta: {x: -73.52002, y: -12.52002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &631298144196759013
 CanvasRenderer:
@@ -2073,13 +2138,28 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 740b916a1f4f5d642b99478989da39b9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &6252090417094216093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631298144196759002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.13333334}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &631298144349254775
 GameObject:
   m_ObjectHideFlags: 0
@@ -2091,6 +2171,7 @@ GameObject:
   - component: {fileID: 631298144349254768}
   - component: {fileID: 631298144349254770}
   - component: {fileID: 631298144349254769}
+  - component: {fileID: 3612188880712909414}
   m_Layer: 5
   m_Name: Trofeu2_P1
   m_TagString: Untagged
@@ -2112,10 +2193,10 @@ RectTransform:
   m_Father: {fileID: 631298145160630024}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 146.75003, y: -25.6}
-  m_SizeDelta: {x: 24.480011, y: 24.480011}
+  m_AnchorMin: {x: 0.15253319, y: 0.93647224}
+  m_AnchorMax: {x: 0.24785939, y: 1}
+  m_AnchoredPosition: {x: 6.7000732, y: -7.100006}
+  m_SizeDelta: {x: -73.52, y: -12.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &631298144349254770
 CanvasRenderer:
@@ -2147,13 +2228,28 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 740b916a1f4f5d642b99478989da39b9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &3612188880712909414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631298144349254775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.13333334}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &631298144397807857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,6 +2340,7 @@ GameObject:
   - component: {fileID: 631298144410021157}
   - component: {fileID: 631298144410021159}
   - component: {fileID: 631298144410021158}
+  - component: {fileID: 1780947876376759088}
   m_Layer: 5
   m_Name: Trofeu3_P1
   m_TagString: Untagged
@@ -2265,10 +2362,10 @@ RectTransform:
   m_Father: {fileID: 631298145160630024}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 178.95001, y: -25.600006}
-  m_SizeDelta: {x: 24.480011, y: 24.480011}
+  m_AnchorMin: {x: 0.15253319, y: 0.93647224}
+  m_AnchorMax: {x: 0.24200001, y: 1}
+  m_AnchoredPosition: {x: 41.900085, y: -7.100006}
+  m_SizeDelta: {x: -67.52, y: -12.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &631298144410021159
 CanvasRenderer:
@@ -2300,13 +2397,28 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 740b916a1f4f5d642b99478989da39b9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &1780947876376759088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631298144410021156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.13333334}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &631298144418760096
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,6 +2430,7 @@ GameObject:
   - component: {fileID: 631298144418760097}
   - component: {fileID: 631298144418760099}
   - component: {fileID: 631298144418760098}
+  - component: {fileID: 142582591946857478}
   m_Layer: 5
   m_Name: Trofeu2_P4
   m_TagString: Untagged
@@ -2339,10 +2452,10 @@ RectTransform:
   m_Father: {fileID: 631298145160630024}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -136.75998, y: 5}
-  m_SizeDelta: {x: 24.480011, y: 24.479996}
+  m_AnchorMin: {x: 0.748, y: 0}
+  m_AnchorMax: {x: 0.8347735, y: 0.054583337}
+  m_AnchoredPosition: {x: -27.99997, y: 5}
+  m_SizeDelta: {x: -65.52002, y: -5.5200195}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &631298144418760099
 CanvasRenderer:
@@ -2374,13 +2487,28 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 740b916a1f4f5d642b99478989da39b9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &142582591946857478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631298144418760096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.13333334}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &631298144562999859
 GameObject:
   m_ObjectHideFlags: 0
@@ -2471,6 +2599,7 @@ GameObject:
   - component: {fileID: 631298144612917423}
   - component: {fileID: 631298144612917417}
   - component: {fileID: 631298144612917416}
+  - component: {fileID: 5079239829025225937}
   m_Layer: 5
   m_Name: Trofeu3_P3
   m_TagString: Untagged
@@ -2492,10 +2621,10 @@ RectTransform:
   m_Father: {fileID: 631298145160630024}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 178.94989, y: 18}
-  m_SizeDelta: {x: 24.480011, y: 24.479996}
+  m_AnchorMin: {x: 0.15253319, y: 0}
+  m_AnchorMax: {x: 0.24785939, y: 0.065000005}
+  m_AnchoredPosition: {x: 38.899963, y: -0.5}
+  m_SizeDelta: {x: -73.52002, y: -12.52002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &631298144612917417
 CanvasRenderer:
@@ -2527,13 +2656,28 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 740b916a1f4f5d642b99478989da39b9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &5079239829025225937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631298144612917422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.13333334}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &631298144728231946
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,6 +2689,7 @@ GameObject:
   - component: {fileID: 631298144728231947}
   - component: {fileID: 631298144728231957}
   - component: {fileID: 631298144728231956}
+  - component: {fileID: 4179437740871889112}
   m_Layer: 5
   m_Name: Trofeu1_P3
   m_TagString: Untagged
@@ -2566,10 +2711,10 @@ RectTransform:
   m_Father: {fileID: 631298145160630024}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 114.04999, y: 18}
-  m_SizeDelta: {x: 24.480011, y: 24.479996}
+  m_AnchorMin: {x: 0.157416, y: 0}
+  m_AnchorMax: {x: 0.24785939, y: 0.065000005}
+  m_AnchoredPosition: {x: -28.499939, y: -0.5}
+  m_SizeDelta: {x: -68.52, y: -12.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &631298144728231957
 CanvasRenderer:
@@ -2601,13 +2746,28 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 740b916a1f4f5d642b99478989da39b9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &4179437740871889112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631298144728231946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.13333334}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &631298144843769759
 GameObject:
   m_ObjectHideFlags: 0
@@ -2894,7 +3054,7 @@ MonoBehaviour:
   - {fileID: 631298143188912299}
   - {fileID: 631298144418760098}
   - {fileID: 631298143269332796}
-  winColor: {r: 1, g: 1, b: 1, a: 0}
+  winColor: {r: 1, g: 1, b: 1, a: 1}
   loseColor: {r: 0, g: 0, b: 0, a: 0.23921569}
   gameWin: {fileID: 631298143161200814}
   winImage: {fileID: 631298143868538463}
@@ -2920,6 +3080,7 @@ GameObject:
   - component: {fileID: 631298145139489889}
   - component: {fileID: 631298145139489891}
   - component: {fileID: 631298145139489890}
+  - component: {fileID: 5727000879382594528}
   m_Layer: 5
   m_Name: Trofeu2_P2
   m_TagString: Untagged
@@ -2941,10 +3102,10 @@ RectTransform:
   m_Father: {fileID: 631298145160630024}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -136.75998, y: -11.399994}
-  m_SizeDelta: {x: 24.480011, y: 24.480011}
+  m_AnchorMin: {x: 0.748, y: 0.93647224}
+  m_AnchorMax: {x: 0.8347735, y: 1}
+  m_AnchoredPosition: {x: -27, y: -11.399994}
+  m_SizeDelta: {x: -64.52002, y: -12.52002}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &631298145139489891
 CanvasRenderer:
@@ -2976,13 +3137,28 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 740b916a1f4f5d642b99478989da39b9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &5727000879382594528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631298145139489888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.13333334}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &631298145160630028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,6 +3283,7 @@ GameObject:
   - component: {fileID: 631298145244431071}
   - component: {fileID: 631298145244431065}
   - component: {fileID: 631298145244431064}
+  - component: {fileID: 4252484206516277973}
   m_Layer: 5
   m_Name: Trofeu1_P1
   m_TagString: Untagged
@@ -3128,10 +3305,10 @@ RectTransform:
   m_Father: {fileID: 631298145160630024}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 114.04996, y: -25.600006}
-  m_SizeDelta: {x: 24.480011, y: 24.480011}
+  m_AnchorMin: {x: 0.15253319, y: 0.93647224}
+  m_AnchorMax: {x: 0.24200001, y: 1}
+  m_AnchoredPosition: {x: -23, y: -7.100006}
+  m_SizeDelta: {x: -67.52002, y: -12.52002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &631298145244431065
 CanvasRenderer:
@@ -3163,10 +3340,25 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 740b916a1f4f5d642b99478989da39b9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &4252484206516277973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631298145244431070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.13333334}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
