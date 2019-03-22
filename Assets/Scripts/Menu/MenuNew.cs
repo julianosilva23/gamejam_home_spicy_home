@@ -10,6 +10,8 @@ public class MenuNew : MonoBehaviour
     public Button start;
     public Button goToMap;
 
+    public GameObject[] levelSelectScreens;
+
     public int playersReady;
     bool ready;
     
@@ -78,6 +80,14 @@ public class MenuNew : MonoBehaviour
         for (int i = 0; i < Keyboard.CountPlayer; i ++){
             cursors[i].SetActive(false);
         }
+    }
+
+    public void SetGameMode(int mode){
+        Keyboard.gamemode = mode;
+    }
+
+    public void LevelSelectScreen(){
+        levelSelectScreens[Keyboard.gamemode].SetActive(true);
     }
 
 

@@ -82,7 +82,7 @@ public class Controller : MonoBehaviour
 			Destroy(playerHUD[2]);
 			Destroy(playerHUD[3]);
 		}
-		if (Keyboard.gamemode==2){
+		if (Keyboard.gamemode==1){
 			Instantiate(tournamentHUD, new Vector2(0,0), new Quaternion());
 		}
 		StartCoroutine(GameTimer(timer));
@@ -170,7 +170,7 @@ public class Controller : MonoBehaviour
 
 		}
 		finish = true;
-		if (Keyboard.gamemode == 1){
+		if (Keyboard.gamemode == 0){
 			gameOver.SetActive(true);
 			if (!tie && noScore < countPlayers) {
 				gameOver.GetComponent<AudioSource>().Play();
@@ -181,7 +181,7 @@ public class Controller : MonoBehaviour
 			StartCoroutine(GameOverOptions());
 			//Time.timeScale = 0f;
 		}
-		if (Keyboard.gamemode == 2){
+		if (Keyboard.gamemode == 1){
 			TournamentManager tournamentManager = GameObject.FindGameObjectWithTag("tournament").GetComponent<TournamentManager>();
 			tournamentManager.EndGame(tie || noScore >= countPlayers, winnerNumber, nameWin);
 		}
