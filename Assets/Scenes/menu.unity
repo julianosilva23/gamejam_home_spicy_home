@@ -1936,7 +1936,7 @@ GameObject:
   - component: {fileID: 207180506}
   m_Layer: 5
   m_Name: Back
-  m_TagString: Button
+  m_TagString: FirstButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2053,8 +2053,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2097424441}
-        m_MethodName: Select
+      - m_Target: {fileID: 1372349203}
+        m_MethodName: SelectButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3820,17 +3820,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 734968641}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 756995048}
         m_MethodName: SetActive
         m_Mode: 6
@@ -3853,8 +3842,30 @@ MonoBehaviour:
           m_StringArgument: next
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1667293685}
-        m_MethodName: Select
+      - m_Target: {fileID: 1372349203}
+        m_MethodName: LevelSelectScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1372349203}
+        m_MethodName: SelectButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4040,7 +4051,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1991362686}
+      - m_Target: {fileID: 456536624}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -4051,7 +4062,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 497415883}
+      - m_Target: {fileID: 969042487}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -4065,6 +4076,28 @@ MonoBehaviour:
       - m_Target: {fileID: 354351877}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1372349203}
+        m_MethodName: SetGameMode
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1372349203}
+        m_MethodName: SelectButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4276,7 +4309,7 @@ GameObject:
   - component: {fileID: 352607468}
   m_Layer: 5
   m_Name: Hill1
-  m_TagString: Button
+  m_TagString: FirstButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4742,8 +4775,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2097424441}
-        m_MethodName: Select
+      - m_Target: {fileID: 1372349203}
+        m_MethodName: SelectButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6071,7 +6104,7 @@ GameObject:
   - component: {fileID: 471415570}
   m_Layer: 5
   m_Name: 2k
-  m_TagString: Button
+  m_TagString: FirstButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6378,7 +6411,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6.9999847, y: 36.00003}
+  m_AnchoredPosition: {x: 12, y: 36.00003}
   m_SizeDelta: {x: -1300.8, y: -687}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &489741256
@@ -7339,7 +7372,7 @@ GameObject:
   - component: {fileID: 615477409}
   m_Layer: 5
   m_Name: Back
-  m_TagString: Button
+  m_TagString: FirstButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7456,8 +7489,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 848322071}
-        m_MethodName: Select
+      - m_Target: {fileID: 1372349203}
+        m_MethodName: SelectButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8062,6 +8095,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1991362686}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1372349203}
+        m_MethodName: SelectButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9658,6 +9702,17 @@ MonoBehaviour:
       - m_Target: {fileID: 471415566}
         m_MethodName: Select
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1372349203}
+        m_MethodName: SetGameMode
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15120,6 +15175,9 @@ MonoBehaviour:
   - {fileID: 1323014681}
   start: {fileID: 1413881693}
   goToMap: {fileID: 312965899}
+  levelSelectScreens:
+  - {fileID: 734968641}
+  - {fileID: 1991362686}
   playersReady: 0
 --- !u!1 &1374303933
 GameObject:
@@ -16339,7 +16397,7 @@ GameObject:
   - component: {fileID: 1486733411}
   m_Layer: 5
   m_Name: Bacvk
-  m_TagString: Button
+  m_TagString: FirstButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16456,8 +16514,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2097424441}
-        m_MethodName: Select
+      - m_Target: {fileID: 1372349203}
+        m_MethodName: SelectButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19247,7 +19305,7 @@ GameObject:
   - component: {fileID: 1667293689}
   m_Layer: 5
   m_Name: Hill1
-  m_TagString: Button
+  m_TagString: FirstButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21226,15 +21284,15 @@ MonoBehaviour:
           m_StringArgument: back
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2097424441}
-        m_MethodName: Select
+      - m_Target: {fileID: 1372349203}
+        m_MethodName: SelectButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: back
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -23808,7 +23866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1991362687
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25341,7 +25399,7 @@ GameObject:
   - component: {fileID: 2097424444}
   m_Layer: 5
   m_Name: Multi
-  m_TagString: Button
+  m_TagString: FirstButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
