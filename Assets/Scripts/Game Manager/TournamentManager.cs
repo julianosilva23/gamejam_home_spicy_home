@@ -41,8 +41,17 @@ public class TournamentManager : MonoBehaviour
 
     void Start()
     {
-        for(int player = 1; player <= Keyboard.CountPlayer; player++){
+        allTrophies = new List<Image[]> {p1Trophies, p2Trophies, p3Trophies, p4Trophies};
+        for(int player = 0; player < Keyboard.CountPlayer; player++){
             CountTrophies(allTrophies[player], player);
+        }
+        if (Keyboard.CountPlayer == 2){
+            foreach (Image trophy in p3Trophies){
+                Destroy(trophy.gameObject);
+            }
+            foreach (Image trophy in p4Trophies){
+                Destroy(trophy.gameObject);
+            }
         }
     }
     
