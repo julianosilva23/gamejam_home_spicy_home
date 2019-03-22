@@ -105,20 +105,29 @@ public class MenuNew : MonoBehaviour
 //================================================LEVEL SELLECT=======================================================//
 //--------------------------------------------------------------------------------------------------------------------//
 
-    public void Hill1(){
-        SceneManager.LoadScene("Hill1");
-    }
-
-    public void Sand1(){
-        SceneManager.LoadScene("Sand1");
-    }
-
-    public void Forest1(){
-        SceneManager.LoadScene("Forest1");
-    }
-
     public void GoToLevel(string levelName){
         SceneManager.LoadScene(levelName);
+    }
+
+    public void HillTournament(){
+        Keyboard.levelsList[0] = "Hill1";
+        Keyboard.levelsList[1] = "Hill2";
+        Keyboard.levelsList[2] = "Hill3";
+        Keyboard.currentRound = 0;
+    }
+
+    public void SandTournament(){
+        Keyboard.levelsList[0] = "Sand1";
+        Keyboard.levelsList[1] = "Sand2";
+        Keyboard.levelsList[2] = "Sand3";
+        Keyboard.currentRound = 0;
+    }
+
+    public void ForestTournament(){
+        Keyboard.levelsList[0] = "Forest1";
+        Keyboard.levelsList[1] = "Forest2";
+        Keyboard.levelsList[2] = "Forest3";
+        Keyboard.currentRound = 0;
     }
 
     public void Main_Exit(){
