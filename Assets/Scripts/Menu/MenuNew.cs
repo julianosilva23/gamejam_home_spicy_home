@@ -90,6 +90,15 @@ public class MenuNew : MonoBehaviour
         levelSelectScreens[Keyboard.gamemode].SetActive(true);
     }
 
+    public void SelectButton(){
+        GameObject[] allFirstButtons = GameObject.FindGameObjectsWithTag("FirstButton");
+        foreach (GameObject buttonObject in allFirstButtons){
+            if (buttonObject.activeSelf){
+                buttonObject.GetComponent<Button>().Select();
+                return;
+            }
+        }
+    }
 
 
 //--------------------------------------------------------------------------------------------------------------------//
