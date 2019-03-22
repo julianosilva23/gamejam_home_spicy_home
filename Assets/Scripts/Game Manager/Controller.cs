@@ -182,7 +182,7 @@ public class Controller : MonoBehaviour
 			//Time.timeScale = 0f;
 		}
 		if (Keyboard.gamemode == 1){
-			TournamentManager tournamentManager = GameObject.FindGameObjectWithTag("tournament").GetComponent<TournamentManager>();
+			TournamentManager tournamentManager = GameObject.FindGameObjectWithTag("Tournament").GetComponent<TournamentManager>();
 			tournamentManager.EndGame(tie || noScore >= countPlayers, winnerNumber, nameWin);
 		}
 	}

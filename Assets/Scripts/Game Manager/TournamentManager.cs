@@ -70,7 +70,9 @@ public class TournamentManager : MonoBehaviour
 
     public void EndGame(bool draw, int winner, string winnerName){
         if (draw){
-
+            Destroy(winImage);
+            gameWinText.text = "DRAW!!!";
+            gameWinScoreText.text = "No impass shall be accepted! Prepare for the next match!";
         } else {        
             Keyboard.playersWins[winner]++;
             CountTrophies(allTrophies[winner], winner);
@@ -78,15 +80,13 @@ public class TournamentManager : MonoBehaviour
                 winImage = Keyboard.ImgChar[winner];
                 gameWinText.text = winnerName + "'s tribe owns this Land!";
                 gameWinScoreText.text = "<b>" + (3 - Keyboard.playersWins[winner]).ToString() + "</b> more land(s) to win the tournament!";
-                gameWin.SetActive(true);
-                GameEndOptions(gameOverOptions,gameOverDefaultButton);
             } else {
                 matchWinText.text = "<b>" + winnerName + "</b> is the winner!!!";
                 TournamentRank(winner);
-                matchWin.SetActive(true);
-                GameEndOptions(matchOverOptions,matchOverDefaultButton);
             }
         }
+        gameWin.SetActive(true);
+        GameEndOptions(gameOverOptions,gameOverDefaultButton);
     }
 
     IEnumerator GameEndOptions(GameObject endOptions, Button endDefaultButton){
