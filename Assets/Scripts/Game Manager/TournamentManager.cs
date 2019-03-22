@@ -86,7 +86,7 @@ public class TournamentManager : MonoBehaviour
             }
         }
         gameWin.SetActive(true);
-        GameEndOptions(gameOverOptions,gameOverDefaultButton);
+        StartCoroutine(GameEndOptions(gameOverOptions,gameOverDefaultButton));
     }
 
     IEnumerator GameEndOptions(GameObject endOptions, Button endDefaultButton){
