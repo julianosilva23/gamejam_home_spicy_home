@@ -109,25 +109,26 @@ public class MenuNew : MonoBehaviour
         SceneManager.LoadScene(levelName);
     }
 
-    public void HillTournament(){
-        Keyboard.levelsList[0] = "Hill1";
-        Keyboard.levelsList[1] = "Hill2";
-        Keyboard.levelsList[2] = "Hill3";
+    void TournamentStart(string[] torunamentLevels){
         Keyboard.currentRound = 0;
+        Keyboard.levelsList = torunamentLevels;
+        Keyboard.playersWins = new int[] {0, 0, 0, 0};
+        GoToLevel(Keyboard.levelsList[0]);
+    }
+
+    public void HillTournament(){
+        string[] torunamentLevels = {"Hill1", "Hill2", "Hill3"};
+        TournamentStart(torunamentLevels);
     }
 
     public void SandTournament(){
-        Keyboard.levelsList[0] = "Sand1";
-        Keyboard.levelsList[1] = "Sand2";
-        Keyboard.levelsList[2] = "Sand3";
-        Keyboard.currentRound = 0;
+        string[] torunamentLevels = {"Sand1", "Sand2", "Sand3"};
+        TournamentStart(torunamentLevels);
     }
 
     public void ForestTournament(){
-        Keyboard.levelsList[0] = "Forest1";
-        Keyboard.levelsList[1] = "Forest2";
-        Keyboard.levelsList[2] = "Forest3";
-        Keyboard.currentRound = 0;
+       string[] torunamentLevels = {"Forest1", "Forest2", "Forest3"};
+        TournamentStart(torunamentLevels);
     }
 
     public void Main_Exit(){
