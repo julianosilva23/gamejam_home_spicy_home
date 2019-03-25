@@ -28,6 +28,8 @@ public class TournamentManager : MonoBehaviour
     public Image secondImage;
     public Image thirdImage;
 
+    AudioSource audioSource;
+
     List<Image[]> allTrophies;
 
     public void NextLevel(){
@@ -37,16 +39,19 @@ public class TournamentManager : MonoBehaviour
             Keyboard.currentRound = 0;
         }
         Time.timeScale = 1f;
+        audioSource.pitch = 1f;
         SceneManager.LoadScene(nextLevel);
     }
 
     public void Return(){
 		Time.timeScale = 1f;
+        Destroy(audioSource.gameObject);
 		SceneManager.LoadScene("menu");
 	}
 
     void Start()
     {
+        audioSource = FindObjectOfType<bgm>().GetComponent<AudioSource>();
         allTrophies = new List<Image[]> {p1Trophies, p2Trophies, p3Trophies, p4Trophies};
         for(int player = 0; player < Keyboard.CountPlayer; player++){
             CountTrophies(allTrophies[player], player);
