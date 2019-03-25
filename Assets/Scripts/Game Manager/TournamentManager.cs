@@ -31,13 +31,19 @@ public class TournamentManager : MonoBehaviour
     List<Image[]> allTrophies;
 
     public void NextLevel(){
-        string nextLevel = Keyboard.levelsList[Keyboard.currentRound];
         Keyboard.currentRound++;
+        string nextLevel = Keyboard.levelsList[Keyboard.currentRound];
         if (Keyboard.currentRound > Keyboard.levelsList.Length){
             Keyboard.currentRound = 0;
         }
+        Time.timeScale = 1f;
         SceneManager.LoadScene(nextLevel);
     }
+
+    public void Return(){
+		Time.timeScale = 1f;
+		SceneManager.LoadScene("menu");
+	}
 
     void Start()
     {
@@ -69,24 +75,30 @@ public class TournamentManager : MonoBehaviour
     }
 
     public void EndGame(bool draw, int winner, string winnerName){
+        Debug.Log("Winner is " + winner.ToString());
         if (draw){
             Destroy(winImage);
             gameWinText.text = "DRAW!!!";
-            gameWinScoreText.text = "No impass shall be accepted! Prepare for the next match!";
+            gameWinScoreText.text = "No impass will be accepted! Prepare for the next match!";
         } else {        
             Keyboard.playersWins[winner]++;
             CountTrophies(allTrophies[winner], winner);
+            Debug.Log(Keyboard.playersWins[winner]);
             if (Keyboard.playersWins[winner] < 3){
-                winImage = Keyboard.ImgChar[winner];
+                Debug.Log(Keyboard.playersWins[winner] < 3);
+                winImage.sprite = Keyboard.ImgChar[winner].sprite;
                 gameWinText.text = winnerName + "'s tribe owns this Land!";
                 gameWinScoreText.text = "<b>" + (3 - Keyboard.playersWins[winner]).ToString() + "</b> more land(s) to win the tournament!";
+                gameWin.SetActive(true);
+                StartCoroutine(GameEndOptions(gameOverOptions,gameOverDefaultButton));
             } else {
                 matchWinText.text = "<b>" + winnerName + "</b> is the winner!!!";
                 TournamentRank(winner);
+                matchWin.SetActive(true);
+                StartCoroutine(GameEndOptions(matchOverOptions,matchOverDefaultButton));
             }
         }
-        gameWin.SetActive(true);
-        StartCoroutine(GameEndOptions(gameOverOptions,gameOverDefaultButton));
+        
     }
 
     IEnumerator GameEndOptions(GameObject endOptions, Button endDefaultButton){
@@ -100,26 +112,20 @@ public class TournamentManager : MonoBehaviour
         int firstHighScore = Keyboard.playersWins[winner];
         int secondHighScore = -1;
         int thirdHighScore = -1;
-        firstImage = Keyboard.ImgChar[winner];
+        firstImage.sprite = Keyboard.ImgChar[winner].sprite;
         for (int player = 0; player < Keyboard.playersWins.Length; player++){
             if (player != winner){
                 if (Keyboard.playersWins[player] > secondHighScore){
                     secondHighScore = Keyboard.playersWins[player];
-                    secondImage = Keyboard.ImgChar[player];
-                } else if (Keyboard.playersWins[player] > thirdHighScore){
+                    secondImage.sprite = Keyboard.ImgChar[player].sprite;
+                } else if (Keyboard.playersWins[player] > thirdHighScore && Keyboard.CountPlayer >= 3){
                     thirdHighScore = Keyboard.playersWins[player];
-                    secondImage = Keyboard.ImgChar[player];
+                    secondImage.sprite = Keyboard.ImgChar[player].sprite;
                 }
             }
         }
         if (Keyboard.CountPlayer < 3){
             Destroy(thirdImage.gameObject);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

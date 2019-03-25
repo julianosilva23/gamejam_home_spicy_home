@@ -133,7 +133,7 @@ public class Player : MonoBehaviour
         hasBomb = true;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (alive){
             PlayerMove();

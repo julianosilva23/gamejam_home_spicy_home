@@ -27,6 +27,7 @@ public class Controller : MonoBehaviour
 	public GameObject playerPrefab;
 
 	public GameObject gameOver;
+	public Image winImage;
 	public GameObject gameOverOptions;
 	public Button gameOverDefaultButton;
 	public Text gameOverText;
@@ -167,7 +168,6 @@ public class Controller : MonoBehaviour
 			} else if (players[i].getHome() == highScore) {
 				tie = true;
 			}
-
 		}
 		finish = true;
 		if (Keyboard.gamemode == 0){
@@ -175,6 +175,7 @@ public class Controller : MonoBehaviour
 			if (!tie && noScore < countPlayers) {
 				gameOver.GetComponent<AudioSource>().Play();
 				gameOverText.text = nameWin + "'s tribe now owns the Land!";
+				winImage.sprite = Keyboard.ImgChar[winnerNumber].sprite;
 			} else {
 				gameOverText.text = "DRAW!";
 			}
