@@ -33,6 +33,8 @@ public class Player : MonoBehaviour
 
     GameObject ghostHome;
 
+    Controller gameManager;
+
     public GameObject bomb;
 
     public GameObject resourceDrop;
@@ -50,6 +52,7 @@ public class Player : MonoBehaviour
         hasBomb = true;    
         ghostBuild = false;
         ghostHome = null;
+        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<Controller>();
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -135,7 +138,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (alive){
+        if (alive && !gameManager.paused){
             PlayerMove();
             if (hasBomb){
 

@@ -49,7 +49,7 @@ public class Controller : MonoBehaviour
 	public GameObject pauseMenu;
 	public Button pauseMenuDefaultButton;
 
-	bool paused;
+	public bool paused;
 
 	bool finish;
 
@@ -146,8 +146,9 @@ public class Controller : MonoBehaviour
 
 	public void EndTime(){
 		SetCount(0);
+		paused = true;
 		string nameWin = "";
-		bool tie = false;
+		bool tie = true;
 		int noScore = 0;
 		int winnerNumber = 9000;
 
@@ -178,6 +179,7 @@ public class Controller : MonoBehaviour
 				winImage.sprite = Keyboard.ImgChar[winnerNumber].sprite;
 			} else {
 				gameOverText.text = "DRAW!";
+				Destroy(winImage.gameObject);
 			}
 			StartCoroutine(GameOverOptions());
 			//Time.timeScale = 0f;

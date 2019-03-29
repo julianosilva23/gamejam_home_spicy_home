@@ -29,15 +29,16 @@ public class TournamentManager : MonoBehaviour
     public Image thirdImage;
 
     AudioSource audioSource;
+    //Controller gameManager;
 
     List<Image[]> allTrophies;
 
     public void NextLevel(){
         Keyboard.currentRound++;
-        string nextLevel = Keyboard.levelsList[Keyboard.currentRound];
-        if (Keyboard.currentRound > Keyboard.levelsList.Length){
+        if (Keyboard.currentRound >= Keyboard.levelsList.Length){
             Keyboard.currentRound = 0;
         }
+        string nextLevel = Keyboard.levelsList[Keyboard.currentRound];
         Time.timeScale = 1f;
         audioSource.pitch = 1f;
         SceneManager.LoadScene(nextLevel);
@@ -51,6 +52,7 @@ public class TournamentManager : MonoBehaviour
 
     void Start()
     {
+        //gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<Controller>();
         audioSource = FindObjectOfType<bgm>().GetComponent<AudioSource>();
         allTrophies = new List<Image[]> {p1Trophies, p2Trophies, p3Trophies, p4Trophies};
         for(int player = 0; player < Keyboard.CountPlayer; player++){
@@ -80,11 +82,13 @@ public class TournamentManager : MonoBehaviour
     }
 
     public void EndGame(bool draw, int winner, string winnerName){
-        Debug.Log("Winner is " + winner.ToString());
+        Debug.Log("Winner is " + winner.ToString() + ", Draw?" + draw.ToString());
         if (draw){
-            Destroy(winImage);
+            Destroy(winImage.gameObject);
             gameWinText.text = "DRAW!!!";
             gameWinScoreText.text = "No impass will be accepted! Prepare for the next match!";
+            gameWin.SetActive(true);
+            StartCoroutine(GameEndOptions(gameOverOptions,gameOverDefaultButton));
         } else {        
             Keyboard.playersWins[winner]++;
             CountTrophies(allTrophies[winner], winner);
